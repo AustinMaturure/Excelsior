@@ -19,7 +19,6 @@ media
 .Python
 build/
 develop-eggs/
-
 downloads/
 eggs/
 .eggs/

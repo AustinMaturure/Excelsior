@@ -5,6 +5,7 @@ const cssFileName = 'index.min.css'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/html/',
   plugins: [react()],
   publicDir: './public',
   build: {
