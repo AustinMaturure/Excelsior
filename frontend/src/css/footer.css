@@ -1,0 +1,48 @@
+.footer-section {
+  background-color: #1f1f1f;
+  margin: 0px;
+  padding: 0px;
+  height: 45rem;
+  color: #f1f1f1;
+  font-family: "Excon";
+ 
+  align-items: center;
+  display: flex;
+
+  flex-direction: column;
+}
+.logo-footer {
+  font-size: 3rem;
+  font-style: italic;
+  width: fit-content;
+  text-shadow: #ca212a 1px 1px;
+
+  padding: 0px;
+}
+
+.about-us {
+  text-align: center;
+}
+
+.contact-us {
+  color: #ca212a;
+  text-decoration: none;
+}
+
+.icons {
+  font-size: 2rem;
+  text-align: center;
+  color: #f1f1f1;
+  text-decoration: none;
+  display: flex;
+  gap: 1.6rem;
+}
+.icon-link {
+  text-decoration: none;
+  color: #f1f1f1;
+  transition: all 0.2s;
+}
+.icon-link:hover {
+  color: #ca212a;
+  scale: 1.3;
+}

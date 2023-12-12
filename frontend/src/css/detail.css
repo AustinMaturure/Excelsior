@@ -1,0 +1,229 @@
+.article {
+  display: flex;
+  align-items: flex-start;
+  padding: 30px;
+  margin-top: 2rem;
+}
+
+.article-details {
+  flex: 1;
+  padding: 20px;
+  border-style: solid;
+  border: 1px solid black;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 5px 5px #1f1f1f;
+}
+@media only screen and (max-width: 480px) {
+  .article {
+    padding: 12px;
+  }
+}
+
+.article-image {
+  flex: 1;
+  padding: 2px;
+  text-align: center;
+  box-shadow: 3px 3px #adb7bfa1; /* Box shadow */
+  
+  filter: drop-shadow(10px);
+  border:1px solid #adb7bfa1;
+
+  border-radius: 6px;
+  margin-left: 10px;
+}
+
+.article-image img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.article-image.sticky {
+  position: sticky;
+
+  top: 1rem;
+  z-index: 0;
+}
+.category {
+  font-family: "Author";
+}
+.article-text {
+  --max-lines: 14;
+  --line-height: 1.4;
+  text-align: justify;
+  max-height: calc(var(--max-lines) * 1em * var(--line-height));
+  font-family: "Excon", sans-serif;
+  margin-top: 12px;
+  line-height: var(--line-height);
+  overflow: hidden;
+  padding-top: 1rem;
+  position: relative;
+}
+
+.article-text::first-letter {
+  font-size: 3rem;
+  font-style: italic;
+  text-shadow: 2px 2px #1f1f1f;
+  initial-letter: 3;
+  color: #ca212a;
+  padding: 6px;
+}
+
+.article-text:has(+ .expand-btn:not(:checked))::before {
+  content: "";
+  position: absolute;
+  height: calc(1em * var(--line-height));
+  width: 100%;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, white);
+}
+.article-title {
+  font-family: "Excon", sans-serif;
+  font-size: 2.5rem;
+  line-height: 2.6rem;
+  color: #1f1f1f;
+  margin-bottom: 6px;
+}
+.expand-btn {
+  appearance: none;
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 1s;
+}
+
+.expand-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.expand-btn::before {
+  content: "Read more";
+}
+
+.expand-btn:checked::before {
+  content: "Read less";
+}
+
+.article-text:has(+ .expand-btn:checked) {
+  max-height: none;
+}
+.additional-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 10px; /* Adjust the gap between images as needed */
+}
+
+.date {
+  color: #1f1f1f;
+  font-family: "Author";
+}
+
+.additional-image {
+  height: 100px;
+  width: 100px;
+  max-height: 100%; /* Limit the height to prevent stretching */
+  max-width: 100%;
+  top: 0;
+  filter: opacity(0.5);
+  align-self: center;
+  z-index: 1;
+  position: sticky;
+  object-fit: cover;
+  transition: filter 0.5s;
+}
+.additional-image:hover {
+  filter: opacity(1);
+}
+.author {
+  font-family: "Author";
+  padding-right: 10px;
+  font-size: 1.2em;
+}
+.details-section {
+  max-width: 100%;
+}
+@media only screen and (max-width: 896px) {
+  .article {
+    flex-direction: column; /* Change to a column layout */
+  }
+
+  .article-details {
+    order: 2; /* Move .article-details below .article-image */
+  }
+
+  .article-image {
+    order: 1; /* Move .article-image above .article-details */
+    margin-left: 0; /* Remove the left margin */
+    margin-bottom: 1.6rem;
+  }
+
+  .article-image.sticky {
+    position: static; /* Remove sticky positioning */
+    margin-top: 20px; /* Adjust spacing as needed */
+  }
+
+  .article-text {
+    max-height: none; /* Allow the text to expand vertically */
+  }
+
+  .author {
+    margin-bottom: 0; /* Adjust spacing as needed */
+  }
+
+  .more-title {
+    padding: 16px; /* Adjust padding as needed */
+  }
+
+  .additional-images {
+    margin-top: 20px; /* Adjust spacing as needed */
+  }
+
+  .expand-btn {
+    margin-top: 10px; /* Adjust spacing as needed */
+  }
+}
+/* <section className="tools">
+        <div className="tool1">
+          
+        
+      <div className="local-header-container" id="header-business">
+        <h1 className="header-missed" style={{alignSelf:"center"}}>Business Board</h1>
+      </div>
+      <div className="scroller" id="scroller-business">
+        <h3 className="Ad">Advertise Your Business Here!</h3>
+        {data
+          .slice(0, 10)
+          .filter(
+            (article) =>
+              article.category.name === "Business" ||
+              article.category.parent_category === "Business"
+          )
+          .map((article) => (
+            <Link to={`/articles/${article.slug}`} style={{ textDecoration: 'none' }} key={article.id}>
+              <div key={article.id} className="scroller-missed-articles">
+                <div
+                  className="box"
+                  style={{
+                    backgroundImage: `url(${article.thumbnail})`,
+                  }}
+                >
+                  <h2 className="scroller-missed-title">{article.title}</h2>
+                </div>
+              </div>
+            </Link>
+          ))
+          .reverse()}</div>
+          </div>
+          <div className="tool2">
+            hi
+          </div>
+          <div className="tool3">
+            weather
+          </div>
+     
+      </section> */
