@@ -14,6 +14,7 @@ import Footer from "./footer";
 
 function Top_Stories() {
   const [data, setData] = useState([]);
+  const [weather, setWeather] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,6 +33,27 @@ function Top_Stories() {
 
     fetchData();
   }, []);
+  const apiKey = '08aa1491da2f1b37eb1107936b922036';
+  const city = 'piet retief'; // Replace with your desired city
+
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+  
+  
+  // Fetch weather data
+  useEffect(() => {
+    fetch(apiUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(weatherData => {
+        console.log('Weather data:', weatherData); // Log the received data
+        setWeather(weatherData);
+      })
+      .catch(error => console.error('Error fetching weather data:', error));
+  }, []); // Em
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = (direction, containerSelector) => {
@@ -72,7 +94,7 @@ function Top_Stories() {
   return (
     <div className="hi">
       
-     
+     <div className="weather-info" id="weather-info"></div>
     
     <section className="container">
         {data.reverse().slice(0,4).map((item, index) => (
@@ -122,7 +144,7 @@ function Top_Stories() {
         <div className="anchor">
           <p className="anchor-text">All News</p>
         </div>  
-      <ul>
+      <ul >
         {tickerTitles.map((title, index) => (
            <Link to={`/articles/${title.slug}`} style={{ textDecoration: 'none', color:"black" }} key={title.id}>
           
@@ -468,6 +490,46 @@ function Top_Stories() {
       </div>
     </section>
       </div>
+      <section className="tools">
+        <div className="tool1">
+          
+        
+      <div className="local-header-container" id="header-business">
+        <h1 className="header-missed" style={{alignSelf:"center"}}>Business Board</h1>
+      </div>
+      <div className="scroller" id="scroller-business">
+        <h3 className="Ad">Advertise Your Business Here!</h3>
+        {data
+          .slice(0, 10)
+          .filter(
+            (article) =>
+              article.category.name === "Business" ||
+              article.category.parent_category === "Business"
+          )
+          .map((article) => (
+            <Link to={`/articles/${article.slug}`} style={{ textDecoration: 'none' }} key={article.id}>
+              <div key={article.id} className="scroller-missed-articles">
+                <div
+                  className="box"
+                  style={{
+                    backgroundImage: `url(${article.thumbnail})`,
+                  }}
+                >
+                  <h2 className="scroller-missed-title">{article.title}</h2>
+                </div>
+              </div>
+            </Link>
+          ))
+          .reverse()}</div>
+          </div>
+          <div className="tool2">
+            hi
+          </div>
+          <div className="tool3">
+          Weather: {weather?.main?.temp ?? 'Loading...'}
+          </div>
+     
+      </section>
       <Footer />
       </div>
       

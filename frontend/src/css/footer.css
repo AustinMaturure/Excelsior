@@ -14,7 +14,9 @@
 .logo-footer {
   font-size: 3rem;
   font-style: italic;
+  width: -moz-fit-content;
   width: fit-content;
+ 
   text-shadow: #ca212a 1px 1px;
 
   padding: 0px;
@@ -44,5 +46,5 @@
 }
 .icon-link:hover {
   color: #ca212a;
-  scale: 1.3;
+  
 }

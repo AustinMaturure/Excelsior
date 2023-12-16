@@ -5,7 +5,7 @@ body {
 
 .responsive-nav {
   max-height: 4.5rem;
-  max-width: 100%;
+  min-width: 100%;
   display: flex;
   background-color: rgb(179, 50, 50);
   box-shadow: 5px 5px  #1f1f1f;
