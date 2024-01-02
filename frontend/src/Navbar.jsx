@@ -27,7 +27,7 @@ function Navbar() {
 
       <nav className={isOpen ? "responsive-nav" : "navbar"}>
       <section className="logo-footer">
-                <h1 style={{backgroundColor:"rgb(179, 50, 50)",color: "white",boxShadow: "5px 5px #1f1f1f", marginTop:"0px" , marginLeft:"1rem",padding:"1rem", fontSize:"2.4rem"}}>Excelsior</h1>
+                <h1 className="logo-header"style={{backgroundColor:"#cf2e2e",border:"2px solid #f1f1f1",color: "white", marginTop:"0px" , marginLeft:"1rem",padding:"1rem", fontSize:"2rem"}}>Excelsior</h1>
             </section>
         <div className={isOpen ? "responsive-links" : "links"}>
           <a href="/#">LATEST /</a>

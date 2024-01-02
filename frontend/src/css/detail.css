@@ -24,10 +24,10 @@
   flex: 1;
   padding: 2px;
   text-align: center;
-  box-shadow: 3px 3px #adb7bfa1; /* Box shadow */
+ /* Box shadow */
   
   filter: drop-shadow(10px);
-  border:1px solid #adb7bfa1;
+  border:1px solid #1f1f1fc5;
 
   border-radius: 6px;
   margin-left: 10px;
@@ -64,6 +64,7 @@
   font-size: 3rem;
   font-style: italic;
   text-shadow: 2px 2px #1f1f1f;
+  -webkit-initial-letter: 3;
   initial-letter: 3;
   color: #ca212a;
   padding: 6px;

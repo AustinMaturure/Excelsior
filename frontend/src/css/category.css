@@ -1,44 +1,44 @@
-.scroller-column {
+.cat-section {
+  margin-top: 2rem;
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  font-family: "Excon";
-  align-items: center;
+  justify-content: center;
 }
-.box2 {
+
+#cat-card-0 {
   color: #1f1f1f;
+  align-self: center;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
+  margin-left: 0px;
+ 
+
 }
 
-.container-scroller {
-  width: 21rem;
-  height: 20rem;
-  background: white;
+
+#cat-card-0 .cat-card-content {
+  position: relative;
+  justify-content: center;
   display: flex;
-  justify-self: center;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  transition: width 0.5s;
+  height: 22rem;
+  width: 70rem;
+
+  
 }
 
-.container-scroller {
-  position: relative;
-  border: 2px solid #ca212a;
-  box-shadow: 10px 10px #ca212a;
-}
-.container-scroller:active {
-  box-shadow: none;
-  transform: translateX(10px);
-  transform: translateY(10px);
+
+#cat-card-0 .cat-card-image-ct{
+  max-height: 22rem;
+  min-width: 70rem;
 }
 
-.box1 {
-  background-size: cover;
-  position: relative;
+#cat-card-0 .cat-card-image-ct img{
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
-/* Add a darkening overlay */
-.container-scroller:before {
+#cat-card-0 .cat-card-image-ct::before {
   content: "";
   position: absolute;
   top: 0;
@@ -53,71 +53,101 @@
   ); /* Adjust the opacity here (0.5 for 50% opacity) */
   z-index: 1; /* Ensure the overlay is above the text */
   pointer-events: none; /* Allow interaction with the text */
+  border-radius: 12px;
 }
-.scroller-column-banner:before {
-  content: "";
+
+
+#cat-card-0 .cat-card-text {
   position: absolute;
-
-  left: 0;
-  width: 100%;
-  height: 31%;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Adjust the opacity here (0.5 for 50% opacity) */
-  z-index: 0; /* Ensure the overlay is above the text */
-  pointer-events: none; /* Allow interaction with the text */
-}
-
-.container-scroller div {
-  min-width: 21rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  scroll-snap-align: center;
-}
-
-.scroller-column-banner {
-  font-size: 3rem;
-  margin: none;
-
-  min-width: 100%;
-  height: 100%;
-
+  background-color: #FFFDFB;
+  max-width: 70%;
+  border-radius:14px ;
+  max-height: 148px;
+ 
   text-align: center;
 
-  background-color: #1f1f1f;
+  padding: 20px;
+  top: 40%;
+  z-index: 2;
 }
-.scroller-column-header {
-  backdrop-filter: blur(0px);
 
-  color: white;
-  margin-bottom: 6rem;
-  font-weight: bold;
+#cat-card-0 .cat-card-title {
+  font-size: 2.4rem;
+  font-family: 'Excon';
+  margin: 0px;
+  line-height: 1em;
+  
+ 
+}
+
+#cat-card-0 .cat-card-snip{
+  font-size: 1rem;
+  font-family: 'EXcon';
+  padding: 0px 1.6rem 0px 1.6rem;
+  margin-top: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
   min-height: 100%;
 }
 
-.header {
-  font-family: "Excon";
-  font-size: 1.6rem;
+#cat-card-0 .cat-card-info{
+  color: rgba(112, 119, 128, 0.757);
+  font-family: 'Author';
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 16px;
 
+
+}
+
+.cat-card-text{
   color: #1f1f1f;
+  max-width: 50%;
+  font-family: 'Author';
+}
+.cat-card-title{
+  margin: 2px 0px 5px 0px;
+  font-size: 1.6rem;
+  padding: 0px;
+  font-family: 'Excon', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  transition: all 0.6s;
+}
+.cat-card-title:hover{
+ 
+  
+  text-decoration: underline #ca212a;
+}
+.cat-card-snip{
+margin: 0px;
 }
 
-.scroller-title {
-  color: white;
+.cat-card-info{
+  margin: 0px;
+  color: rgba(112, 119, 128, 0.757);
+  font-size: 0.8rem;
+}
 
-  font-weight: bold;
-  padding: 10px;
+.cat-card-content{
+  display: flex;
+  gap :2rem;
+}
+
+.cat-card-image-ct{
+  max-width: 10rem;
+}
+.cat-card-image-ct img{
   max-width: 100%;
-
-  z-index: 2;
+  border: 1px solid #1f1f1f;
+  box-shadow: 2px 2px #1f1f1f;
 }
+.cat-card-image-ct img:hover{
+  
+}
+
+.cat-card{
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+}
+
 .load-more-btn {
   font-family: "Excon";
   font-weight: bold;
@@ -125,10 +155,10 @@
   height: 3rem;
   width: 10rem;
   background-color: white;
-  color: #ca212a;
+  color: #1f1f1f;
 
-  border: 2px solid #ca212a;
-  box-shadow: 5px 5px 0 #ca212a; /* Initial box shadow */
+  border: 2px solid #1f1f1f;
+  box-shadow: 2px 2px 0 #1f1f1f; /* Initial box shadow */
   border-radius: 12px;
   transition: all 0.1s; /* Add a smooth transition for the box shadow */
 }
@@ -139,19 +169,4 @@
   transform: translateX(5px);
 
   border: none;
-}
-
-.scroller-snippet {
-  font-size: 1.2rem;
-  font-family: "Excon";
-  color: #1f1f1f;
-  padding: 0.5rem;
-}
-.article-scroller {
-  padding-right: 0.5rem;
-}
-
-.box3 {
-  text-align: center;
-  color: #ca212a;
 }

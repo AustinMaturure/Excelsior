@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import "../src/css/detail.css"
 import More from "./More";
-
+import DOMPurify from 'dompurify';
 function Details() {
   const [data, setData] = useState([]);
   const [expanded, setExpanded] = useState(false); // Track expansion state
@@ -78,7 +78,7 @@ function Details() {
               </label>
               <article
                 className="article-text"
-                dangerouslySetInnerHTML={{ __html: matchingItem.body }}
+                dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(matchingItem.body) }}
               ></article>
               <input
                 type="checkbox"
@@ -96,7 +96,7 @@ function Details() {
                     key={image.id}
                     src={image.image}
                     className="additional-image"
-                    alt=""
+                    alt={image.description}
                   />
                 ))}
               </div>

@@ -95,9 +95,9 @@ function Top_Stories() {
     <div className="hi">
       
      <div className="weather-info" id="weather-info"></div>
-    
+     {/* data.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 4).map((item, index) => ( */}
     <section className="container">
-        {data.reverse().slice(0,4).map((item, index) => (
+        {data.slice(0,4).reverse().map((item, index) => (
           <div
             className={`item item-${index + 1}`}
             key={index}
@@ -160,7 +160,7 @@ function Top_Stories() {
         <div className="local-header-container">
           
         
-          <h1 className="header-local" >Local/ <span >all your latest town news</span></h1>
+          <h1 className="header-local" >LOCAL/<span className="category-desc" >all your latest town news</span></h1>
           <hr color="#1f1f1f" width="98%" style={{  borderwidth: "0.5px" }} />
           <hr color="#1f1f1f" width="98%" style={{  borderwidth: "0.5px" }} />
           
@@ -197,9 +197,8 @@ function Top_Stories() {
               </div>
             <img src={article.thumbnail} className="local-image" alt={article.thumbnail.description} srcSet="" />
             <div className="latest-local-text">
-              <h2 className="latest-local-date">
-                {article.title}
-             
+            <h2 className="latest-local-date">
+                {article.category.name}
               </h2>
               <h2 className="latest-local-title">{article.title}</h2>
               <p className="latest-local-cat">{new Date(article.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
@@ -214,7 +213,7 @@ function Top_Stories() {
         </div>
         <div className="local-header-container">
         <hr color="#1f1f1f" width="98%" style={{  borderWidth: "0.5px" }} />
-          <h1 className="header-local">Sport/ <span > all your exciting sport news</span></h1>
+          <h1 className="header-local">SPORT/ <span className="category-desc" > all your exciting sport news</span></h1>
         <hr color="#1f1f1f" width="98%" style={{  borderWidth: "0.5px" }} ></hr>
         <hr color="#1f1f1f" width="98%" style={{  borderwidth: "0.5px" }} />
         </div>
@@ -271,7 +270,7 @@ function Top_Stories() {
         <div className="local-header-container">
         <hr color="#1f1f1f" width="98%" style={{  borderWidth: "1px" }} />
          
-          <h1 className="header-local">School / <span >all your latest school news</span></h1>
+          <h1 className="header-local">SCHOOL/ <span className="category-desc" >all your latest school news</span></h1>
        
           
           <hr color="#1f1f1f" width="98%" style={{  borderWidth: "1px" }} ></hr>
@@ -328,7 +327,7 @@ function Top_Stories() {
         <div className="local-header-container">
       
         <hr color="#1f1f1f" width="98%" style={{  borderWidth: "0.5px" }} />
-          <h1 className="header-local">Latest/ <span >all your latest, latest news</span></h1>
+          <h1 className="header-local">LATEST/ <span className="category-desc" >all your latest, latest news</span></h1>
           <hr color="#1f1f1f" width="98%" style={{  borderWidth: "0.5px" }} />
           <hr color="#1f1f1f" width="98%" style={{  borderwidth: "0.5px" }} />
         </div>
@@ -375,7 +374,7 @@ function Top_Stories() {
           ))
           }
       </div>
-      <div className="news-ticker"style={{marginBottom:"6rem"}}>
+      <div className="news-ticker">
         <div className="anchor">
           <p className="anchor-text">All News</p>
         </div>  
@@ -389,7 +388,9 @@ function Top_Stories() {
           
         ))}
       </ul>
+      
     </div>
+    <hr color="#1f1f1f" width="80%" style={{  borderWidth: "0.1px", border:'none', height:"1px" }} />
       <div className="missed-header-container">
         <h1 className="header-missed" id="header-missed-msd">You Might Have <span style={{textShadow:"1px 1px #ca412a",paddingRight:"10px", fontStyle:"italic"}}>Missed</span></h1>
       </div>
@@ -399,9 +400,10 @@ function Top_Stories() {
 
       <div className="scroller-overlay">
     <div className="navigation-buttons">
-      <button className="btnPrev" onClick={() => handleScroll('prev', 'scroller-1')}><FaArrowLeft/></button>
-      <button className="btnNext" onClick={() => handleScroll('next', 'scroller-1')}><FaArrowRight/></button>
-    </div>
+      <div><button className="btnPrev" onClick={() => handleScroll('prev', 'scroller-1')}><FaArrowLeft/></button></div>
+      <div> <button className="btnNext" onClick={() => handleScroll('next', 'scroller-1')}><FaArrowRight/></button>
+    </div></div>
+     
   </div>
   <div className="scroller" id="scroller-1">
 
@@ -489,6 +491,7 @@ function Top_Stories() {
         ))}
       </div>
     </section>
+    <hr color="#868e97" width="80%" style={{  borderWidth: "0.1px", border:'none', height:"1px" }} />
       </div>
       <section className="tools">
         <div className="tool1">
@@ -523,10 +526,13 @@ function Top_Stories() {
           .reverse()}</div>
           </div>
           <div className="tool2">
-            hi
+          <div className="local-header-container" id="header-business">
+        <h1 className="header-missed" style={{alignSelf:"center"}}>Recipe</h1>
+      </div>
           </div>
           <div className="tool3">
-          Weather: {weather?.main?.temp ?? 'Loading...'}
+            
+          <span className="tdt-title">Today's Temp</span>{  (weather?.main?.temp * 0.1).toFixed(0) + ' ºC' ?? 'Loading...'}
           </div>
      
       </section>
