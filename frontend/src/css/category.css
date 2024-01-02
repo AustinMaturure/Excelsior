@@ -59,7 +59,9 @@
 
 #cat-card-0 .cat-card-text {
   position: absolute;
-  background-color: #FFFDFB;
+
+  background-color: #fffffff2;
+
   max-width: 70%;
   border-radius:14px ;
   max-height: 148px;
@@ -139,9 +141,7 @@ margin: 0px;
   border: 1px solid #1f1f1f;
   box-shadow: 2px 2px #1f1f1f;
 }
-.cat-card-image-ct img:hover{
-  
-}
+
 
 .cat-card{
   margin-left: 3rem;

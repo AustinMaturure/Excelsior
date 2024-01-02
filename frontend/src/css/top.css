@@ -228,6 +228,7 @@
 .latest-local-title {
   font-size: 1.1rem;
   color: #1f1f1f;
+  margin-bottom: 0px;
 }
 .latest-local-date {
   font-size: 0.7rem;
@@ -482,7 +483,6 @@
     max-width: 100%;
     align-self: center;
     border-radius: 0px;
-
     object-fit: cover;
   }
 
