@@ -65,7 +65,7 @@ function Category() {
                             </Link>
                         </section>
                     ))}
-                {visibleArticles <= data.length && (
+                {visibleArticles <= data.length &&  (
                     <div className="load-more">
                         <button
                             className="load-more-btn"

@@ -68,7 +68,7 @@ function Details() {
           <div className={`article ${expanded ? 'expanded' : ''}`}>
             <div className="article-details">
               <p className="category">
-              {matchingItem.category.parent_category}~  {matchingItem.category.name} | views~ {matchingItem.views}
+              {matchingItem.category.parent_category}|  {matchingItem.category.name} | views~ {matchingItem.views}
               </p>
             <h1 className="article-title">{matchingItem.title}</h1>
             

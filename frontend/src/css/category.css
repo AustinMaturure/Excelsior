@@ -97,8 +97,7 @@
   font-family: 'Author';
   font-weight: bold;
   margin-bottom: 16px;
-
-
+  justify-items:flex-end; 
 }
 
 .cat-card-text{
@@ -139,7 +138,7 @@ margin: 0px;
 .cat-card-image-ct img{
   max-width: 100%;
   border: 1px solid #1f1f1f;
-  box-shadow: 2px 2px #1f1f1f;
+  box-shadow: 2px 2px #1f1f1fd7;
 }
 
 
@@ -148,16 +147,26 @@ margin: 0px;
   margin-bottom: 1rem;
 }
 
+.load-more {
+  display: flex;
+
+justify-content: center;
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
+
 .load-more-btn {
   font-family: "Excon";
   font-weight: bold;
   font-size: 1.3rem;
   height: 3rem;
-  width: 10rem;
+  width: 8rem;
   background-color: white;
   color: #1f1f1f;
+  cursor: pointer;
 
-  border: 2px solid #1f1f1f;
+
+  border: 1px solid #1f1f1f;
   box-shadow: 2px 2px 0 #1f1f1f; /* Initial box shadow */
   border-radius: 12px;
   transition: all 0.1s; /* Add a smooth transition for the box shadow */
@@ -169,4 +178,63 @@ margin: 0px;
   transform: translateX(5px);
 
   border: none;
+}
+
+@media screen and (max-width: 726px) {
+  #cat-card-0{
+    margin-bottom: 10rem;
+  }
+  #cat-card-0 .cat-card-content{
+    max-width:25rem;
+    flex-direction: row;
+   
+  }
+  #cat-card-0 .cat-card-image-ct {
+    
+    max-width:100%; min-width: 0px;
+}
+#cat-card-0 .cat-card-image-ct img{
+  min-height: 100%;
+ 
+}
+#cat-card-0 .cat-card-text{
+  max-height: 100%;
+  min-width: 84%;
+ margin-left: 1.5%;
+ margin-right: 0px;
+ 
+}
+#cat-card-0 .cat-card-title{
+
+text-overflow: ellipsis;
+  overflow: hidden;
+  }
+  .cat-card-content{
+    flex-direction: column;
+    min-width: 100%;
+   
+  }
+  .cat-card-image-ct {
+    min-width: 96%;
+    max-height: 20rem;
+    
+  }
+  .cat-card-image-ct img{
+    box-shadow: none;
+    max-height: 18rem;
+    min-width: 100%;
+    object-fit: cover;
+    border: none;
+  }
+  .cat-card-text{
+    max-width: 100%;
+    text-align: left;
+    margin-right: 1rem;
+  }
+  .cat-card{
+    margin-left: 1rem;
+  }
+  .cat-card-title{
+    margin: 6px 0px 12px 0px;
+  }
 }

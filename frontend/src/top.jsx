@@ -160,7 +160,7 @@ function Top_Stories() {
         <div className="local-header-container">
           
         
-          <h1 className="header-local" >LOCAL/<span className="category-desc" >all your latest town news</span></h1>
+          <h1 className="header-local" >LOCAL/ <span className="category-desc" >all your latest town news</span></h1>
           <hr color="#1f1f1f" width="98%" style={{  borderwidth: "0.5px" }} />
           <hr color="#1f1f1f" width="98%" style={{  borderwidth: "0.5px" }} />
           
@@ -528,11 +528,12 @@ function Top_Stories() {
           <div className="tool2">
           <div className="local-header-container" id="header-business">
         <h1 className="header-missed" style={{alignSelf:"center"}}>Recipe</h1>
+        
       </div>
           </div>
           <div className="tool3">
             
-          <span className="tdt-title">Today's Temp</span>{  (weather?.main?.temp * 0.1).toFixed(0) + ' ºC' ?? 'Loading...'}
+          <span className="tdt-title">Today's Temp</span>{  (weather?.main?.temp * 0.1).toFixed(0) + 'ºC' ?? 'Loading...'}
           </div>
      
       </section>
