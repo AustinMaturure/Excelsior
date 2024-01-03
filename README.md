@@ -79,7 +79,7 @@ Customize and extend the project based on your specific requirements.
 
 ## Contributing
 
-welcome to contributions! Please follow our [contribution guidelines](CONTRIBUTING.md) when making contributions.
+welcome to suggestions 
 
 ## License
 
