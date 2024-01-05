@@ -1,9 +1,13 @@
 .footer-section {
   background-color: #1f1f1f;
   margin: 0px;
+  margin-top: 4rem;
   padding: 0px;
-  height: 45rem;
+  height: 30rem;
+  
   color: #f1f1f1;
+  border-top-right-radius: 18px;
+  border-top-left-radius: 18px;
   font-family: "Excon";
  
   align-items: center;
@@ -11,12 +15,12 @@
 
   flex-direction: column;
 }
-.logo-footer {
-  font-size: 3rem;
+.logo-footer h1{
+  font-size: 4rem;
   font-style: italic;
   width: -moz-fit-content;
   width: fit-content;
- 
+ margin-bottom: 20px;
   text-shadow: #ca212a 1px 1px;
 
   padding: 0px;

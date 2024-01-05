@@ -31,13 +31,14 @@ function More({ category,id, articles }) {
             <Link to={`/articles/${article.slug}`} onClick={handleLinkClick} style={{ textDecoration: 'none', color: 'inherit' }}>
             <div className="content-block">
               <div className="content-text">
+                <div className="thumb">
+                <img className="article-card-image" src={article.thumbnail} alt="" srcSet="" />
+              </div>
                 <h2 className="snippet-title">{article.title}</h2>
                 <p className="snippet" dangerouslySetInnerHTML={{ __html: article.shortened_body }}></p>
                 
               </div>
-              <div className="thumb">
-                <img className="article-card-image" src={article.thumbnail} alt="" srcSet="" />
-              </div>
+              
             </div>
             
               {/* Link should wrap the entire article card */}
@@ -56,14 +57,14 @@ function More({ category,id, articles }) {
             <div key={index} className={`article-card card-${index + 1}`}>
             <Link to={`/articles/${article.slug}`} onClick={handleLinkClick} style={{ textDecoration: 'none', color: 'inherit' }}>
             <div className="content-block">
-              <div className="content-text">
+              <div className="content-text"><div className="thumb">
+                <img className="article-card-image" src={article.thumbnail} alt="" srcSet="" />
+              </div>
                 <h2 className="snippet-title">{article.title}</h2>
                 <p className="snippet" dangerouslySetInnerHTML={{ __html: article.shortened_body }}></p>
                 
               </div>
-              <div className="thumb">
-                <img className="article-card-image" src={article.thumbnail} alt="" srcSet="" />
-              </div>
+              
             </div>
             
               {/* Link should wrap the entire article card */}
@@ -82,14 +83,14 @@ function More({ category,id, articles }) {
             <div key={index} className={`article-card card-${index + 1}`}>
             <Link to={`/articles/${article.slug}`} onClick={handleLinkClick} style={{ textDecoration: 'none', color: 'inherit' }}>
             <div className="content-block">
-              <div className="content-text">
+              <div className="content-text"><div className="thumb">
+                <img className="article-card-image" src={article.thumbnail} alt="" srcSet="" />
+              </div>
                 <h2 className="snippet-title">{article.title}</h2>
                 <p className="snippet" dangerouslySetInnerHTML={{ __html: article.shortened_body }}></p>
                 
               </div>
-              <div className="thumb">
-                <img className="article-card-image" src={article.thumbnail} alt="" srcSet="" />
-              </div>
+              
             </div>
             
             </Link>

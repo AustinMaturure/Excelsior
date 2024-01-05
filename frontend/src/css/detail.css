@@ -49,11 +49,11 @@
 }
 .article-text {
   --max-lines: 14;
-  --line-height: 1.4;
+  --line-height: 1.6;
   text-align: justify;
   max-height: calc(var(--max-lines) * 1em * var(--line-height));
   font-family: "Excon", sans-serif;
-  margin-top: 12px;
+  margin-top: px;
   line-height: var(--line-height);
   overflow: hidden;
   padding-top: 1rem;

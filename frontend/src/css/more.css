@@ -31,22 +31,22 @@
 }
 
 .article-card {
-  border: 1.2px solid black;
+  
   border-radius: 0.2rem;
-  padding: 10px;
+  
   min-height: 26rem;
   min-width: 20rem;
   margin-bottom: 1rem;
+ 
   transition: box-shadow 2s;
   transition: border-radius 1s;
 }
 
 .article-card:hover {
-  box-shadow: 4px 4px 0px #868e97a1;
-  border: 1.6px solid #868e97a1;
+  box-shadow: 1px 1px  #1f1f1f;
+  border: 1px solid #1f1f1f;
   border-radius: 0px;
-  top: -5px;
-  left: -5px;
+  
 }
 
 .snippet {
@@ -54,6 +54,9 @@
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-family: 'Author';
 }
 .article-card-image {
   width: 100%;
@@ -64,7 +67,11 @@
 }
 
 .content-block {
-  padding: 0.8rem;
+  padding: 0.4rem;
+}
+
+.content-text{
+  margin-top: 0px;
 }
 
 .snippet-title {
@@ -72,16 +79,13 @@
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  margin: 0px;
-  background-color: #868e97a1;
+  padding: 4px;
+  background-color: #1f1f1f;
   color: white;
+  margin-bottom:0px ;
 }
 
-.snippet-date {
-  color: #868e97a1;
-  font-size: small;
-  margin: 0px;
-}
+
 
 @media screen and (min-width: 1024px) {
   .columns-container {
@@ -94,7 +98,7 @@
   }
   .article-card-image {
     width: 100%;
-    min-height: 12rem;
+    height: 10rem;
 
     object-fit: cover;
     border-radius: 0.1rem;

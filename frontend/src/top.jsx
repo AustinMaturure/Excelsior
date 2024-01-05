@@ -2,10 +2,9 @@
 import "../src/css/top.css";
 
 import React, { useState, useEffect } from 'react';
-import Navigaton from "./Navigation";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Footer from "./footer";
+
 
 
 
@@ -537,7 +536,7 @@ function Top_Stories() {
           </div>
      
       </section>
-      <Footer />
+      
       </div>
       
     

@@ -4,7 +4,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Nav from './Navbar.jsx';
 import Top_Stories from './top.jsx';
 import Details from './Details.jsx';
-import Category from './Category.jsx'
+import Category from './Category.jsx';
+import Footer from './footer.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -17,5 +18,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         {/* Add more routes as needed */}
       </Routes>
     </BrowserRouter>
+    <Footer></Footer>
   </React.StrictMode>,
 );
