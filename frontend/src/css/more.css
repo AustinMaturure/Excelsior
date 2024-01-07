@@ -5,7 +5,7 @@
   font-weight: bold;
   color: #1f1f1f;
   padding: 26px;
-  text-decoration: underline #ca212a;
+  text-shadow: 2px 1px #ca212a;
 }
 
 .columns-container {
@@ -22,12 +22,12 @@
   margin-bottom: 2rem;
   cursor: pointer;
   color: #1f1f1f;
-  text-decoration: underline white;
-  transition: text-decoration 0.6s;
+  
+  transition: text-shadow 0.6s;
 }
 
 .column-header:hover {
-  text-decoration: underline #ca212a;
+  text-shadow: 2px 1px #ca212a;
 }
 
 .article-card {
@@ -36,26 +36,27 @@
   
   min-height: 26rem;
   min-width: 20rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0px;
+
  
   transition: box-shadow 2s;
   transition: border-radius 1s;
 }
 
-.article-card:hover {
-  box-shadow: 1px 1px  #1f1f1f;
-  border: 1px solid #1f1f1f;
-  border-radius: 0px;
+.article-card:hover .snippet-title {
+  
+  text-decoration: underline #ca212a;
   
 }
 
 .snippet {
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  margin-top: 10px;
+  margin-top: 0px;
   font-size: 1.1rem;
+  padding: 4px;
   font-family: 'Author';
 }
 .article-card-image {
@@ -80,8 +81,8 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   padding: 4px;
-  background-color: #1f1f1f;
-  color: white;
+ color: #1f1f1f;
+ 
   margin-bottom:0px ;
 }
 
@@ -131,6 +132,16 @@
 
   .article-card {
     max-height: 2rem;
-    max-width: 0.8rem;
+    min-width: 0rem;
+    max-width: 25rem;
+  }
+
+  .column-header{
+    font-size: 2.4rem;
+ 
+  }
+
+  .more-title{
+    margin-bottom: 0px;
   }
 }

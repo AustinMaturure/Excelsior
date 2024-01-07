@@ -5,6 +5,7 @@ import More from './More';
 
 
 
+
 function Category() {
     const [data, setData] = useState([]);
     const { category } = useParams();
