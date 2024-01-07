@@ -36,13 +36,13 @@ Ensure you have the following installed on your machine:
 
     ```bash
     git clone https://github.com/AustinMaturure/Excelsior.git
-    cd Excelsior
+    
     ```
 
 2. **Backend Setup:**
 
     ```bash
-    cd frontend/backend
+    cd Excelsior
     python -m venv venv
     source venv/bin/activate  # On Windows: .\venv\Scripts\activate
     pip install -r requirements.txt
