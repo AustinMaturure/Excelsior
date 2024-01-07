@@ -143,8 +143,7 @@
 .author {
   font-family: "Author";
   padding-right: 10px;
-  color: #1f1f1f;
-  
+  font-size: 1.2em;
 }
 .details-section {
   max-width: 100%;

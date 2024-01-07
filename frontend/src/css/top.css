@@ -987,7 +987,9 @@
   border-radius: 0px;
 }
 
+#scroller-business{
 
+}
 
 
 @media only screen and (max-width: 1148px) {
@@ -1180,9 +1182,9 @@ padding: 0px;
 color: #1f1f1f;
 }
 
-.editors-grid .article{
+.article{
  border-bottom: 1px solid #868e97;
- margin-top: 0px;
+margin-top: 0px;
 }
 
 .editors-title, .editors-snippet{
