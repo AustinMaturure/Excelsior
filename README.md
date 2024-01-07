@@ -43,8 +43,7 @@ Ensure you have the following installed on your machine:
 
     ```bash
     cd Excelsior
-    python -m venv venv
-    source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+    ( You may set up your virtual enviroment here)
     pip install -r requirements.txt
     python manage.py migrate
     python manage.py runserver
