@@ -1089,6 +1089,7 @@
   }
   .latest-local{
   position: relative;
+  margin-left: 6px;
   }
   .latest-local.local-2:before,
 .latest-local.local-6:before,
@@ -1105,6 +1106,9 @@
 
 .extended-card-title{
 z-index: 1;
+padding: 10px;
+font-size: 2.6rem;
+font-weight: bold;
 
 }
 
@@ -1120,6 +1124,10 @@ border: 0px;}
  color: #f9f9f9;
  background-size: cover;
  font-size: 1.6rem;
+ align-self: center;
+ max-width: 94%;
+ min-height: 19rem;
+ margin-left: 10px;
  }
 .local-image{
   max-width: 100%;
@@ -1226,8 +1234,6 @@ font-size: 1.5rem;
 .latest-local-title{
   height: auto;
 }
-
-
 
 }
 

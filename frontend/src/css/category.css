@@ -191,7 +191,7 @@ margin-bottom: 1rem;
 
 @media screen and (max-width: 726px) {
   #cat-card-0{
-    margin-bottom: 10rem;
+    margin-bottom: 13rem;
   }
   #cat-card-0 .cat-card-content{
     max-width:25rem;
@@ -211,12 +211,12 @@ margin-bottom: 1rem;
   min-width: 84%;
  margin-left: 1.5%;
  margin-right: 0px;
- 
 }
 #cat-card-0 .cat-card-title{
 
 text-overflow: ellipsis;
   overflow: hidden;
+  margin-bottom: 2rem;
   }
   .cat-card-content{
     flex-direction: column;
@@ -239,11 +239,20 @@ text-overflow: ellipsis;
     max-width: 100%;
     text-align: left;
     margin-right: 1rem;
+    
   }
   .cat-card{
     margin-left: 1rem;
+  
+  }
+  .cat-card-snip{
+    font-size: 1.2rem;
   }
   .cat-card-title{
     margin: 6px 0px 12px 0px;
+    font-size: 1.9rem;
+  }
+  .cat-card-info{
+    font-size: 1rem;
   }
 }
