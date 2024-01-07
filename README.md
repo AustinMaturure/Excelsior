@@ -1,8 +1,6 @@
 # Excelsior
 Full-stack News Website
 
-# Excelsior News Website
-
 Excelsior is a modern news website that uses the power of Django for the backend and React for the frontend. It provides a platform for delivering and consuming news content in an efficient and user-friendly manner.
 
 ## Table of Contents
@@ -44,7 +42,7 @@ Ensure you have the following installed on your machine:
 2. **Backend Setup:**
 
     ```bash
-    cd backend
+    cd frontend/backend
     python -m venv venv
     source venv/bin/activate  # On Windows: .\venv\Scripts\activate
     pip install -r requirements.txt
