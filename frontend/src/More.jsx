@@ -2,6 +2,9 @@ import React from "react";
 import "../src/css/more.css"
 import { Link } from "react-router-dom";
 import Navigaton from "./Navigation";
+import DOMPurify from 'dompurify'; 
+
+
 function More({ category,id, articles }) {
     
     function handleLinkClick() {
@@ -35,7 +38,8 @@ function More({ category,id, articles }) {
                 <img className="article-card-image" src={article.thumbnail} alt="" srcSet="" />
               </div>
                 <h2 className="snippet-title">{article.title}</h2>
-                <p className="snippet" dangerouslySetInnerHTML={{ __html: article.shortened_body }}></p>
+                <p className="snippet" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article.shortened_body) }}></p>
+                
                 
               </div>
               
@@ -61,7 +65,7 @@ function More({ category,id, articles }) {
                 <img className="article-card-image" src={article.thumbnail} alt="" srcSet="" />
               </div>
                 <h2 className="snippet-title">{article.title}</h2>
-                <p className="snippet" dangerouslySetInnerHTML={{ __html: article.shortened_body }}></p>
+                <p className="snippet" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article.shortened_body) }}></p>
                 
               </div>
               
@@ -87,7 +91,8 @@ function More({ category,id, articles }) {
                 <img className="article-card-image" src={article.thumbnail} alt="" srcSet="" />
               </div>
                 <h2 className="snippet-title">{article.title}</h2>
-                <p className="snippet" dangerouslySetInnerHTML={{ __html: article.shortened_body }}></p>
+                <p className="snippet" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article.shortened_body) }}></p>
+                
                 
               </div>
               
