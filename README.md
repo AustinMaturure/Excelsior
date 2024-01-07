@@ -45,6 +45,7 @@ Ensure you have the following installed on your machine:
    
     cd Excelsior/frontend
     npm install
+    npm run build
     npm run dev
     ```
 
