@@ -45,6 +45,7 @@ Ensure you have the following installed on your machine:
     cd Excelsior
     ( You may set up your virtual enviroment here)
     pip install -r requirements.txt
+    cd frontend
     python manage.py migrate
     python manage.py runserver
     ```
