@@ -987,9 +987,7 @@
   border-radius: 0px;
 }
 
-#scroller-business{
 
-}
 
 
 @media only screen and (max-width: 1148px) {
@@ -1134,7 +1132,7 @@ border: 0px;}
 }
 .latest-local{
   min-height: 20rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 .editors-grid{
@@ -1182,9 +1180,9 @@ padding: 0px;
 color: #1f1f1f;
 }
 
-.article{
+.editors-grid .article{
  border-bottom: 1px solid #868e97;
-margin-top: 0px;
+ margin-top: 0px;
 }
 
 .editors-title, .editors-snippet{
@@ -1223,6 +1221,10 @@ font-size: 1.5rem;
   top: 30%;
   align-items: center;
   z-index: 2;
+}
+
+.latest-local-title{
+  height: auto;
 }
 
 
