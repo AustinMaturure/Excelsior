@@ -61,7 +61,7 @@ function Top_Stories() {
     const scrollAmount = 900; // Adjust the scroll amount as needed
     const maxScroll = container.scrollWidth - container.clientWidth;
     if (container) {
-      const newPosition =
+      let newPosition =
         direction === 'next' ? scrollPosition + scrollAmount : scrollPosition - scrollAmount;
       container.scrollLeft = newPosition;
       
