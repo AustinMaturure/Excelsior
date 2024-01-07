@@ -39,8 +39,19 @@ Ensure you have the following installed on your machine:
     
     ```
 
-2. **Backend Setup:**
-  ( You may set up your virtual enviroment here)
+2. **Frontend Setup:**
+   (in new terminal)
+    ```bash
+   
+    cd Excelsior/frontend
+    npm install
+    npm run dev
+    ```
+
+    The React with Vite frontend will be accessible at `http://localhost:5175`.
+
+3.**Backend Setup:**
+  (You may set up your virtual enviroment here)
     ```bash
     cd Excelsior
     
@@ -51,18 +62,6 @@ Ensure you have the following installed on your machine:
     ```
 
     The Django backend will be accessible at `http://localhost:8000`.
-
-3. **Frontend Setup:**
-   (in new terminal)
-    ```bash
-   
-    cd Excelsior/frontend
-    npm install
-    npm run dev
-    ```
-
-    The React with Vite frontend will be accessible at `http://localhost:3000`.
-
 ## Project Structure
 
 - **`backend/`:** Django backend code.
