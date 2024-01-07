@@ -55,7 +55,8 @@ Ensure you have the following installed on your machine:
 3. **Frontend Setup:**
 
     ```bash
-    cd frontend
+    (in new terminal)
+    cd Excelsior/frontend
     npm install
     npm run dev
     ```
