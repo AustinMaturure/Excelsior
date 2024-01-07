@@ -50,7 +50,7 @@ Ensure you have the following installed on your machine:
 
     The React with Vite frontend will be accessible at `http://localhost:5175`.
 
-3.**Backend Setup:**
+3. **Backend Setup:**
   (You may set up your virtual enviroment here)
     ```bash
     cd Excelsior
