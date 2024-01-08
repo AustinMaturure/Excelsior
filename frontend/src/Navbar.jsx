@@ -31,13 +31,15 @@ function Navbar() {
       <section className="logo-footer">
         <h1
           className="logo-header"
-          style={{
-            backgroundColor: "#cf2e2e",
-            color: "white",
-            marginTop: "0px",
-            marginLeft: "1rem",
-            padding: "1rem",
-            fontSize: "2rem",
+         
+            style={{
+              backgroundColor: "#cf2e2e",
+              color: "white",
+              marginTop: "0px",
+              marginLeft: "1rem",
+              padding: "1rem",
+              fontSize: "2rem",
+            
           }}
         >
           Excelsior
@@ -47,10 +49,11 @@ function Navbar() {
         <a href="/#">LATEST /</a>
         <NavLink to="/">HOME /</NavLink>
         <NavLink to="category/Local">LOCAL /</NavLink>
-        <a href="/#">CRIME /</a>
-        <a href="/#">YOUTH /</a>
         <NavLink to="category/Sport">SPORT /</NavLink>
         <NavLink to="category/Schools">SCHOOL</NavLink>
+        <NavLink to="category/Accidents">ACCIDENTS /</NavLink>
+        <NavLink to="category/Crime">CRIME /</NavLink>
+       
         <FaSearch className="search-btn" onClick={handleClick} />
         <input
           type="search"

@@ -92,7 +92,8 @@
   margin-top: 18px;
   text-overflow: ellipsis;
   overflow: hidden;
-  min-height: 100%;
+
+  min-height: 80%;
 }
 
 #cat-card-0 .cat-card-info{
