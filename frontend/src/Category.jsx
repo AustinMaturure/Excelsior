@@ -40,9 +40,9 @@ function Category() {
                         (article) =>
                             article.category.name === category ||
                             article.category.parent_category === category
-                    )
+                    ).reverse()
                     .slice(0, visibleArticles)
-                    .reverse()
+                    
                     .map((article, index) => (
                         <section className={`cat-section ${category}`} key={article.id}>
                             <Link to={`/articles/${article.slug}`} style={{ textDecoration: 'none' }}>
