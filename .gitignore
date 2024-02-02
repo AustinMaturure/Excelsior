@@ -33,3 +33,6 @@ bower_components
 psd
 thumb
 sketch
+
+# Add dist folder to be tracked
+dist/
