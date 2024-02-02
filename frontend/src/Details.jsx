@@ -89,10 +89,11 @@ function Details() {
               />
             </div>
             <div className={`article-image ${expanded ? 'sticky' : ''}`}>
-              <img src={matchingItem.thumbnail} alt="" />
+              <img loading="lazy" src={matchingItem.thumbnail} alt="" />
               <div className="additional-images">
                 {matchingItem.images.map(image => (
                   <img
+                  loading="lazy"
                     key={image.id}
                     src={image.image}
                     className="additional-image"

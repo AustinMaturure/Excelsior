@@ -194,7 +194,7 @@ function Top_Stories() {
               <div className="local-image-container">
                 
               </div>
-            <img src={article.thumbnail} className="local-image" alt={article.thumbnail.description} srcSet="" />
+            <img loading="lazy" src={article.thumbnail} className="local-image" alt={article.thumbnail.description} srcSet="" />
             <div className="latest-local-text">
             <h2 className="latest-local-date">
                 {article.category.name}
@@ -249,7 +249,7 @@ function Top_Stories() {
               <div className="local-image-container">
                 
               </div>
-            <img src={article.thumbnail} className="local-image" alt={article.thumbnail.description} srcSet="" />
+            <img loading="lazy" src={article.thumbnail} className="local-image" alt={article.thumbnail.description} srcSet="" />
             <div className="latest-local-text">
               <h2 className="latest-local-date">
                 {article.category.name}
@@ -306,7 +306,7 @@ function Top_Stories() {
                 </div>
                   <div className="thefront">
                     <div className="local-image-container">
-                      <img src={article.thumbnail} className="local-image" alt={article.thumbnail.description} srcSet="" />
+                      <img loading="lazy" src={article.thumbnail}  className="local-image" alt={article.thumbnail.description} srcSet="" />
                     </div>
                   
                   <div className="latest-local-text">
@@ -358,7 +358,7 @@ function Top_Stories() {
               <div className="local-image-container">
                 
               </div>
-            <img src={article.thumbnail} className="local-image" alt={article.thumbnail.description} srcSet="" />
+            <img loading="lazy" src={article.thumbnail}  className="local-image" alt={article.thumbnail.description} srcSet="" />
             <div className="latest-local-text">
               <h2 className="latest-local-date">
               {article.category.name}
