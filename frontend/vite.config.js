@@ -15,7 +15,7 @@ export default defineConfig({
         // Specify the path to your JavaScript entry file
         main: 'src/main.jsx',
         // Specify the path to your CSS entry file
-        css: './src/css/index.css',
+        css: 'src/css/index.css',
       },
       output: {
         assetFileNames:(file) => {
