@@ -7,7 +7,7 @@ const cssFileName = 'index.min.css'
 export default defineConfig({
   base: '',
   plugins: [react()],
-  publicDir: './public',
+  publicDir: './static',
   build: {
     outDir: 'static',
     rollupOptions: {
