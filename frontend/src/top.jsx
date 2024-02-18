@@ -483,7 +483,7 @@ function Top_Stories() {
                   <h2 className="editors-title">{article.title}</h2>
                   <h3 className="editors-snippet" >{article.shortened_body.slice(0, 100) + '...'}</h3>
                 </div>
-                <div className="editors-box"><img className="editors-img" src={article.thumbnail} alt="article-image" /></div>
+                <div className="editors-box"><img loading="lazy" className="editors-img" src={article.thumbnail} alt="article-image" /></div>
               </div>
             </Link>
           </div>
