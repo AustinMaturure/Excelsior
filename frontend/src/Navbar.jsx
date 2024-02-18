@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaSearch } from "react-icons/fa";
 import { NavLink, useLocation } from "react-router-dom";
 import "../src/css/nav.css";
-import logo from "../static/Excelsior-News-Logo-544 copy.png"
+import logo from "../static/Excelsior-News-Logo-544.png"
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(window.innerWidth <= 726);
