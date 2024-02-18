@@ -9,6 +9,7 @@ export default defineConfig({
   plugins: [react()],
   publicDir: './public',
   build: {
+    outDir: 'static',
     rollupOptions: {
       output: {
         assetFileNames:(file) => {
