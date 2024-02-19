@@ -9,7 +9,6 @@ class Staff(models.Model):
         upload_to="staff_images")  # Adjust the upload_to path
     email = models.EmailField(blank=True, null=True)
     phone_number = models.CharField(max_length=15, blank=True, null=True)
-
     def __str__(self):
         return self.name
 

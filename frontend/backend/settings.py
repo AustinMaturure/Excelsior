@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6yin2@o&y)$ycfo0i6y%=zb*8&g_r(+h86u6!)ya0jn2&-o^l3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-os.environ['DATABASE_URL'] = "postgresql://austin:Q_6LJWZ7dvpefVBAqNFaiQ@news-articles-1884.g8x.gcp-southamerica-east1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full"
+os.environ['DATABASE_URL'] = "postgresql://muno:sG_si1k2sp0yI1MRJOoM9A@articles-1887.g8x.gcp-southamerica-east1.cockroachlabs.cloud:26257/articles?sslmode=verify-full"
 
 
 # other properties
