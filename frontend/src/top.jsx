@@ -18,7 +18,7 @@ function Top_Stories() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:1204/articles/');
+        const response = await fetch('articles/api');
 
         if (!response.ok) {
           throw new Error('Network response was not ok');
