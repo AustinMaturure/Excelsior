@@ -26,7 +26,7 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name="base.html")),
     re_path(r'.*?/api', include('api.urls')),
     re_path(r'articles/.*?/api/', include('api.urls')),
-       re_path(r'articles/.*?', include('api.urls')),
+    re_path(r'articles/.*?', include('api.urls')),
     path('api/', include('api.urls')),
     path('api/categories', include('api.urls')),
     path('api/articles/<int:article_id>/increment_views/',
