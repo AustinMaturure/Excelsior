@@ -24,6 +24,7 @@ pycodestyle==2.10.0
 Pygments==2.16.1
 pytz==2023.3
 dj-database-url==2.1.0
+django-cockroachdb==5.0
 requests==2.31.0
 snowballstemmer==2.2.0
 sqlparse==0.4.4
