@@ -89,16 +89,14 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-os.environ['DATABASE_URL'] = "postgresql://muno:sG_si1k2sp0yI1MRJOoM9A@articles-1887.g8x.gcp-southamerica-east1.cockroachlabs.cloud:26257/articles?sslmode=verify-full"
+os.environ['DATABASE_URL'] = "postgresql://muno:sG_si1k2sp0yI1MRJOoM9A@articles-1887.g8x.gcp-southamerica-east1.cockroachlabs.cloud:26257/articles?sslmode=verify-full&sslrootcert=C:/Users/Austin/AppData/Roaming/postgresql/root.crt"
 
-# Configure the default database using dj_database_url
+# Import dj_database_url module
+import dj_database_url
+
+# Configure the database using dj_database_url
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ['DATABASE_URL'],
-        engine='django_cockroachdb',
-        ssl_require=False  # Disable SSL certificate verification
-        
-    )
+    'default': dj_database_url.config()
 }
 
 
