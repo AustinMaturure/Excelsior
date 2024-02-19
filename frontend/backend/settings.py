@@ -89,10 +89,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-os.environ['DATABASE_URL'] = "postgresql://muno:sG_si1k2sp0yI1MRJOoM9A@articles-1887.g8x.gcp-southamerica-east1.cockroachlabs.cloud:26257/articles?sslmode=verify-full&sslrootcert=C:/Users/Austin/AppData/Roaming/postgresql/root.crt"
+ssl_cert_path = os.path.join(BASE_DIR, 'certificates', 'root.crt')
 
-# Import dj_database_url module
-import dj_database_url
+# Set the environment variable DATABASE_URL
+os.environ['DATABASE_URL'] = f"postgresql://muno:sG_si1k2sp0yI1MRJOoM9A@articles-1887.g8x.gcp-southamerica-east1.cockroachlabs.cloud:26257/articles?sslmode=verify-full&sslrootcert={ssl_cert_path}"
+
 
 # Configure the database using dj_database_url
 DATABASES = {
