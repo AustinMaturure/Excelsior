@@ -18,7 +18,7 @@ function Top_Stories() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('articles/api');
+        const response = await fetch('https://main--excelsiornews.netlify.app/articles/api');
 
         if (!response.ok) {
           throw new Error('Network response was not ok');
