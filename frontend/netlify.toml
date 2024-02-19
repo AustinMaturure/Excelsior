@@ -1,3 +1,7 @@
 [build]
   command = "sh ./build.sh"
   publish = "static"
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
