@@ -97,8 +97,10 @@ DATABASES = {
         default=os.environ['DATABASE_URL'],
         engine='django_cockroachdb',
         ssl_require=False  # Disable SSL certificate verification
+        
     )
 }
+
 
 
 # Password validation
