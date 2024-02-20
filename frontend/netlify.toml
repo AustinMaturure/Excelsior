@@ -1,6 +1,7 @@
 [build]
   command = "sh ./build.sh"
   publish = "static"
+functions = "netlify_functions"
 [[redirects]]
 from = "/*"
 to = "/index.html"
