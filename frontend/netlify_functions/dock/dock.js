@@ -3,12 +3,12 @@ const { spawn } = require('child_process');
 
 exports.handler = async (event, context) => {
   // Pull your Docker container
-  const pullProcess = spawn('docker', ['pull', 'astindocked/excelsior:frontend-django']);
+  const pullProcess = spawn('docker', ['pull', 'austindocked/excelsior:frontend-django']);
 
   pullProcess.on('exit', (code) => {
     if (code === 0) {
       // Run your Docker container
-      const runProcess = spawn('docker', ['run', '-d', '-p', '8000:8000', 'austindockd/excelsior:frontend-django']);
+      const runProcess = spawn('docker', ['run', '-d', '-p', '8000:8000', 'austindocked/excelsior:frontend-django']);
       
       runProcess.on('exit', (code) => {
         if (code === 0) {
