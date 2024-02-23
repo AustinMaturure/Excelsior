@@ -18,7 +18,7 @@ function Top_Stories() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://excelsior-415216.rj.r.appspot.com/articles/api');
+        const response = await fetch('https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/articles/api');
 
         if (!response.ok) {
           throw new Error('Network response was not ok');
