@@ -1,5 +1,4 @@
-# Use an official Python runtime as a parent image
-FROM python:3.9-slim
+FROM python:3.10.4-slim-bullseye
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -8,21 +7,21 @@ ENV PYTHONUNBUFFERED 1
 # Set the working directory in the container
 WORKDIR /app
 
-# Install dependencies
-COPY requirements.txt /app/
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    netcat postgresql-client mime-support \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install gunicorn
 
-# Copy the rest of the application code
-COPY . /app/
+# Copy the Django project code into the container
+COPY . .
 
-# Run the application
-CMD ["gunicorn", "backend.wsgi:application", "--bind", "0.0.0.0:8000"]
+# Expose the port (Cloud Run uses the PORT environment variable)
+ENV PORT 8080
+EXPOSE 8080
 
-FROM nginx:latest
-
-# Copy the NGINX configuration file from the host into the container
-COPY nginx.conf /etc/nginx/nginx.conf
-
-# Expose port 80 for HTTP traffic
-EXPOSE 443
+# Run the Django development server
+CMD exec gunicorn mysite.wsgi:application --bind :$PORT --workers 1 --threads 8

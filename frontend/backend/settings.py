@@ -59,9 +59,11 @@ MIDDLEWARE = [
     
 ]
 
-CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = [
     'https://main--excelsiornews.netlify.app',
+    'https://excelsior-415216.rj.r.appspot.com'
+
     # Add any other domains if necessary
 ]
 
