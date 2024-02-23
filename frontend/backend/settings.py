@@ -58,7 +58,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     
 ]
+CORS_ALLOWED_ORIGINS = [
+    "https://excelsiornews.netlify.app",
+    'https://main--excelsiornews.netlify.app',
+        'https://excelsior-415216.rj.r.appspot.com'
 
+]
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = [
     'https://main--excelsiornews.netlify.app',
