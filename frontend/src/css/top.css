@@ -280,6 +280,7 @@
   transform: rotateY(180deg);
   line-height: 1.4;
   min-height: 100%;
+  max-width: 100%;
 }
 
 .thefront {
@@ -371,7 +372,7 @@
   border: none;
   font-size: 1.5rem;
   text-align: center;
-  min-height: 3rem;
+  min-height: 2rem;
 
   cursor: pointer;
   box-shadow: 2px 2px #1f1f1f;
@@ -1066,6 +1067,7 @@
   .container {
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
   }
   .local {
     display: flex;
@@ -1168,7 +1170,7 @@ border: 0px;}
 }
 
 .item{
-  border-radius: 12px;
+  border-radius: 6px;
 }
 
 #header-local-editors{
