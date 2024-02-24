@@ -60,6 +60,18 @@
   position: relative;
 }
 
+.typing-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.typing-text{
+  padding: 2rem;
+  text-align: center;font-family: "Excon";
+  color: #1f1f1f;
+}
+
 .article-text::first-letter {
   font-size: 3rem;
   font-style: italic;

@@ -50,8 +50,8 @@ function Details() {
   }, [matchingItem]);
 
   if (!matchingItem) {
-    return <div>
-      <h1>Typing Article...</h1></div>; // Add a loading state
+    return <div className="typing-div">
+      <h1 className="typing-text">Typing Article...</h1></div>; // Add a loading state
   }
 
 
