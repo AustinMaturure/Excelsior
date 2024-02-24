@@ -89,13 +89,13 @@ function Details() {
               />
             </div>
             <div className={`article-image ${expanded ? 'sticky' : ''}`}>
-              <img loading="lazy" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/api/articles/${matchingItem.thumbnail}`} alt="" />
+              <img loading="lazy" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${matchingItem.thumbnail}`} alt="" />
               <div className="additional-images">
                 {matchingItem.images.map(image => (
                   <img
                   loading="lazy"
                     key={image.id}
-                    src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/api/articles/${image.image}`}
+                    src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${image.image}`}
                     className="additional-image"
                     alt={image.description}
                   />
