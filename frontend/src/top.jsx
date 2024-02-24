@@ -174,7 +174,7 @@ function Top_Stories() {
     <Link to={`/articles/${article.slug}`} style={{ textDecoration: 'none' }} key={article.id}>
       { [2, 6, 10].includes(index) ? (
         <div key={article.id} className={`latest-local local-${index}`} style={
-          { backgroundImage: `url(${window.location.protocol}//${window.location.host}${article.thumbnail})` }
+          {  backgroundImage: `url(https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${item.thumbnail})` }
            
         }>
           <h2 className="extended-card-title">{article.title}</h2> 
@@ -229,7 +229,7 @@ function Top_Stories() {
     <Link to={`/articles/${article.slug}`} style={{ textDecoration: 'none' }} key={article.id}>
       { [2, 6, 10].includes(index) ? (
         <div key={article.id} className={`latest-local local-${index}`} style={
-          { backgroundImage: `url(${window.location.protocol}//${window.location.host}${article.thumbnail})` }
+          { backgroundImage: `url(https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${item.thumbnail})`, }
            
         }>
           <h2 className="extended-card-title">{article.title}</h2> 
@@ -288,7 +288,7 @@ function Top_Stories() {
             <Link to={`/articles/${article.slug}`} style={{ textDecoration: 'none' }} key={article.id}>
             { [2, 6, 10].includes(index) ? (
               <div key={article.id} className={`latest-local local-${index}`} style={
-                { backgroundImage: `url(${window.location.protocol}//${window.location.host}${article.thumbnail})` }
+                {  backgroundImage: `url(https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${item.thumbnail})` }
                  
               }>
                 <h2 className="extended-card-title">{article.title}</h2> 
@@ -338,7 +338,7 @@ function Top_Stories() {
             <Link to={`/articles/${article.slug}`} style={{ textDecoration: 'none' }} key={article.id}>
       { [2, 6, 10].includes(index) ? (
         <div key={article.id} className={`latest-local local-${index}`} style={
-          { backgroundImage: `url(${window.location.protocol}//${window.location.host}${article.thumbnail})` }
+          { backgroundImage: `url(https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${item.thumbnail})`, }
            
         }>
           <h2 className="extended-card-title">{article.title}</h2> 
@@ -416,7 +416,7 @@ function Top_Stories() {
                 <div
                   className="box"
                   style={{
-                    backgroundImage: `url(${article.thumbnail})`,
+                    backgroundImage: `url(https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${item.thumbnail})`
                   }}
                 >
                   <h2 className="scroller-missed-title">{article.title}</h2>
@@ -456,7 +456,7 @@ function Top_Stories() {
                 <div
                   className="box"
                   style={{
-                    backgroundImage: `url(${article.thumbnail})`,
+                    backgroundImage: `url(https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${item.thumbnail})`,
                   }}
                 >
                   <h2 className="scroller-missed-title">{article.title}</h2>
@@ -514,7 +514,7 @@ function Top_Stories() {
                 <div
                   className="box"
                   style={{
-                    backgroundImage: `url(${article.thumbnail})`,
+                    backgroundImage: `url(https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${item.thumbnail})`,
                   }}
                 >
                   <h2 className="scroller-missed-title">{article.title}</h2>
