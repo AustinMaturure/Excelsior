@@ -82,7 +82,8 @@
 }
 
 .header-local {
-  min-width: 20rem;text-align: center;
+  min-width: 20rem;
+  text-align: center;
   align-self: center;
 }
 .header-local,
@@ -538,7 +539,6 @@
   .header-local {
     text-shadow: 1px 1px #ca212a;
    
-   padding: 0.2em;
     margin-top: 0px;
 
     overflow: hidden;
@@ -1250,7 +1250,8 @@ font-size: 1.5rem;
   .container {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    padding: 30px;
+    padding: 10px;
+    row-gap: 0px;
   }
 
   .item {
