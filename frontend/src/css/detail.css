@@ -210,7 +210,7 @@
                 <div
                   className="box"
                   style={{
-                    backgroundImage: `url(${article.thumbnail})`,
+                    backgroundImage: `url(${})`,
                   }}
                 >
                   <h2 className="scroller-missed-title">{article.title}</h2>

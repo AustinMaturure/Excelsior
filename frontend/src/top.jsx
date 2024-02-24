@@ -194,7 +194,7 @@ function Top_Stories() {
               <div className="local-image-container">
                 
               </div>
-            <img loading="lazy" src={article.thumbnail} className="local-image" alt={article.thumbnail.description} srcSet="" />
+            <img loading="lazy" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} className="local-image" alt={article.thumbnail.description} srcSet="" />
             <div className="latest-local-text">
             <h2 className="latest-local-date">
                 {article.category.name}
@@ -249,7 +249,7 @@ function Top_Stories() {
               <div className="local-image-container">
                 
               </div>
-            <img loading="lazy" src={article.thumbnail} className="local-image" alt={article.thumbnail.description} srcSet="" />
+            <img loading="lazy" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} className="local-image" alt={article.thumbnail.description} srcSet="" />
             <div className="latest-local-text">
               <h2 className="latest-local-date">
                 {article.category.name}
@@ -306,7 +306,7 @@ function Top_Stories() {
                 </div>
                   <div className="thefront">
                     <div className="local-image-container">
-                      <img loading="lazy" src={article.thumbnail}  className="local-image" alt={article.thumbnail.description} srcSet="" />
+                      <img loading="lazy" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`}  className="local-image" alt={article.thumbnail.description} srcSet="" />
                     </div>
                   
                   <div className="latest-local-text">
@@ -358,7 +358,7 @@ function Top_Stories() {
               <div className="local-image-container">
                 
               </div>
-            <img loading="lazy" src={article.thumbnail}  className="local-image" alt={article.thumbnail.description} srcSet="" />
+            <img loading="lazy" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`}  className="local-image" alt={article.thumbnail.description} srcSet="" />
             <div className="latest-local-text">
               <h2 className="latest-local-date">
               {article.category.name}
@@ -483,7 +483,7 @@ function Top_Stories() {
                   <h2 className="editors-title">{article.title}</h2>
                   <h3 className="editors-snippet" >{article.shortened_body.slice(0, 100) + '...'}</h3>
                 </div>
-                <div className="editors-box"><img loading="lazy" className="editors-img" src={article.thumbnail} alt="article-image" /></div>
+                <div className="editors-box"><img loading="lazy" className="editors-img" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} alt="article-image" /></div>
               </div>
             </Link>
           </div>
