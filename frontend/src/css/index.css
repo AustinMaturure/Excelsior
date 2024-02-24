@@ -1,3 +1,10 @@
+@import url('./category.css');
+@import url('./detail.css');
+@import url('./footer.css');
+@import url('./more.css');
+@import url('./nav.css');
+@import url('./navigation.css');
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
