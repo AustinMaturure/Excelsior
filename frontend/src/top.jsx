@@ -101,7 +101,7 @@ function Top_Stories() {
             className={`item item-${index + 1}`}
             key={index}
             style={{
-              backgroundImage: `url(https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/media/article_thumbnails/${item.thumbnail})`,
+              backgroundImage: `url(https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${item.thumbnail})`,
             }}
           >
             <Link to={`/articles/${item.slug}`} style={{ textDecoration: 'none' }}>
