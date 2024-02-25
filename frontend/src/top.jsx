@@ -513,7 +513,7 @@ function Top_Stories() {
               <div className="edt-div">
                 <div className="edt-ttl-div">
                   <h2 className="editors-title">{article.title}</h2>
-                  <h3 className="editors-snippet" >{article.shortened_body.slice(0, 100) + '...'}</h3>
+                  <h3 className="editors-snippet" >{removeTags(article.shortened_body.slice(0, 100) + '...')}</h3>
                 </div>
                 <div className="editors-box"><img loading="lazy" className="editors-img" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} alt="article-image" /></div>
               </div>

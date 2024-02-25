@@ -32,6 +32,11 @@ function Category() {
         setVisibleArticles(visibleArticles + 5); // Load 5 more articles
     };
 
+    const removeTags = (html) => {
+        const regex = /(<([^>]+)>)/gi;
+        return html.replace(regex, '');
+      };
+
     return (
         <section>
             <section className="scroller-column">
@@ -57,7 +62,7 @@ function Category() {
                                                 <h2 className='cat-card-title'>{article.title}</h2>
                                             </div>
                                             <div className="cat-card-snip-ct">
-                                                <p className='cat-card-snip'>{new DOMParser().parseFromString(article.shortened_body, 'text/html').body.innerText}</p>
+                                                <p className='cat-card-snip'>{removeTags(article.shortend_body)}</p>
                                             </div>
                                         </div>
                                     </div>

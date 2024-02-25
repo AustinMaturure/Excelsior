@@ -2,7 +2,7 @@ import React from "react";
 import "../src/css/more.css"
 import { Link } from "react-router-dom";
 import Navigaton from "./Navigation";
-import DOMPurify from 'dompurify'; 
+
 
 
 function More({ category,id, articles }) {
@@ -15,6 +15,11 @@ function More({ category,id, articles }) {
           behavior: 'smooth',
         });
       }
+
+      const removeTags = (html) => {
+        const regex = /(<([^>]+)>)/gi;
+        return html.replace(regex, '');
+      };
 
     return (
         
@@ -38,7 +43,7 @@ function More({ category,id, articles }) {
                 <img loading="lazy" className="article-card-image" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
               </div>
                 <h2 className="snippet-title">{article.title}</h2>
-                <p className="snippet" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article.shortened_body) }}></p>
+                <p className="snippet" >{removeTags(article.shortened_body)}</p>
                 
                 
               </div>
@@ -65,7 +70,7 @@ function More({ category,id, articles }) {
                 <img loading="lazy" className="article-card-image" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
               </div>
                 <h2 className="snippet-title">{article.title}</h2>
-                <p className="snippet" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article.shortened_body) }}></p>
+                <p className="snippet" >{removeTags(article.shortened_body)}</p>
                 
               </div>
               
@@ -91,7 +96,7 @@ function More({ category,id, articles }) {
                 <img loading="lazy" className="article-card-image" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
               </div>
                 <h2 className="snippet-title">{article.title}</h2>
-                <p className="snippet" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article.shortened_body) }}></p>
+                <p className="snippet" > {removeTags(article.shortened_body)}</p>
                 
                 
               </div>
