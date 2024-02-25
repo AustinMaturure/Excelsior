@@ -89,6 +89,25 @@ function Top_Stories() {
     setTickerTitles(data.map(item => item));
   }, [data]);
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const removeTags = (html) => {
+    const regex = /(<([^>]+)>)/gi;
+    return html.replace(regex, '');
+  };
+
 
   
   return (
@@ -276,53 +295,66 @@ function Top_Stories() {
           <hr color="#1f1f1f" width="98%" style={{  borderWidth: "1px" }} ></hr>
           <hr color="#1f1f1f" width="98%" style={{  borderwidth: "0.5px" }} />
         </div>
-      <div className="local">
-        
-        {data
-          .filter(
-            (article) =>
-              article.category.name === "Schools" ||
-              article.category.parent_category === "Schools"
-          )
-          .slice(0, 6)
-          .map((article, index) => (
-            <Link to={`/articles/${article.slug}`} style={{ textDecoration: 'none' }} key={article.id}>
-            { [2, 6, 10].includes(index) ? (
-              <div key={article.id} className={`latest-local local-${index}`} style={
-                {  backgroundImage: `url(https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail})` }
-                 
-              }>
-                <h2 className="extended-card-title">{article.title}</h2> 
-               
-                <h2
-                          className="title" style={{display:"none"}}
-                          dangerouslySetInnerHTML={{ __html: article.shortened_body }}
-                        ></h2>
-              </div>
-            ) : (
-                <div key={article.id} className={`latest-local local-${index}`}>
-                  
-                <div className="theback">
-                  <p className="article-card-snippet" dangerouslySetInnerHTML={{ __html: article.shortened_body }}></p>
-                </div>
-                  <div className="thefront">
-                  <div className="content-block">
-              <div className="content-text"><div className="thumb">
-                <img loading="lazy" className="article-card-image" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
-              </div>
-                <h2 className="snippet-title">{article.title}</h2>
-                <p className="snippet" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article.shortened_body) }}></p>
-                
-              </div>
-              </div>
+        <div className="local">
+  {data
+    .filter(
+      (article) =>
+        article.category.name === "Schools" ||
+        article.category.parent_category === "Schools"
+    )
+    .slice(0, 6)
+    .map((article, index) => (
+      <Link
+        to={`/articles/${article.slug}`}
+        style={{ textDecoration: 'none' }}
+        key={article.id}
+      >
+        {/* The following line should be moved outside the <Link> tag */}
+        { [2, 6, 10].includes(index) ? (
+          <div key={article.id} className={`latest-local local-${index}`} style={{ backgroundImage: `url(https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail})` }}>
+            <h2 className="extended-card-title">{article.title}</h2> 
+            {/* This <h2> element is not closed properly */}
+            {/* I'm assuming you want to display the title here, but it's currently commented out. */}
+            {/* Uncomment the following lines if you want to display the title */}
+            {/* <h2 className="title" style={{ display: "none" }} dangerouslySetInnerHTML={{ __html: article.shortened_body }}></h2> */}
+          </div>
+        ) : (
+          <div key={article.id} className={`latest-local local-${index}`}>
+            <div className="theback">
+              <p className="article-card-snippet" dangerouslySetInnerHTML={{ __html: article.shortened_body }}></p>
+            </div>
+            <div className="thefront">
+              {/* The following block seems to be dependent on the 'isMobile' variable, make sure it's defined */}
+              {/* Also, there's a missing closing parenthesis for the ternary operator */}
+              {isMobile ? (
+                <div className="content-block">
+                  <div className="content-text">
+                    <div className="thumb">
+                      <img loading="lazy" className="article-card-image" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
                     </div>
-                   
-              </div>
-            )}
-          </Link>
-          ))
-            }
-        </div>
+                    <h2 className="snippet-title">{article.title}</h2>
+                    <p className="snippet">{removeTags(article.shortened_body)}</p>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <div className="local-image-container">
+                    <img loading="lazy" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} className="local-image" alt={article.thumbnail.description} srcSet="" />
+                  </div>
+                  <div className="latest-local-text">
+                    <h2 className="latest-local-date">{article.category.name}</h2>
+                    <h2 className="latest-local-title">{article.title}</h2>
+                    <p className="latest-local-cat">{new Date(article.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+        )}
+      </Link>
+    ))}
+</div>
+
         <div className="local-header-container">
       
         <hr color="#1f1f1f" width="98%" style={{  borderWidth: "0.5px" }} />
