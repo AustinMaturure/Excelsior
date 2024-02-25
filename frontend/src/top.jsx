@@ -4,6 +4,7 @@ import "../src/css/top.css";
 import React, { useState, useEffect } from 'react';
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import DOMPurify from 'dompurify'; 
 
 
 
