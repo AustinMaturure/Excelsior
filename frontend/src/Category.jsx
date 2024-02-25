@@ -62,7 +62,7 @@ function Category() {
                                                 <h2 className='cat-card-title'>{article.title}</h2>
                                             </div>
                                             <div className="cat-card-snip-ct">
-                                                <p className='cat-card-snip'>{removeTags(article.shortend_body)}</p>
+                                                <p className='cat-card-snip'>{removeTags(article.shortened_body)}</p>
                                             </div>
                                         </div>
                                     </div>
