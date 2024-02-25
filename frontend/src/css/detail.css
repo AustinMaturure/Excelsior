@@ -53,11 +53,12 @@
   text-align: justify;
   max-height: calc(var(--max-lines) * 1em * var(--line-height));
   font-family: "Excon", sans-serif;
-  margin-top: px;
+  
   line-height: var(--line-height);
   overflow: hidden;
   padding-top: 1rem;
   position: relative;
+  color: #1f1f1f;
 }
 
 .typing-div{
