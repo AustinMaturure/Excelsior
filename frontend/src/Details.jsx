@@ -108,6 +108,10 @@ function Details() {
         </div>
         
         <h1 className="more-title"> More</h1>
+
+        <div className="line" style={{ display:"flex", alignItems: "center", marginTop:"40px", justifyContent:"center"}}>
+          <hr width="80%" align="center"/>
+        </div>
         
        { <More category={matchingItem.category.name} id={matchingItem.id} articles={data}></More> } 
         

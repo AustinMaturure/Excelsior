@@ -173,7 +173,7 @@
   .article-image {
     order: 1; /* Move .article-image above .article-details */
     margin-left: 0; /* Remove the left margin */
-    margin-bottom: 1.6rem;
+    
   }
 
   .article-image.sticky {
