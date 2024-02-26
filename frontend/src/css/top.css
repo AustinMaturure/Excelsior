@@ -1070,6 +1070,10 @@
     flex-direction: column;
     margin-top: 20px;
   }
+.btnNext, .btnPrev{
+  color: #1f1f1f;
+  padding: 4px;
+}
   .scroller-media{font-size: unset;}
   .local {
     display: flex;
@@ -1253,7 +1257,7 @@ font-size: 1.5rem;
 
 
 .scroller{
-  width: 24.5rem;
+  
 }
 #scroller-1{
   margin-bottom: 0.8rem;
