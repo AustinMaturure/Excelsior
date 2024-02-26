@@ -34,7 +34,7 @@ function Navbar() {
           className="logo-header"
          
             style={{
-              backgroundColor: "#cf2e2e",
+              backgroundColor: "#ca212a",
               color: "white",
               marginTop: "0px",
               marginLeft: "1rem",
@@ -52,7 +52,7 @@ function Navbar() {
         <NavLink to="/">HOME /</NavLink>
         <NavLink to="category/Local">LOCAL /</NavLink>
         <NavLink to="category/Sport">SPORT /</NavLink>
-        <NavLink to="category/Schools">SCHOOL</NavLink>
+        <NavLink to="category/Schools">SCHOOL /</NavLink>
         <NavLink to="category/Accidents">ACCIDENTS /</NavLink>
         <NavLink to="category/Crime">CRIME /</NavLink>
        

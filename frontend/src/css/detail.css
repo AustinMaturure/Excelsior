@@ -27,7 +27,7 @@
  /* Box shadow */
   
   filter: drop-shadow(10px);
-  border:1px solid #1f1f1fc5;
+  box-shadow: 2px 2px black;
 
   border-radius: 6px;
   margin-left: 10px;
