@@ -1191,7 +1191,15 @@ border: 0px;}
 .local-header-container{
   padding: 15px;
   line-height: 2.9em;
+  display: flex;
+  height: 1rem;
+  justify-content: center;
   
+}
+
+.tool3{
+  font-family: 'Excon', sans-serif;
+  color: #1f1f1f;
 }
 .more-news{
 padding: 0px;
@@ -1236,11 +1244,13 @@ font-size: 1.5rem;
 }
 .header-missed{
   font-size: 7vw;
+  margin-top: 0px;
+  display: flex;
 }
 
 
 .scroller{
-  width: 21rem;
+  width: 24.5rem;
 }
 #scroller-1{
   margin-bottom: 0.8rem;
@@ -1250,7 +1260,7 @@ font-size: 1.5rem;
   position: relative;
   display: flex;
 
-   width: 21.2rem;
+   width: 24.5rem;
   top: 30%;
   align-items: center;
   z-index: 2;
