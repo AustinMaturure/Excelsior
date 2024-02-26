@@ -1070,6 +1070,7 @@
     flex-direction: column;
     margin-top: 20px;
   }
+  .scroller-media{font-size: unset;}
   .local {
     display: flex;
     flex-direction: column;
@@ -1221,7 +1222,13 @@ color: #1f1f1f;
 font-family: 'Author';
 font-size: 1.5rem;
 }
-
+.tools{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
 
 
 .missed-header-container{
@@ -1233,14 +1240,17 @@ font-size: 1.5rem;
 
 
 .scroller{
-  width: 24.5rem;
+  width: 21rem;
+}
+#scroller-1{
+  margin-bottom: 0.8rem;
 }
 
 .scroller-overlay {
   position: relative;
   display: flex;
 
-   width: 24.5rem;
+   width: 21.2rem;
   top: 30%;
   align-items: center;
   z-index: 2;
