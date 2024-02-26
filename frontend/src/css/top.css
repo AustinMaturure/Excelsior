@@ -1076,6 +1076,7 @@
     padding-left: 11px;
     padding-right: 15px;
     margin-top: 3rem;
+    gap: 2rem;
   
   }
   .navigation-buttons{
@@ -1154,6 +1155,8 @@ border: 0px;}
   min-height: 20rem;
   margin-bottom: 5rem;
 }
+
+.latest-local-cat, .latest-local-date{margin: 0px}
 
 .editors-grid{
   max-width: 100%;
