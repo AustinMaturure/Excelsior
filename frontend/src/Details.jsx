@@ -8,7 +8,11 @@ function Details() {
   const [data, setData] = useState([]);
   const [expanded, setExpanded] = useState(false); // Track expansion state
   const { slug } = useParams();
-
+  useEffect(() => {window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });})
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
