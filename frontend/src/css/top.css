@@ -1111,7 +1111,7 @@
   }
 
   .content-block{
-    padding: 1rem;
+    padding: 1rem !important;
   }
   .latest-local.local-2:before,
 .latest-local.local-6:before,
