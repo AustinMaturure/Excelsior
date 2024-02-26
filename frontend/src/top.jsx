@@ -172,6 +172,9 @@ function Top_Stories() {
          
           
         ))}
+        
+      </ul>
+      <ul >
         {tickerTitles.map((title, index) => (
            <Link to={`/articles/${title.slug}`} style={{ textDecoration: 'none', color:"black" }} key={title.id}>
           
@@ -180,6 +183,7 @@ function Top_Stories() {
          
           
         ))}
+        
       </ul>
     </div>
    
