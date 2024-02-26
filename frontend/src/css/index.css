@@ -11,7 +11,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: #1a1a1a;
   background-color: #242424;
 
   font-synthesis: none;
@@ -63,6 +63,9 @@ button {
   :root {
     color: #213547;
     background-color: #ffffff;
+  }
+  p{
+    color: #1a1a1a;
   }
   a:hover {
     color: #747bff;
