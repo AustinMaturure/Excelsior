@@ -509,7 +509,7 @@ function Top_Stories() {
           ))}
       </div>
       </div>
-      <div className="local-header-container">
+      <div className="local-header-container" id="editors-local-header-container">
       
         <hr color="#1f1f1f" width="98%" style={{  borderWidth: "0.5px" }} />
           <h1 className="header-local" id='header-local-editors' style={{fontFamily:'Excon', textShadow:'none'}}>Editor's Pick's</h1>

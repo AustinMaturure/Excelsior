@@ -45,10 +45,10 @@
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  box-shadow: 2px 2px #1f1f1f; /* Box shadow */
+  box-shadow: 2px 2px rgb(0, 0, 0); /* Box shadow */
   
   z-index: 0;
-  border: 1px solid #1f1f1f; /* Border color */
+  border: 1px solid rgb(0, 0, 0); /* Border color */
   transition: border-radius 1s;
 }
 .item:before,
@@ -117,7 +117,7 @@
   margin-top: 8rem;
  
   
-  color: #1f1f1f;
+  color: #1a1a1a;
   background-color: #fffffff2;
   border: 1px solid #1f1f1f;
   box-shadow: 1px 1px #1f1f1f;
@@ -150,7 +150,7 @@
   
   overflow-x: scroll;
   overflow-y: hidden;
-  border: 10px #1f1f1f;
+  border: 10px #1a1a1a;
 
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -219,7 +219,7 @@
 }
 
 .latest-local-cat{
-  color: #ca2129be;
+  color: #ca212a;
   font-size: 0.8rem;
   padding: 4px;
   
@@ -236,7 +236,7 @@
 
 .latest-local-title {
   font-size: 1.1rem;
-  color: #1f1f1f;
+  color: #1a1a1a;
   margin-bottom: 0px;
 }
 .latest-local-date {
@@ -548,7 +548,7 @@
     font-size: 3rem;
     text-align: center;
 
-    color: #1f1f1f;
+    color: #1a1a1a;
   }
   
 
@@ -643,10 +643,10 @@
   .scroll-name {
     font-size: 2rem;
     padding: 10px;
-    box-shadow: 5px 5px #1f1f1f;
+    box-shadow: 5px 5px #1a1a1a;
     background-color: #f9f9f9;
-    border: 3px solid #1f1f1f;
-    color: #1f1f1f;
+    border: 3px solid #1a1a1a;
+    color: #1a1a1a;
     border-radius: 8px;
   }
 
@@ -1166,7 +1166,7 @@ border: 0px;}
 
 .editors-grid{
   max-width: 100%;
-  background-color: #1f1f1f;
+  background-color: #1a1a1a;
   
   border-top-left-radius: 14px;
     border-top-right-radius: 14px;
@@ -1233,6 +1233,10 @@ color: #1f1f1f;
   font-family: 'Excon';
   
 }
+#editors-local-header-container{
+  text-align: center;
+  line-height: 1em;
+}
 
 .editors-snippet{
 font-family: 'Author';
@@ -1255,10 +1259,6 @@ font-size: 1.5rem;
   
 }
 
-
-.scroller{
-  
-}
 #scroller-1{
   margin-bottom: 0.8rem;
 }
