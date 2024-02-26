@@ -6,7 +6,7 @@ body {
 
 .responsive-nav {
   max-height: 4rem;
-  min-width: 100%;
+  max-width: 100%;
   display: flex;
   background-color: #ca212a;
   

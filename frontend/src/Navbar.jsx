@@ -53,7 +53,7 @@ function Navbar() {
         <NavLink to="category/Local">LOCAL /</NavLink>
         <NavLink to="category/Sport">SPORT /</NavLink>
         <NavLink to="category/Schools">SCHOOL /</NavLink>
-        <NavLink to="category/Accidents">ACCIDENTS /</NavLink>
+        <NavLink to="category/Accidents">ACCIDENTS/</NavLink>
         <NavLink to="category/Crime">CRIME /</NavLink>
        
         <FaSearch className="search-btn" onClick={handleClick} />
