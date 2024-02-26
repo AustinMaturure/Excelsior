@@ -425,17 +425,31 @@ function Top_Stories() {
             <p className="article-card-snippet" dangerouslySetInnerHTML={{ __html: article.shortened_body }}></p>
           </div>
             <div className="thefront">
-              <div className="local-image-container">
-                
-              </div>
-            <img loading="lazy" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`}  className="local-image" alt={article.thumbnail.description} srcSet="" />
-            <div className="latest-local-text">
-              <h2 className="latest-local-date">
-              {article.category.name}
-              </h2>
-              <h2 className="latest-local-title">{article.title}</h2>
-              <p className="latest-local-cat">{new Date(article.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-            </div>
+            {isMobile ? (
+                <div className="content-block">
+                  <div className="content-text">
+                    <div className="thumb">
+                      <img loading="lazy" className="article-card-image" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
+                    </div>
+                    <h2 className="latest-local-date">{article.category.name}</h2>
+
+                    <h2 className="snippet-title">{article.title}</h2>
+                    <p className="snippet">{removeTags(article.shortened_body)}</p>
+                    <p className="latest-local-cat">{new Date(article.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <div className="local-image-container">
+                    <img loading="lazy" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} className="local-image" alt={article.thumbnail.description} srcSet="" />
+                  </div>
+                  <div className="latest-local-text">
+                    <h2 className="latest-local-date">{article.category.name}</h2>
+                    <h2 className="latest-local-title">{article.title}</h2>
+                    <p className="latest-local-cat">{new Date(article.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                  </div>
+                </>
+              )}
           </div>
         </div>
       )}

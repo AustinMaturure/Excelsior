@@ -1080,7 +1080,7 @@
     flex-direction: column;
   
     margin-top: 3rem;
-    gap: 2rem;
+    gap: 4rem;
   
   }
 
@@ -1109,7 +1109,9 @@
   position: relative;
   
   }
-
+  #line-2{
+    margin-top: 0px !important;
+  }
   .content-block{
     padding: 1rem !important;
   }
@@ -1150,6 +1152,7 @@ border: 0px;}
  max-width: 100%;
  min-height: 19rem;
  margin: 1rem;
+ margin-top: 0px;
  
  }
 .local-image{
