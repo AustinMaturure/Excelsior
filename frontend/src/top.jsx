@@ -231,7 +231,7 @@ function Top_Stories() {
                     </div>
                     <h2 className="latest-local-date">{article.category.name}</h2>
 
-                    <h2 className="snippet-title">{article.title}</h2>
+                    <h2 className="snippet-title" id="snippet-title-main">{article.title}</h2>
                     <p className="snippet">{removeTags(article.shortened_body)}</p>
                     <p className="latest-local-cat">{new Date(article.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                   </div>
@@ -300,7 +300,7 @@ function Top_Stories() {
                     </div>
                     <h2 className="latest-local-date">{article.category.name}</h2>
 
-                    <h2 className="snippet-title">{article.title}</h2>
+                    <h2 className="snippet-title" id="snippet-title-main">{article.title}</h2>
                     <p className="snippet">{removeTags(article.shortened_body)}</p>
                     <p className="latest-local-cat">{new Date(article.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                   </div>
@@ -369,7 +369,7 @@ function Top_Stories() {
                     </div>
                     <h2 className="latest-local-date">{article.category.name}</h2>
 
-                    <h2 className="snippet-title">{article.title}</h2>
+                    <h2 className="snippet-title" id="snippet-title-main">{article.title}</h2>
                     <p className="snippet">{removeTags(article.shortened_body)}</p>
                     <p className="latest-local-cat">{new Date(article.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                   </div>
@@ -433,7 +433,7 @@ function Top_Stories() {
                     </div>
                     <h2 className="latest-local-date">{article.category.name}</h2>
 
-                    <h2 className="snippet-title">{article.title}</h2>
+                    <h2 className="snippet-title" id="snippet-title-main">{article.title}</h2>
                     <p className="snippet">{removeTags(article.shortened_body)}</p>
                     <p className="latest-local-cat">{new Date(article.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                   </div>

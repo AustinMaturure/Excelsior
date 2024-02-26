@@ -1074,6 +1074,9 @@
   color: #1f1f1f;
   padding: 4px;
 }
+#snippet-title-main{
+  margin: 0px;
+}
   .scroller-media{font-size: unset;}
   .local {
     display: flex;
@@ -1261,6 +1264,7 @@ font-size: 1.5rem;
 
 .missed-header-container{
   margin-top:3rem;
+  margin-bottom: 1rem;
 }
 .header-missed{
   font-size: 7vw;
