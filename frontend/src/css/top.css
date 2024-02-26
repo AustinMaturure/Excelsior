@@ -1078,8 +1078,7 @@
   .local {
     display: flex;
     flex-direction: column;
-    padding-left: 11px;
-    padding-right: 15px;
+  
     margin-top: 3rem;
     gap: 2rem;
   
@@ -1108,7 +1107,7 @@
   }
   .latest-local{
   position: relative;
-  margin-left: 6px;
+  
   }
   .latest-local.local-2:before,
 .latest-local.local-6:before,
@@ -1146,6 +1145,7 @@ border: 0px;}
  align-self: center;
  max-width: 100%;
  min-height: 19rem;
+ margin: 0px;
  
  }
 .local-image{
@@ -1160,6 +1160,7 @@ border: 0px;}
 .latest-local{
   min-height: 20rem;
   margin-bottom: 5rem;
+  padding: 0px;
 }
 
 .latest-local-cat, .latest-local-date{margin: 0px}
