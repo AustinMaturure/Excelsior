@@ -1191,9 +1191,7 @@ border: 0px;}
 .local-header-container{
   padding: 15px;
   line-height: 2.9em;
-  display: flex;
-  height: 1rem;
-  justify-content: center;
+  
   
 }
 
@@ -1244,8 +1242,7 @@ font-size: 1.5rem;
 }
 .header-missed{
   font-size: 7vw;
-  margin-top: 0px;
-  display: flex;
+  
 }
 
 
