@@ -1188,10 +1188,14 @@ border: 0px;}
    font-family: 'Excon', sans-serif;
 }
 
+#header-business{
+  text-align: center;
+}
+
 .local-header-container{
   padding: 15px;
   line-height: 2.9em;
-  text-align: center;
+ 
   
   
 }

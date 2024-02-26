@@ -172,6 +172,14 @@ function Top_Stories() {
          
           
         ))}
+        {tickerTitles.map((title, index) => (
+           <Link to={`/articles/${title.slug}`} style={{ textDecoration: 'none', color:"black" }} key={title.id}>
+          
+            <li key={index} className="ticker-title">{title.title}</li>
+            </Link>
+         
+          
+        ))}
       </ul>
     </div>
    
