@@ -170,6 +170,10 @@
     order: 2; /* Move .article-details below .article-image */
   }
 
+  #line-2{
+    margin-top: 0px;
+  }
+
   .article-image {
     order: 1; /* Move .article-image above .article-details */
     margin-left: 0; /* Remove the left margin */

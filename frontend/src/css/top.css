@@ -1139,9 +1139,9 @@ border: 0px;}
  background-size: cover;
  font-size: 1.6rem;
  align-self: center;
- max-width: 100svw;
+ max-width: 100%;
  min-height: 19rem;
- margin-left: 10px;
+ 
  }
 .local-image{
   max-width: 100%;
@@ -1191,6 +1191,7 @@ border: 0px;}
 .local-header-container{
   padding: 15px;
   line-height: 2.9em;
+  text-align: center;
   
   
 }
