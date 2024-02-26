@@ -1109,6 +1109,10 @@
   position: relative;
   
   }
+
+  .content-block{
+    padding: 1rem;
+  }
   .latest-local.local-2:before,
 .latest-local.local-6:before,
 .latest-local.local-10:before{
@@ -1145,7 +1149,7 @@ border: 0px;}
  align-self: center;
  max-width: 100%;
  min-height: 19rem;
- margin: 0px;
+ margin: 1rem;
  
  }
 .local-image{
