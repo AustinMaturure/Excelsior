@@ -309,13 +309,10 @@ function Top_Stories() {
         style={{ textDecoration: 'none' }}
         key={article.id}
       >
-        {/* The following line should be moved outside the <Link> tag */}
+       
         { [2, 6, 10].includes(index) ? (
           <div key={article.id} className={`latest-local local-${index}`} style={{ backgroundImage: `url(https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail})` }}>
             <h2 className="extended-card-title">{article.title}</h2> 
-            {/* This <h2> element is not closed properly */}
-            {/* I'm assuming you want to display the title here, but it's currently commented out. */}
-            {/* Uncomment the following lines if you want to display the title */}
             {/* <h2 className="title" style={{ display: "none" }} dangerouslySetInnerHTML={{ __html: article.shortened_body }}></h2> */}
           </div>
         ) : (
@@ -324,16 +321,18 @@ function Top_Stories() {
               <p className="article-card-snippet" dangerouslySetInnerHTML={{ __html: article.shortened_body }}></p>
             </div>
             <div className="thefront">
-              {/* The following block seems to be dependent on the 'isMobile' variable, make sure it's defined */}
-              {/* Also, there's a missing closing parenthesis for the ternary operator */}
+             
               {isMobile ? (
                 <div className="content-block">
                   <div className="content-text">
                     <div className="thumb">
                       <img loading="lazy" className="article-card-image" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
                     </div>
+                    <h2 className="latest-local-date">{article.category.name}</h2>
+
                     <h2 className="snippet-title">{article.title}</h2>
                     <p className="snippet">{removeTags(article.shortened_body)}</p>
+                    <p className="latest-local-cat">{new Date(article.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                   </div>
                 </div>
               ) : (
