@@ -1080,11 +1080,7 @@
     gap: 2rem;
   
   }
-  @media (hover: none){
-    .news-ticker ul:hover{
-      animation-play-state: running;
-    }
-  }
+
   .navigation-buttons{
     position: absolute;
     opacity: 1;
