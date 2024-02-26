@@ -1141,8 +1141,8 @@ font-weight: bold;
 
 .additional-image{
 
-height:60px;
-width: 60px;
+height:60px !important;
+width: 60px !important;
 }
 .article-image{
 border: 0px;}
