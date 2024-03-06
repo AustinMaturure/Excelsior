@@ -16,7 +16,7 @@ Excelsior is a modern news website that uses the power of Django for the backend
 
 
 ## Screenshots 
-![Home page](frontend/picture1.jpg?raw=true "News Site Home Page")
+![Home page](frontend/picture1.jpeg?raw=true "News Site Home Page")
 
 ## Features
 
