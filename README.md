@@ -4,6 +4,7 @@ Full-stack News Website
 Excelsior is a modern news website that uses the power of Django for the backend and React for the frontend. It provides a platform for delivering and consuming news content in an efficient and user-friendly manner.
 
 ## Table of Contents
+- [Screenshots](#screenshots)
 - [Features](#features)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
@@ -12,6 +13,10 @@ Excelsior is a modern news website that uses the power of Django for the backend
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+
+
+## Screenshots 
+![Home page](/picture1.jpg?raw=true "News Site Home Page")
 
 ## Features
 
