@@ -399,6 +399,15 @@
   min-width: 100%;
 }
 
+
+.tool2{
+  font-family: 'Excon';
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media screen and (min-width: 1024px) {
   .container {
     padding-bottom: 40px;
@@ -606,6 +615,7 @@
   #scroller-business{
     border: 2px dashed #868e97;
     width: auto;
+   
 
   }
 
@@ -1304,3 +1314,5 @@ font-size: 1.5rem;
     margin-bottom: 20px;
   }
 }
+
+#

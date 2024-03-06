@@ -34,7 +34,7 @@ function Top_Stories() {
     fetchData();
   }, []);
   const apiKey = '08aa1491da2f1b37eb1107936b922036';
-  const city = 'piet retief'; // Replace with your desired city
+  const city = 'piet retief'; 
 
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
   
@@ -49,17 +49,17 @@ function Top_Stories() {
         return response.json();
       })
       .then(weatherData => {
-        console.log('Weather data:', weatherData); // Log the received data
+        console.log('Weather data:', weatherData); 
         setWeather(weatherData);
       })
       .catch(error => console.error('Error fetching weather data:', error));
-  }, []); // Em
+  }, []); 
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = (direction, containerSelector) => {
     const container = document.getElementById(containerSelector);
     const prevBut = document.querySelector('.btnPrev');
-    const scrollAmount = 900; // Adjust the scroll amount as needed
+    const scrollAmount = 900; 
     const maxScroll = container.scrollWidth - container.clientWidth;
     if (container) {
       let newPosition =
@@ -611,6 +611,7 @@ function Top_Stories() {
           <div className="tool2">
           <div className="local-header-container" id="header-business">
         <h1 className="header-missed" style={{alignSelf:"center"}}>Recipe</h1>
+        <h3 className="Ad">Recipe updated weekly</h3>
         
       </div>
           </div>
