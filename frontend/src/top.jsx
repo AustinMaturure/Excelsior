@@ -417,7 +417,7 @@ function Top_Stories() {
         <div className="local-header-container">
       
         <hr color="#1f1f1f" width="98%" style={{  borderWidth: "0.5px" }} />
-          <h1 className="header-local">LATEST/ <span className="category-desc" >all your latest, latest news</span></h1>
+          <h1 className="header-local">LATEST/ <span className="category-desc" >all your latest news</span></h1>
           <hr color="#1f1f1f" width="98%" style={{  borderWidth: "0.5px" }} />
           <hr color="#1f1f1f" width="98%" style={{  borderwidth: "0.5px" }} />
         </div>
