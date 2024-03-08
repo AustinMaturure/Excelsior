@@ -595,10 +595,11 @@
 
   .item-5,
   .item-6 {
-    animation: slideInRight 2s;
+    background-color: #868e97;
+
   }
   .item {
-    animation: slideInLeft 2s ease;
+    background-color: #868e97;
     max-width: 99svw;
   }
   .scroll-inner {
