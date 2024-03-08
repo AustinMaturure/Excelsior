@@ -127,7 +127,8 @@
 }
 .additional-images {
   display: flex;
-  flex-wrap: wrap;
+  height: 100px;
+  width: 100px;
   justify-content: start;
   gap: 10px; 
 }

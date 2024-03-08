@@ -1,4 +1,4 @@
-.container {
+.container, .skeleton-loading {
   display: grid;
   justify-content: center;
   padding: 70px;
@@ -8,11 +8,25 @@
   row-gap: 20px;
   background-color: #f9f9f9;
   grid-template-columns: repeat(11, 80px);
- 
+ transition: all 6s;
 
   grid-template-rows: repeat(6, 80px);
 }
+.skeleton-loading div {
+  
+  background: linear-gradient(90deg, #f3f2f2 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 400% 100%;
+  animation: gradientLoading 3s infinite alternate;
+}
 
+@keyframes gradientLoading {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
 .sign-up-box-title {
   margin: 0px;
   padding-top: 10px;
@@ -409,7 +423,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .container {
+  .container, .skeleton-loading {
     padding-bottom: 40px;
   }
 
@@ -830,6 +844,7 @@
   align-self: center;
   box-shadow: 5px 5px #f1f1f1;
   border: 2px solid #f1f1f1;
+  font-size: 1.2em;
   padding: 10px;
 }
 .latest-artcile-title:hover {
@@ -928,6 +943,11 @@
   transition: all 1s;
 }
 
+.skeleton-loading{
+
+  
+}
+
 .ticker-title:hover{
   color: #f9f9f9;
   background-color: #1f1f1f;
@@ -994,7 +1014,7 @@
   justify-self: center;
 }
 .email-box {
-  min-width: 96%;
+  
   min-height: 2rem;
   background-color: #f1f1f1;
 
@@ -1013,7 +1033,7 @@
 
 
 @media only screen and (max-width: 1148px) {
-  .container {
+  .container, .skeleton-loading {
     grid-template-columns: repeat(11, 64px);
     grid-template-rows: repeat(6, 64px);
   }
@@ -1054,7 +1074,7 @@
 }
 
 @media only screen and (max-width: 866px) {
-  .container {
+  .container, .skeleton-loading {
     grid-template-columns: repeat(5, 100px);
     grid-template-rows: repeat(4, 100px);
   }
@@ -1076,7 +1096,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .container {
+  .container, .skeleton-loading {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -1203,6 +1223,12 @@ border: 0px;}
 
 .item{
   border-radius: 6px;
+ 
+}
+
+.skeleton-loading div{
+  min-height: 291px;
+  transition: all 6s;
 }
 
 #header-local-editors{
@@ -1303,7 +1329,7 @@ font-size: 1.5rem;
 }
 
 @media only screen and (max-width: 480px) {
-  .container {
+  .container, .skeleton-loading {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     padding: 10px;

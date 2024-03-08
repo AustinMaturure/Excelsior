@@ -15,7 +15,21 @@ import DOMPurify from 'dompurify';
 function Top_Stories() {
   const [data, setData] = useState([]);
   const [weather, setWeather] = useState([])
-
+  const SkeletonLoading = () => {
+ 
+    return (
+      <div className="skeleton-loading">
+        <div className="item item-1"></div>
+        <div className="item item-2"></div>
+        <div className="item item-3"></div>
+        <div className="item item-4"></div>
+        <div className="item item-5"></div>
+        <div className="item item-6"></div>
+       
+      </div>
+    );
+  };
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -28,6 +42,8 @@ function Top_Stories() {
         setData(jsonData);
       } catch (error) {
         console.error('Error fetching data:', error);
+      } finally {
+        setIsLoading(false); 
       }
     };
 
@@ -53,7 +69,7 @@ function Top_Stories() {
         setWeather(weatherData);
       })
       .catch(error => console.error('Error fetching weather data:', error));
-  }, []); 
+      }, []); 
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = (direction, containerSelector) => {
@@ -115,7 +131,11 @@ function Top_Stories() {
       
      <div className="weather-info" id="weather-info"></div>
      {/* data.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 4).map((item, index) => ( */}
-    <section className="container">
+    
+    {isLoading ? (
+        <SkeletonLoading />
+      ) : (
+      <section className="container">
         {data.slice(0,4).reverse().map((item, index) => (
           <div
             className={`item item-${index + 1}`}
@@ -157,7 +177,8 @@ function Top_Stories() {
             <button className="btn-email"  ><FaArrowRight/></button>
           </div>
             
-        </div></section>
+        </div>
+</section>)}
 
         <div className="news-ticker">
         <div className="anchor">
