@@ -3,11 +3,11 @@
   margin: 0px;
   margin-top: 4rem;
   padding: 0px;
-  height: 100svh;
+
   
   color: #f1f1f1;
-  border-top-right-radius: 18px;
-  border-top-left-radius: 18px;
+  border-top-right-radius: 22px;
+  border-top-left-radius: 22px;
   font-family: "Excon";
  
   align-items: center;
@@ -44,6 +44,7 @@
   text-align: center;
   color: #f1f1f1;
   text-decoration: none;
+  background-color: #1f1f1f;
   display: flex;
   gap: 1.6rem;
 }
