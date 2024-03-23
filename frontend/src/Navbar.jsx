@@ -34,7 +34,7 @@ function Navbar() {
           className="logo-header"
          
             style={{
-              backgroundColor: "#ca212a",
+              backgroundColor: "#4A825A",
               color: "white",
               marginTop: "0px",
               marginLeft: "1rem",
