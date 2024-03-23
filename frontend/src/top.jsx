@@ -1,6 +1,6 @@
 
 import "../src/css/top.css";
-
+import hero from '../assets/drone.jpg'
 import React, { useState, useEffect } from 'react';
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -136,6 +136,7 @@ function Top_Stories() {
         <SkeletonLoading />
       ) : (
       <section className="container">
+         
         {data.slice(0,4).reverse().map((item, index) => (
           <div
             className={`item item-${index + 1}`}
@@ -170,7 +171,7 @@ function Top_Stories() {
         </div>
         <div className="item-6">
           <p className="sign-up-box-title">Be The First To Know</p>
-          <h2 className="sign-up-box-news">News, in <span style={{color:"#ca212a"}}>your</span> inbox!</h2>
+          <h2 className="sign-up-box-news">News, in <span style={{color:"#4A825A"}}>your</span> inbox!</h2>
           <p className="sign-up-box-notif" style={{fontSize:"0.7rem"}}> Get Notified whenever a new article is posted</p>
           <div className="mail" style={{display:"flex"}}>
             <input type="email"  className="email-box" name="email-box" id="email-box" title={'Email Adress'} />
@@ -195,7 +196,7 @@ function Top_Stories() {
         ))}
         
       </ul>
-      <ul >
+      <ul id="ticker-2" >
         {tickerTitles.map((title, index) => (
            <Link to={`/articles/${title.slug}`} style={{ textDecoration: 'none', color:"black" }} key={title.id}>
           

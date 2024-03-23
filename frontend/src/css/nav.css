@@ -8,7 +8,7 @@ body {
   max-height: 4rem;
   max-width: 100%;
   display: flex;
-  background-color: #ca212a;
+  background-color: #4A825A;
   
 
   gap: 1rem;
@@ -18,7 +18,7 @@ body {
   justify-content: space-between;
 }
  .logo-header{
-  background-color: #ca212a;
+  background-color: #4A825A;
   color: white;
   margin-top: 0px;
   margin-left: 1rem;
@@ -41,15 +41,15 @@ body {
   padding: 0.5rem;
 }
 .responsive-links a:hover {
-  box-shadow: 5px 5px #1f1f1f;
-  border: 2px solid #1f1f1f;
+  box-shadow: 5px 5px #FFE66D;
+  border: 2px solid #FFE66D;
   background-color: #f1f1f1;
-  color: #1f1f1f;
+  color: #FFE66D;
   font-family: "Excon";
  
 }
 .navbar {
-  background-color: #ca212a;
+  background-color: #4A825A;
   
   
   display: flex;
@@ -92,9 +92,9 @@ body {
 .logo-header{
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  border-left: 2px solid #f1f1f1;
-  border-right: 2px solid #f1f1f1;
-  background-color:#ca212a;
+  border-left: 2px solid #FFE66D;
+  border-right: 2px solid #FFE66D;
+  background-color:#4A825A;
   color: #f1f1f1;
   margin-top:0px ;
   margin-left:1rem;
@@ -109,7 +109,7 @@ body {
     display: inline;
     font-size: 1.4rem;
 
-    background-color: #ca212a;
+    background-color: #4A825A;
 
     color: white;
     border: none;

@@ -44,7 +44,7 @@ function Navbar() {
           }}
         >
          
-          Excelsior
+          Laerskool Piet Retief
         </h1>
       </section>
       <div className={isOpen ? "responsive-links" : "links"}>

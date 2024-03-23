@@ -5,7 +5,7 @@
   font-weight: bold;
   color: #1f1f1f;
   padding: 26px;
-  text-shadow: 2px 1px #ca212a;
+  text-shadow: 2px 1px #4A825A;
 }
 
 .columns-container {
@@ -27,7 +27,7 @@
 }
 
 .column-header:hover {
-  text-shadow: 2px 1px #ca212a;
+  text-shadow: 2px 1px #4A825A;
 }
 
 .article-card {
@@ -45,7 +45,7 @@
 
 .article-card:hover .snippet-title {
   
-  text-decoration: underline #ca212a;
+  text-decoration: underline #4A825A;
   
 }
 

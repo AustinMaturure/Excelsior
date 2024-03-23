@@ -25,7 +25,7 @@
   font-family: 'Excon';
   width: fit-content;
  margin-bottom: 20px;
-  text-shadow: #ca212a 1px 1px;
+  text-shadow: #4A825A 1px 1px;
 
   padding: 0px;
 }
@@ -35,7 +35,7 @@
 }
 
 .contact-us {
-  color: #ca212a;
+  color: #4A825A;
   text-decoration: none;
 }
 
@@ -54,6 +54,6 @@
   transition: all 0.2s;
 }
 .icon-link:hover {
-  color: #ca212a;
+  color: #4A825A;
   
 }

@@ -25,7 +25,7 @@ export default function Footer() {
 </div>
             <div className="about-us">
                 <h1>About us</h1>
-                <p className="about-us-text">The <span style={{ color: '#ca212a'}}>Only</span> Registered, Recognised and Approved Local Newspaper Servicing Piet Rietief, Mkhondo and 
+                <p className="about-us-text">The <span style={{ color: '#4A825A'}}>Only</span> Registered, Recognised and Approved Local Newspaper Servicing Piet Rietief, Mkhondo and 
                     Surronding Districts.
                 </p>
                 <p >
