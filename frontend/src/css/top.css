@@ -918,6 +918,10 @@
   animation-play-state: paused;
   
 }
+.news-ticker ul:hover .news-ticker {
+  animation-play-state: paused;
+  
+}
 .news-ticker ul {
   list-style-type: none;
   padding: 0;
