@@ -33,7 +33,7 @@ function Top_Stories() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/articles/api');
+        const response = await fetch('https://excelsior-imez7mjwgq-bq.a.run.app/articles/api');
 
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -141,7 +141,7 @@ function Top_Stories() {
             className={`item item-${index + 1}`}
             key={index}
             style={{
-              backgroundImage: `url(https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${item.thumbnail})`,
+              backgroundImage: `url(https://excelsior-imez7mjwgq-bq.a.run.app/${item.thumbnail})`,
             }}
           >
             <Link to={`/articles/${item.slug}`} style={{ textDecoration: 'none' }}>
@@ -227,7 +227,7 @@ function Top_Stories() {
     <Link to={`/articles/${article.slug}`} style={{ textDecoration: 'none' }} key={article.id}>
       { [2, 6, 10].includes(index) ? (
         <div key={article.id} className={`latest-local local-${index}`} style={
-          {  backgroundImage: `url(https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail})` }
+          {  backgroundImage: `url(https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail})` }
            
         }>
           <h2 className="extended-card-title">{article.title}</h2> 
@@ -248,7 +248,7 @@ function Top_Stories() {
                 <div className="content-block">
                   <div className="content-text">
                     <div className="thumb">
-                      <img loading="lazy" className="article-card-image" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
+                      <img loading="lazy" className="article-card-image" src={`https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
                     </div>
                     <h2 className="latest-local-date">{article.category.name}</h2>
 
@@ -260,7 +260,7 @@ function Top_Stories() {
               ) : (
                 <>
                   <div className="local-image-container">
-                    <img loading="lazy" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} className="local-image" alt={article.thumbnail.description} srcSet="" />
+                    <img loading="lazy" src={`https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail}`} className="local-image" alt={article.thumbnail.description} srcSet="" />
                   </div>
                   <div className="latest-local-text">
                     <h2 className="latest-local-date">{article.category.name}</h2>
@@ -296,7 +296,7 @@ function Top_Stories() {
     <Link to={`/articles/${article.slug}`} style={{ textDecoration: 'none' }} key={article.id}>
       { [2, 6, 10].includes(index) ? (
         <div key={article.id} className={`latest-local local-${index}`} style={
-          { backgroundImage: `url(https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail})`, }
+          { backgroundImage: `url(https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail})`, }
            
         }>
           <h2 className="extended-card-title">{article.title}</h2> 
@@ -317,7 +317,7 @@ function Top_Stories() {
                 <div className="content-block">
                   <div className="content-text">
                     <div className="thumb">
-                      <img loading="lazy" className="article-card-image" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
+                      <img loading="lazy" className="article-card-image" src={`https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
                     </div>
                     <h2 className="latest-local-date">{article.category.name}</h2>
 
@@ -329,7 +329,7 @@ function Top_Stories() {
               ) : (
                 <>
                   <div className="local-image-container">
-                    <img loading="lazy" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} className="local-image" alt={article.thumbnail.description} srcSet="" />
+                    <img loading="lazy" src={`https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail}`} className="local-image" alt={article.thumbnail.description} srcSet="" />
                   </div>
                   <div className="latest-local-text">
                     <h2 className="latest-local-date">{article.category.name}</h2>
@@ -371,7 +371,7 @@ function Top_Stories() {
       >
        
         { [2, 6, 10].includes(index) ? (
-          <div key={article.id} className={`latest-local local-${index}`} style={{ backgroundImage: `url(https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail})` }}>
+          <div key={article.id} className={`latest-local local-${index}`} style={{ backgroundImage: `url(https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail})` }}>
             <h2 className="extended-card-title">{article.title}</h2> 
             {/* <h2 className="title" style={{ display: "none" }} dangerouslySetInnerHTML={{ __html: article.shortened_body }}></h2> */}
           </div>
@@ -386,7 +386,7 @@ function Top_Stories() {
                 <div className="content-block">
                   <div className="content-text">
                     <div className="thumb">
-                      <img loading="lazy" className="article-card-image" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
+                      <img loading="lazy" className="article-card-image" src={`https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
                     </div>
                     <h2 className="latest-local-date">{article.category.name}</h2>
 
@@ -398,7 +398,7 @@ function Top_Stories() {
               ) : (
                 <>
                   <div className="local-image-container">
-                    <img loading="lazy" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} className="local-image" alt={article.thumbnail.description} srcSet="" />
+                    <img loading="lazy" src={`https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail}`} className="local-image" alt={article.thumbnail.description} srcSet="" />
                   </div>
                   <div className="latest-local-text">
                     <h2 className="latest-local-date">{article.category.name}</h2>
@@ -429,7 +429,7 @@ function Top_Stories() {
             <Link to={`/articles/${article.slug}`} style={{ textDecoration: 'none' }} key={article.id}>
       { [2, 6, 10].includes(index) ? (
         <div key={article.id} className={`latest-local local-${index}`} style={
-          { backgroundImage: `url(https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail})`, }
+          { backgroundImage: `url(https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail})`, }
            
         }>
           <h2 className="extended-card-title">{article.title}</h2> 
@@ -450,7 +450,7 @@ function Top_Stories() {
                 <div className="content-block">
                   <div className="content-text">
                     <div className="thumb">
-                      <img loading="lazy" className="article-card-image" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
+                      <img loading="lazy" className="article-card-image" src={`https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
                     </div>
                     <h2 className="latest-local-date">{article.category.name}</h2>
 
@@ -462,7 +462,7 @@ function Top_Stories() {
               ) : (
                 <>
                   <div className="local-image-container">
-                    <img loading="lazy" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} className="local-image" alt={article.thumbnail.description} srcSet="" />
+                    <img loading="lazy" src={`https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail}`} className="local-image" alt={article.thumbnail.description} srcSet="" />
                   </div>
                   <div className="latest-local-text">
                     <h2 className="latest-local-date">{article.category.name}</h2>
@@ -521,7 +521,7 @@ function Top_Stories() {
                 <div
                   className="box"
                   style={{
-                    backgroundImage: `url(https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail})`
+                    backgroundImage: `url(https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail})`
                   }}
                 >
                   <h2 className="scroller-missed-title">{article.title}</h2>
@@ -561,7 +561,7 @@ function Top_Stories() {
                 <div
                   className="box"
                   style={{
-                    backgroundImage: `url(https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail})`,
+                    backgroundImage: `url(https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail})`,
                   }}
                 >
                   <h2 className="scroller-missed-title">{article.title}</h2>
@@ -588,7 +588,7 @@ function Top_Stories() {
                   <h2 className="editors-title">{article.title}</h2>
                   <h3 className="editors-snippet" >{removeTags(article.shortened_body.slice(0, 100) + '...')}</h3>
                 </div>
-                <div className="editors-box"><img loading="lazy" className="editors-img" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} alt="article-image" /></div>
+                <div className="editors-box"><img loading="lazy" className="editors-img" src={`https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail}`} alt="article-image" /></div>
               </div>
             </Link>
           </div>
@@ -619,7 +619,7 @@ function Top_Stories() {
                 <div
                   className="box"
                   style={{
-                    backgroundImage: `url(https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail})`,
+                    backgroundImage: `url(https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail})`,
                   }}
                 >
                   <h2 className="scroller-missed-title">{article.title}</h2>

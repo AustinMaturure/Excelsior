@@ -7,7 +7,7 @@ function Navigaton() {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await fetch('https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/api/categories');
+            const response = await fetch('https://excelsior-imez7mjwgq-bq.a.run.app/api/categories');
     
             if (!response.ok) {
               throw new Error('Network response was not ok');

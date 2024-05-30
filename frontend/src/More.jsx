@@ -40,7 +40,7 @@ function More({ category,id, articles }) {
             <div className="content-block">
               <div className="content-text">
                 <div className="thumb">
-                <img loading="lazy" className="article-card-image" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
+                <img loading="lazy" className="article-card-image" src={`https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
               </div>
                 <h2 className="snippet-title">{article.title}</h2>
                 <p className="snippet" >{removeTags(article.shortened_body)}</p>
@@ -67,7 +67,7 @@ function More({ category,id, articles }) {
             <Link to={`/articles/${article.slug}`} onClick={handleLinkClick} style={{ textDecoration: 'none', color: 'inherit' }}>
             <div className="content-block">
               <div className="content-text"><div className="thumb">
-                <img loading="lazy" className="article-card-image" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
+                <img loading="lazy" className="article-card-image" src={`https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
               </div>
                 <h2 className="snippet-title">{article.title}</h2>
                 <p className="snippet" >{removeTags(article.shortened_body)}</p>
@@ -93,7 +93,7 @@ function More({ category,id, articles }) {
             <Link to={`/articles/${article.slug}`} onClick={handleLinkClick} style={{ textDecoration: 'none', color: 'inherit' }}>
             <div className="content-block">
               <div className="content-text"><div className="thumb">
-                <img loading="lazy" className="article-card-image" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
+                <img loading="lazy" className="article-card-image" src={`https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
               </div>
                 <h2 className="snippet-title">{article.title}</h2>
                 <p className="snippet" > {removeTags(article.shortened_body)}</p>

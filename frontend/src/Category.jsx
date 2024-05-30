@@ -13,7 +13,7 @@ function Category() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/articles/api');
+                const response = await fetch('https://excelsior-imez7mjwgq-bq.a.run.app/articles/api');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -54,7 +54,7 @@ function Category() {
                                 <div className='cat-card' id={`cat-card-${index}`}>
                                     <div className="cat-card-content">
                                         <div className='cat-card-image-ct'>
-                                            <img loading="lazy" className="cat-card-image" src={`https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app/${article.thumbnail}`} alt={article.title} />
+                                            <img loading="lazy" className="cat-card-image" src={`https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail}`} alt={article.title} />
                                         </div>
                                         <div className="cat-card-text">
                                             <p className='cat-card-info'>{article.author.name} - {new Date(article.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })} </p>
