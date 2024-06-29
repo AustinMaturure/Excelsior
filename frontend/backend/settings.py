@@ -62,6 +62,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://excelsiornews.netlify.app",
     'https://main--excelsiornews.netlify.app',
         'https://excelsior-415216.rj.r.appspot.com',
+        'https://excelsior-imez7mjwgq-bq.a.run.app'
         
 
 ]
@@ -70,7 +71,7 @@ CORS_ORIGIN_WHITELIST = [
     'https://main--excelsiornews.netlify.app',
     'https://excelsior-415216.rj.r.appspot.com','https://excelsior-imez7mjwgq-bq.a.run.app'
 
-    # Add any other domains if necessary
+    
 ]
 
 

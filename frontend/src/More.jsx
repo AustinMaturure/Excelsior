@@ -28,33 +28,34 @@ function More({ category,id, articles }) {
   
 
   <div className="columns-container">
+  <div className="columns-container">
+  {articles.filter((article) => article.id !== id && (article.category.name === category || article.category.parent_category === category)).length > 0 ? (
     <section className="column">
       <h2 className="column-header">{category}</h2>
       {articles
-        .filter((article) => article.id != id && article.category.name == category || article.category.parent_category ==category )
+        .filter((article) => article.id !== id && (article.category.name === category || article.category.parent_category === category))
         .slice(0, 3) // Display up to 3 articles
         .map((article, index) => (
-            // Article card code here
-            <div key={index} className={`article-card card-${index + 1}`}>
+          <div key={index} className={`article-card card-${index + 1}`}>
             <Link to={`/articles/${article.slug}`} onClick={handleLinkClick} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <div className="content-block">
-              <div className="content-text">
-                <div className="thumb">
-                <img loading="lazy" className="article-card-image" src={`https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail}`} alt="" srcSet="" />
+              <div className="content-block">
+                <div className="content-text">
+                  <div className="thumb">
+                    <img loading="lazy" className="article-card-image" src={`https://excelsior-imez7mjwgq-bq.a.run.app/${article.thumbnail}`} alt="" />
+                  </div>
+                  <h2 className="snippet-title">{article.title}</h2>
+                  <p className="snippet">{removeTags(article.shortened_body)}</p>
+                </div>
               </div>
-                <h2 className="snippet-title">{article.title}</h2>
-                <p className="snippet" >{removeTags(article.shortened_body)}</p>
-                
-                
-              </div>
-              
-            </div>
-            
-              {/* Link should wrap the entire article card */}
             </Link>
           </div>
         ))}
     </section>
+  ) : (
+    <></>
+  )}
+</div>
+
 
     <section className="column">
       <h2 className="column-header">Sport</h2>

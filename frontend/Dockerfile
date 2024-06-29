@@ -1,19 +1,24 @@
-FROM python:3.8-slim
+# Use a Python slim image
+FROM python:3.10.4-slim-bullseye
 
-COPY ./requirements.txt /requirements.txt
-COPY ./src /app
-WORKDIR /app
-
-RUN python -m venv /py && \
-    /py/bin/pip install --upgrade pip && \
-    /py/bin/pip install -r /requirements.txt && \
-    adduser --disabled-password --no-create-home django-user
-
-ENV PATH="/py/bin:$PATH"
+# Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-USER django-user
+# Set the working directory in the container
+WORKDIR /app
 
-# Gunicorn as app server
-CMD exec gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 0 app.wsgi:application
+# Install Python dependencies
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the Django project code into the container
+COPY . .
+
+ENV PORT 8080
+EXPOSE $PORT
+
+# Use Gunicorn to serve the Django application
+
+CMD exec gunicorn backend.wsgi:application --bind :$PORT --workers 2 --threads 4

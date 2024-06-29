@@ -94,6 +94,7 @@ function Details() {
             </div>
             <div className={`article-image ${expanded ? 'sticky' : ''}`}>
               <img loading="lazy" src={`https://excelsior-imez7mjwgq-bq.a.run.app/${matchingItem.thumbnail}`} alt="" />
+              {matchingItem.images.length > 0 ?
               <div className="additional-images">
                 {matchingItem.images.map(image => (
                   <img
@@ -104,7 +105,7 @@ function Details() {
                     alt={image.description}
                   />
                 ))}
-              </div>
+              </div>:<></>}
             </div>
         </div>
         <div className="line" style={{ display:"flex", alignItems: "center", marginTop:"40px", justifyContent:"center"}}>
