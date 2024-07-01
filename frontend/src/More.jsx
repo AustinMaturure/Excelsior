@@ -28,7 +28,7 @@ function More({ category,id, articles }) {
   
 
   <div className="columns-container">
-  <div className="columns-container">
+  
   {articles.filter((article) => article.id !== id && (article.category.name === category || article.category.parent_category === category)).length > 0 ? (
     <section className="column">
       <h2 className="column-header">{category}</h2>
@@ -54,7 +54,7 @@ function More({ category,id, articles }) {
   ) : (
     <></>
   )}
-</div>
+
 
 
     <section className="column">

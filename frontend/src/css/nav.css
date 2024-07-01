@@ -78,6 +78,7 @@ body{
   
   .navbar{
     flex-direction: column;
+    padding-right: 0px;
   }
   .nav-links {
     padding: 0px 4rem ;

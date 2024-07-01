@@ -114,7 +114,7 @@ function Details() {
         
         <h1 className="more-title"> More</h1>
 
-        <div className="line" id='line-2'style={{ display:"flex", alignItems: "center", marginTop:"40px", justifyContent:"center"}}>
+        <div className="line" id='line-2'style={{ display:"flex", alignItems: "center", justifyContent:"center"}}>
           <hr width="80%" align="center"/>
         </div>
         

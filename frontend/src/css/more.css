@@ -5,6 +5,7 @@
   font-weight: bold;
   color: #1f1f1f;
   padding: 26px;
+  margin: 0px;
   text-shadow: 2px 1px #ca212a;
 }
 
@@ -146,5 +147,6 @@
     margin-bottom: 0px;
     margin-top: 0px;
     padding: 14px;
+    font-size: 2.5rem;
   }
 }

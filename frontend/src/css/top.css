@@ -104,17 +104,12 @@
   font-family: "Excon";
   text-align: center;
   font-size: 2.2rem;
-
   margin-left: 0.4rem;
   margin-bottom: 0px;
   padding: 0px;
-  
   display: inline;
   color: #ca212a;
-
-  background-color: #f9f9f9;
-
-  position: relative; /* Add position relative for ::after */
+  position: relative;
 }
 .missed-header-container{
   text-align: center
