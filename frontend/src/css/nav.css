@@ -1,46 +1,60 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-}
-
-.responsive-nav {
-  max-height: 4rem;
-  max-width: 100%;
+.navbar {
   display: flex;
+  align-items: center;
   background-color: #ca212a;
-  
-
-  gap: 1rem;
-  font-family: "Excon";
-  transition: height 6s;
-  color: #f9f9f9;
-  justify-content: space-between;
-}
- .logo-header{
-  background-color: #ca212a;
-  color: white;
-  margin-top: 0px;
-  margin-left: 1rem;
+  font-family: 'Excon';
   padding: 1rem;
-  font-Size: 1.4rem,
+  
 }
-.search-btn{
+body{
+  margin: 0px;
+}
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-logo {
+  height: 50px;
+}
+
+.navbar-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
-.responsive-links {
+.nav-links {
   display: flex;
-  font-family: "Excon";
-  font-weight: 500;
+  flex-direction: column;
   align-items: center;
-  text-decoration: none;
-  gap: 20px;
-  max-width: 100%;
-  margin-right: 0.5rem;
-  padding: 0.5rem;
+  width: 100%;
+  font-weight: bold;
+  gap: 10px;
+  transition: max-height 0.3s ease-in-out;
 }
-.responsive-links a:hover {
+
+.show-nav {
+  max-height: 1000px;
+}
+
+.hide-nav {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.nav-links a {
+  color: white;
+  
+  text-decoration: none;
+  padding: 0rem;
+}
+
+.nav-links a:hover {
   box-shadow: 5px 5px #1f1f1f;
   border: 2px solid #1f1f1f;
   background-color: #f1f1f1;
@@ -48,91 +62,25 @@ body {
   font-family: "Excon";
  
 }
-.navbar {
-  background-color: #ca212a;
+
+@media (min-width: 726px) {
   
-  
-  display: flex;
-  justify-content: flex-end;
-  text-align: center;
-  gap: 20px;
-  border-bottom-left-radius: 12px;
-
-  padding: 1rem;
-  padding-top: 0px;
-  margin-top: 0px;
-  border-bottom-right-radius: 12px;
-}
-
-.responsive-links a {
-  text-decoration: none;
-
-  font-size: 1rem;
-  color: white;
-  transition: all 0.2s;
-}
-.nav-btn {
-  display: none;
-}
-
-#search-box {
-  display: none;
-  transition: display 20s ease; /* Add smooth transition for display property */
-}
-
-.links {
-  transition: transform 20s ease; /* Add smooth transition for transform property */
-}
-
-.responsive-links {
-  transition: transform 20s ease; /* Add smooth transition for transform property */
-}
-
-
-.logo-header{
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  border-left: 2px solid #f1f1f1;
-  border-right: 2px solid #f1f1f1;
-  background-color:#ca212a;
-  color: #f1f1f1;
-  margin-top:0px ;
-  margin-left:1rem;
-  padding:1rem;
-  font-size: 2rem;
-  
-}
-
-
-@media only screen and (max-width: 726px) {
-  .nav-btn {
-    display: inline;
-    font-size: 1.4rem;
-
-    background-color: #ca212a;
-
-    color: white;
-    border: none;
-    padding: 0.5rem;
-
-    margin-top: 0.5rem;
-    border-radius: 8px;
+  .nav-links {
+    flex-direction: row;
+    justify-content: center;
+    max-height: none;
   }
-  
-  .links a {
-    display: flex;
-    padding: 8px;
-    flex-direction: column;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-family: "Excon";
-  
-
-    text-align: center;
-    gap: 28px;
-    color: white;
-  }
-  .responsive-links {
+  .navbar-toggle {
     display: none;
+  }
+}
+@media (max-width: 726px) {
+  
+  .navbar{
+    flex-direction: column;
+  }
+  .nav-links {
+    padding: 0px 4rem ;
+    font-size: 1.5rem;
   }
 }

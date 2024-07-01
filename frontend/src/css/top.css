@@ -8,7 +8,6 @@
   row-gap: 20px;
   background-color: #f9f9f9;
   grid-template-columns: repeat(11, 80px);
- transition: all 6s;
 
   grid-template-rows: repeat(6, 80px);
 }
@@ -1063,7 +1062,7 @@
 
   .local{
     grid-template-columns: 20% 20% 20% 20%;
-    max-width: 100%;
+    max-width: 100svw;
     justify-content: flex-start;
   }
 
@@ -1234,7 +1233,10 @@ border: 0px;}
 }
 
 .navbar h1{
-  display: none;
+  font-size: 2rem;
+
+ text-align: center;
+ align-self: center;
 }
 
 .skeleton-loading div{

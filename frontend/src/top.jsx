@@ -146,14 +146,14 @@ function Top_Stories() {
           >
             <Link to={`/articles/${item.slug}`} style={{ textDecoration: 'none' }}>
               <div className="content">
-                <h2 className="title1">{item.title}</h2>
+                 <h2 className="title1">{item.title}</h2>
                 <div className="title-container">
-                  <h2
+                 <h2
                     className="title"
                     dangerouslySetInnerHTML={{ __html: item.shortened_body }}
                   ></h2>
-                </div>
-              </div>
+                </div></div>
+              
             </Link>
           </div>
         ))} <div className="item-5">
