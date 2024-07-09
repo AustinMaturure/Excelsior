@@ -205,6 +205,18 @@
 .details-section {
   max-width: 100%;
 }
+@media  screen and (min-width: 897px) {
+  .typing-div{
+    flex-direction: row-reverse;
+
+    align-items: flex-start;
+  }
+
+  .skel-img{
+    height: 50%;
+  }
+  
+}
 @media only screen and (max-width: 896px) {
   .article {
     flex-direction: column; 

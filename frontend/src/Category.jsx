@@ -12,6 +12,13 @@ function Category() {
     const [visibleArticles, setVisibleArticles] = useState(4);
 
     useEffect(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      }, []);
+
+    useEffect(() => {
         const fetchData = async () => {
             setIsLoading(true)
             try {
