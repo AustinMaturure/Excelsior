@@ -23,14 +23,14 @@ function Navbar() {
   };
 
   useEffect(() => {
-    // Close the navbar whenever the location (route) changes
+
     closeNavbar();
-  }, [location]);
+      }, [location]);
 
   return (
     <nav className={`navbar`}>
       <div className="navbar-header">
-        <img src={logo} alt="Excelsior Logo" className="navbar-logo" />
+      <NavLink to="/"><img src={logo} alt="Excelsior Logo" className="navbar-logo" /></NavLink>
         <button className="navbar-toggle" onClick={toggleNavbar}>
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>

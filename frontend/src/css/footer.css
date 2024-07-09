@@ -1,50 +1,45 @@
-.footer-section {
-  background-color: #1f1f1f;
-  margin: 0px;
-  margin-top: 4rem;
-  padding: 0px;
+footer{
+  color: #f1f1f1;
+  padding: 1rem;
+  border: 2px solid #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+
+
+  font-family: 'Excon';
+}
+
+footer h1{
+  text-decoration:underline 4px #ca212a;
+}
+.logo-footer{
+  height: 40px;
+  width: 12rem;
+  align-self: center;
+  padding: 20px;
+  
+}
+
+.about-us p{
+  font-family: 'Author';
+  font-size: 19.2px;
+  margin: 0;
+}
+
+.logo-footer img{
+  min-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
 
   
-  color: #f1f1f1;
-  border-top-right-radius: 22px;
-  border-top-left-radius: 22px;
-  font-family: "Excon";
- 
-  align-items: center;
-  display: flex;
-
-  flex-direction: column;
 }
-.search-btn{
-  color: #f1f1f1;
-}
-.logo-footer h1{
-  font-size: 4rem;
-  font-style: italic;
-  width: -moz-fit-content;
-  font-family: 'Excon';
-  width: fit-content;
- margin-bottom: 20px;
-  text-shadow: #ca212a 1px 1px;
-
-  padding: 0px;
-}
-
-.about-us {
-  text-align: center;
-}
-
-.contact-us {
-  color: #ca212a;
-  text-decoration: none;
-}
-
 .icons {
   font-size: 2rem;
   text-align: center;
   color: #f1f1f1;
   text-decoration: none;
-  background-color: #1f1f1f;
+
   display: flex;
   gap: 1.6rem;
 }
@@ -54,6 +49,17 @@
   transition: all 0.2s;
 }
 .icon-link:hover {
+  color: #ca212a
+}
+
+.contact-us {
   color: #ca212a;
-  
+ 
+}
+.legal p{
+  margin: 0;
+  padding: 0;
+  font-size: 19.2px;
+  font-family: 'Author';
+
 }

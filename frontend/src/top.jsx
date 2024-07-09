@@ -596,51 +596,17 @@ function Top_Stories() {
         ))}
       </div>
     </section>
-    <hr color="#868e97" width="80%" style={{  borderWidth: "0.1px", border:'none', height:"1px" }} />
+    
       </div>
       <section className="tools">
         <div className="tool1">
           
         
-      <div className="local-header-container" id="header-business">
-        <h1 className="header-missed" style={{alignSelf:"center"}}>Business Board</h1>
-      </div>
-      <div className="scroller" id="scroller-business">
-        <h3 className="Ad">Advertise Your Business Here!</h3>
-        {data
-          .slice(0, 10)
-          .filter(
-            (article) =>
-              article.category.name === "Business" ||
-              article.category.parent_category === "Business"
-          )
-          .map((article) => (
-            <Link to={`/articles/${article.slug}`} style={{ textDecoration: 'none' }} key={article.id}>
-              <div key={article.id} className="scroller-missed-articles">
-                <div
-                  className="box"
-                  style={{
-                    backgroundImage: `url(https://excelsior-imez7mjwgq-bq.a.run.app${article.thumbnail})`,
-                  }}
-                >
-                  <h2 className="scroller-missed-title">{article.title}</h2>
-                </div>
-              </div>
-            </Link>
-          ))
-          .reverse()}</div>
+    
+      
           </div>
-          <div className="tool2">
-          <div className="local-header-container" id="header-business">
-        <h1 className="header-missed" style={{alignSelf:"center"}}>Recipe</h1>
-        <h3 className="Ad">Recipe updated weekly</h3>
         
-      </div>
-          </div>
-          <div className="tool3">
-            
-          <span className="tdt-title">Today's Temp</span>{  (weather?.main?.temp * 0.1).toFixed(0) + 'ºC' ?? 'Loading...'}
-          </div>
+         
      
       </section>
       
