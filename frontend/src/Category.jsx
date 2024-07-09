@@ -7,11 +7,13 @@ import More from './More';
 
 function Category() {
     const [data, setData] = useState([]);
+    const [loading, setIsLoading] = useState(true)
     const { category } = useParams();
     const [visibleArticles, setVisibleArticles] = useState(4);
 
     useEffect(() => {
         const fetchData = async () => {
+            setIsLoading(true)
             try {
                 const response = await fetch('https://excelsior-imez7mjwgq-bq.a.run.app/articles/api');
                 if (!response.ok) {
@@ -19,9 +21,12 @@ function Category() {
                 }
                 const jsonData = await response.json();
                 setData(jsonData);
+                setIsLoading(false)
                 setVisibleArticles(4); // Reset visibleArticles when data is fetched
             } catch (error) {
                 console.error('Error fetching data:', error);
+            } finally {
+                setIsLoading(false)
             }
         };
 
@@ -39,7 +44,7 @@ function Category() {
 
     return (
         <section>
-            { data ? 
+            { !loading ? 
             <section className="scroller-column">
                 {data
                     .filter(

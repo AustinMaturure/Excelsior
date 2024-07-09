@@ -53,7 +53,7 @@ function Details() {
     }
   }, [matchingItem]);
 
-  if (matchingItem) {
+  if (!matchingItem) {
     return <div className="typing-div">
       <div className="skel skel-img">
         </div>   
