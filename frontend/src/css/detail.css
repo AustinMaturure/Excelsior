@@ -154,6 +154,49 @@
 .additional-image:hover {
   filter: opacity(1);
 }
+
+
+.typing-div{
+  display: flex;
+  flex-direction: column;
+  height: 90svh;
+  padding: 1rem;
+  gap: 10px;
+}
+.skel{
+  width: 100%;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #f3f2f2 25%, #969696 50%, #f0f0f0 75%);
+  background-size: 400% 100%;
+  animation: gradientLoading 3s infinite alternate;
+}
+
+.skel-img{
+  height: 30%;
+  background-color: #868e97;
+}
+
+.skel-text-area{
+  height: 68%;
+  display: flex;
+  flex-direction: column;
+  background: none;
+  gap: 10px;
+}
+.skel-title{
+  background-color: #868e97;
+  height: 10%;
+
+}
+.skel-text{
+  height: 90%;
+  background-color: #868e97;
+}
+
+
+
+
+
 .author {
   font-family: "Author";
   padding-right: 10px;

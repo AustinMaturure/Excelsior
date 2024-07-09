@@ -39,6 +39,7 @@ function Category() {
 
     return (
         <section>
+            { data ? 
             <section className="scroller-column">
                 {data
                     .filter(
@@ -80,7 +81,13 @@ function Category() {
                         </button>
                     </div>
                 )}
-            </section>
+            </section>:<><div className="typing-div">
+      <div className="skel skel-img">
+        </div>   
+        <div className="skel skel-text-area">
+    
+        <div className="skel skel-text"></div></div>
+         </div></>}
         </section>
     );
 }

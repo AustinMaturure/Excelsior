@@ -53,9 +53,14 @@ function Details() {
     }
   }, [matchingItem]);
 
-  if (!matchingItem) {
+  if (matchingItem) {
     return <div className="typing-div">
-      <h1 className="typing-text">Typing Article...</h1></div>; // Add a loading state
+      <div className="skel skel-img">
+        </div>   
+        <div className="skel skel-text-area">
+        <div className="skel skel-title"></div>
+        <div className="skel skel-text"></div></div>
+         </div>;
   }
 
 
