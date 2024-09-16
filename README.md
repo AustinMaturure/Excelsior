@@ -71,7 +71,8 @@ Ensure you have the following installed on your machine:
 
 - **`backend/`:** Django backend code.
 - **`frontend/`:** React with Vite frontend code.
-- **`docs/`:** Documentation files.
+
+
 
 ## Usage
 
