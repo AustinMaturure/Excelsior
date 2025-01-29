@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import "../css/carousels.css";
 
 export default function Carousels() {
-  const [articles, setArticles] = useState({});
+  const [articles, setArticles] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -12,7 +13,7 @@ export default function Carousels() {
         if (!response.ok) throw new Error("Failed to fetch");
 
         const data = await response.json();
-        setCategories(data);
+        setArticles(data);
       } catch (error) {
         console.error("Error fetching articles:", error);
       }
@@ -21,30 +22,53 @@ export default function Carousels() {
     fetchData();
   }, []);
 
+  const handleClick = (direction) => {
+    const carousel = document.getElementById("carousel-1");
+    if (carousel) {
+      const remToPx = parseFloat(
+        getComputedStyle(document.documentElement).fontSize
+      );
+      const scrollAmount = 19 * remToPx;
+      carousel.scrollLeft += direction * scrollAmount;
+    }
+  };
+
   return (
-    <div className="scroller" id="scroller-1">
-      {data
-        .slice(0, 10)
-        .sort((a, b) => b.views - a.views)
-        .map((article) => (
-          <Link
-            to={`/articles/${article.slug}`}
-            style={{ textDecoration: "none" }}
-            key={article.id}
-          >
-            <div key={article.id} className="scroller-missed-articles">
-              <div
-                className="box"
-                style={{
-                  backgroundImage: `url(https://excelsior-imez7mjwgq-bq.a.run.app${article.thumbnail})`,
-                }}
-              >
-                <h2 className="scroller-missed-title">{article.title}</h2>
+    <>
+      <section className="top-stories-cnt">
+        <h2>Top Stories</h2>
+        <hr />
+        <div className="carousel" id="carousel-1">
+          {articles.map((article) => (
+            <a style={{ textDecoration: "none" }} key={article.id}>
+              <div className="carousel-inner" id="carousel-inner">
+                <div
+                  className="article-box"
+                  style={{
+                    backgroundImage: `url(https://excelsior-imez7mjwgq-bq.a.run.app${article.thumbnail})`,
+                  }}
+                >
+                  <h2 className="article-box-title">{article.title}</h2>
+                </div>
               </div>
-            </div>
-          </Link>
-        ))
-        .reverse()}
-    </div>
+            </a>
+          ))}
+        </div>
+        <div className="carousel-nav">
+          <button
+            className="carousel-button btn-left"
+            onClick={() => handleClick(-1)}
+          >
+            {"←"}
+          </button>
+          <button
+            className="carousel-button btn-right"
+            onClick={() => handleClick(1)}
+          >
+            {"→"}
+          </button>
+        </div>
+      </section>
+    </>
   );
 }

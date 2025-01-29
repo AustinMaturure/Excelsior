@@ -1,0 +1,18 @@
+.carousel {
+  color: white;
+  gap: 1rem;
+  display: flex;
+  overflow: scroll;
+  padding: 1rem;
+  scroll-behavior: smooth;
+}
+.article-box {
+  min-height: 15rem;
+  background-size: cover;
+  min-width: 18rem;
+  text-align: end;
+}
+
+.article-box-title {
+  padding: 1rem;
+}
