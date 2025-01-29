@@ -3,6 +3,7 @@ import "../css/carousels.css";
 
 export default function Carousels() {
   const [articles, setArticles] = useState([]);
+  const [MissedArticles, setMissedArticles] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,7 +20,22 @@ export default function Carousels() {
       }
     };
 
+    const fetchMissedArticles = async () => {
+      try {
+        const response = await fetch(
+          "http://127.0.0.1:8000/api/articles/missed-articles/"
+        );
+        if (!response.ok) throw new Error("Failed to fetch");
+
+        const data = await response.json();
+        setMissedArticles(data);
+      } catch (error) {
+        console.error("Error fetching articles:", error);
+      }
+    };
+
     fetchData();
+    fetchMissedArticles();
   }, []);
 
   const handleClick = (direction) => {
@@ -67,6 +83,20 @@ export default function Carousels() {
           >
             {"→"}
           </button>
+        </div>
+        <h2>You might have missed</h2>
+        <hr />
+        <div className="missed-cnt">
+          {" "}
+          <div className="missed-articles">
+            {MissedArticles.map((article) => (
+              <div className="missed-tile">
+                <a style={{ textDecoration: "none" }} key={article.id}>
+                  <h2>{article.title}</h2>
+                </a>
+              </div>
+            ))}{" "}
+          </div>
         </div>
       </section>
     </>

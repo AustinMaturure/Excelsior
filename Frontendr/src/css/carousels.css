@@ -6,6 +6,10 @@
   padding: 1rem;
   scroll-behavior: smooth;
 }
+
+.top-stories-cnt {
+  padding: 1rem;
+}
 .article-box {
   min-height: 15rem;
   background-size: cover;
@@ -15,4 +19,32 @@
 
 .article-box-title {
   padding: 1rem;
+}
+.carousel-nav button {
+  background-color: white;
+  padding: 2px;
+  font-size: 2em;
+  border-radius: 1px;
+  border: 1px solid #1a1a1a;
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.missed-articles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  font-family: "Abril Fatface", serif;
+  line-height: 1.5em;
+}
+.missed-tile {
+  border-right: 1px solid #1a1a1a;
+}
+
+.missed-tile:last-child {
+  border: none;
 }

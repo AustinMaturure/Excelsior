@@ -5,15 +5,18 @@ from excelsior.models import Articles
 from .serializers import ArticleSerializer
 from excelsior.models import Category
 from .serializers import CategorySerializer
+from rest_framework.pagination import PageNumberPagination
 
 # Create your views here.
 
 
 @api_view(['GET'])
 def getData(request):
-    articles = Articles.objects.all().prefetch_related('images', 'author', 'category')
-    serializer = ArticleSerializer(articles, many=True)
-    return Response(serializer.data)
+    articles = Articles.objects.all() 
+    paginator = PageNumberPagination()   
+    paginated_articles = paginator.paginate_queryset(articles, request)  
+    serializer = ArticleSerializer(paginated_articles, many=True)
+    return paginator.get_paginated_response(serializer.data)  
 
 @api_view(['GET'])
 def getLatest(request):
@@ -38,6 +41,13 @@ def get_articles_by_category(request):
 @api_view(['GET'])
 def get_top_articles(request):
     articles = Articles.objects.all().prefetch_related('images', 'author', 'category').order_by('-views')[:10]
+
+    serializer = ArticleSerializer(articles, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def get_missed_articles(request):
+    articles = Articles.objects.only('id', 'title', 'slug').order_by('views')[:4]
 
     serializer = ArticleSerializer(articles, many=True)
     return Response(serializer.data)

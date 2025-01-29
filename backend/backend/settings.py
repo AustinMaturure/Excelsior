@@ -102,6 +102,11 @@ CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'backend.urls'
 
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 8,  
+}
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -129,27 +134,19 @@ DATABASES = {
         default=os.environ['DATABASE_URL'],
         engine='django_cockroachdb',
         ssl_require=True,  # Enable SSL certificate verification
-        conn_max_age=600  # Adjust the connection age if needed
+        conn_max_age=600  
     )
 }
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
-
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
-
-
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-
-
-print("MEDIA_ROOT:", os.path.join(BASE_DIR, 'media'))
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
