@@ -1,0 +1,168 @@
+.landing-cnt {
+  padding: 2rem 5rem;
+
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 1459px;
+  place-self: center;
+  box-sizing: border-box;
+}
+
+.block-1 {
+  display: grid;
+  padding: 1rem;
+  gap: 1rem;
+  grid-template-areas:
+    " a a a a b b"
+    " a a a a c c"
+    " a a a a d d"
+    " e e f f g g";
+}
+.content {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+.title-cnt {
+}
+
+.title-cnt h2 {
+  font-family: "Abril Fatface", serif;
+  font-weight: 900;
+  line-height: 1.2em;
+  color: #2a2a2a;
+}
+
+.article-1 h2 {
+  margin-bottom: 0.5rem;
+}
+
+.article-1 p {
+  color: #595959;
+  line-height: 1.2em;
+  font-size: 0.9em;
+}
+.image-cnt {
+  width: 100%;
+}
+
+.article-1 .image-cnt {
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.image-cnt img {
+  width: 100%;
+  min-height: 100%;
+}
+.article-1 {
+  border-bottom: 1px solid #161616b0;
+  grid-area: a;
+}
+
+.article-2 {
+  grid-area: b;
+  border-bottom: 1px solid #161616b0;
+}
+.article-3 {
+  grid-area: c;
+  border-bottom: 1px solid #161616b0;
+}
+.article-4 {
+  grid-area: d;
+  border-bottom: 1px solid #161616b0;
+}
+.article-5 {
+  grid-area: e;
+  border-right: 1px solid #161616b0;
+}
+.article-6 {
+  grid-area: f;
+  border-right: 1px solid #161616b0;
+}
+.article-7 {
+  grid-area: g;
+}
+
+.article-1 h2 {
+  font-size: 2em;
+}
+
+.content.sub {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  justify-items: center;
+  align-items: center;
+  min-height: 100%;
+}
+
+.content.sub.image-cnt {
+  min-height: 100%;
+}
+.content.sub img {
+  height: 5rem;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1015px) {
+  .block-1 {
+    grid-template-areas:
+      " a a a a "
+      " a a a a "
+      " a a a a "
+      " b b c c "
+      " d d e e "
+      " f f g g ";
+  }
+
+  .article-5,
+  .article-4,
+  .article-6,
+  .article-7 {
+    border: none;
+    border-bottom: 1px solid #595959;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .landing-cnt {
+    padding: 1rem;
+  }
+  .block-1 {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .article-5,
+  .article-4,
+  .article-6,
+  .article-7 {
+    border: none;
+    border-bottom: 1px solid #595959;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content.sub {
+    justify-items: normal;
+  }
+  .article-1 h2 {
+    font-size: 26px;
+  }
+  .article-1 p {
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+
+  .article-1 .image-cnt {
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  .article-1 .image-cnt {
+    margin-bottom: 1rem;
+  }
+}

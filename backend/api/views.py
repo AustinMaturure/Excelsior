@@ -15,6 +15,33 @@ def getData(request):
     serializer = ArticleSerializer(articles, many=True)
     return Response(serializer.data)
 
+@api_view(['GET'])
+def getLatest(request):
+    articles = Articles.objects.all().prefetch_related('images', 'author', 'category')[:7]
+    serializer = ArticleSerializer(articles, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def get_articles_by_category(request):
+    data = {}
+    selected_categories = ['Local', 'Sport', 'Schools']
+
+    parent_categories = Category.objects.filter(name__in=selected_categories, parent__isnull=True)
+    
+    for category in parent_categories:
+   
+        articles = Articles.objects.filter(category=category)[:7]
+        data[category.name] = ArticleSerializer(articles, many=True).data
+
+    return Response(data)
+
+@api_view(['GET'])
+def get_top_articles(request):
+    articles = Articles.objects.all().prefetch_related('images', 'author', 'category').order_by('-views')[:10]
+
+    serializer = ArticleSerializer(articles, many=True)
+    return Response(serializer.data)
+
 
 @api_view(['GET'])
 def getCategoryData(request):
