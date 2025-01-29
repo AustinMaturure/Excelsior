@@ -73,7 +73,7 @@ export default function Latest() {
                   ></p>
                 </div>
               </div>
-              <p className="category-name">{article.category.name}</p>
+              <p className="latest category-name">{article.category.name}</p>
               <div className="image-cnt">
                 <img
                   src={`http://127.0.0.1:8000${article.thumbnail}`}

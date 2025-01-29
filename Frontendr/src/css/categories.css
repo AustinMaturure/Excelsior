@@ -37,6 +37,23 @@ hr {
   color: #ca212a;
   font-size: 0.8em;
 }
+
+.load-cnt {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.load-cnt button {
+  color: white;
+  border-radius: 22px;
+  padding: 0.5rem 2rem;
+  font-weight: 200;
+}
+
+.latest.category-name {
+  display: block;
+}
 @media screen and (min-width: 1015px) {
   .article-cnt {
     display: grid;
@@ -51,5 +68,11 @@ hr {
   }
   .category-name {
     display: none;
+  }
+  .latest.category-name {
+    margin-bottom: 0px;
+  }
+  .cat-article p {
+    margin-top: 0px;
   }
 }

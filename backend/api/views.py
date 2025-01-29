@@ -12,7 +12,7 @@ from rest_framework.pagination import PageNumberPagination
 
 @api_view(['GET'])
 def getData(request):
-    articles = Articles.objects.all() 
+    articles = Articles.objects.all().order_by("-date")
     paginator = PageNumberPagination()   
     paginated_articles = paginator.paginate_queryset(articles, request)  
     serializer = ArticleSerializer(paginated_articles, many=True)
@@ -20,7 +20,7 @@ def getData(request):
 
 @api_view(['GET'])
 def getLatest(request):
-    articles = Articles.objects.all().prefetch_related('images', 'author', 'category')[:7]
+    articles = Articles.objects.all()[:7]
     serializer = ArticleSerializer(articles, many=True)
     return Response(serializer.data)
 
@@ -40,7 +40,7 @@ def get_articles_by_category(request):
 
 @api_view(['GET'])
 def get_top_articles(request):
-    articles = Articles.objects.all().prefetch_related('images', 'author', 'category').order_by('-views')[:10]
+    articles = Articles.objects.all().order_by('-views')[:10]
 
     serializer = ArticleSerializer(articles, many=True)
     return Response(serializer.data)

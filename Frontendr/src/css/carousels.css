@@ -3,8 +3,13 @@
   gap: 1rem;
   display: flex;
   overflow: scroll;
+
   padding: 1rem;
   scroll-behavior: smooth;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
 }
 
 .top-stories-cnt {
