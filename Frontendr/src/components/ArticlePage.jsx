@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import "../css/detail.css";
+import axios from "axios";
 
 export default function ArticlePage() {
   const [article, setArticle] = useState(null);
   const { slug } = useParams();
   const [isLoading, setIsLoading] = useState(true);
+  const [snippets, setSnippets] = useState([]);
+
+  const [snippetsLoading, setSnippetsLoading] = useState(true);
 
   useEffect(() => {
     window.scrollTo({
@@ -37,6 +41,23 @@ export default function ArticlePage() {
     fetchData();
   }, [slug]);
 
+  const fetchSnippets = async () => {
+    setSnippetsLoading(true);
+    try {
+      const response = await axios.get(
+        `http://127.0.0.1:8000/api/articles/snippets/${slug}`
+      );
+      setSnippets(response.data);
+    } catch (error) {
+      console.error("Error fetching snippets:", error);
+    } finally {
+      setSnippetsLoading(false);
+    }
+  };
+  useEffect(() => {
+    fetchSnippets();
+  }, []);
+
   if (isLoading) {
     return (
       <div className="typing-div">
@@ -52,27 +73,45 @@ export default function ArticlePage() {
   return (
     <section className="article-section">
       <div className="article-container">
-        <article>
-          <div className="article-header">
-            <h1 className="article-page-title">{article.title}</h1>
-            <p>{article.author?.name || "Unknown Author"}</p>
-            <p className="category-date">
-              {new Date(article.date).toLocaleDateString(undefined, {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </p>
+        <div className="article-header">
+          <h1 className="article-page-title">{article.title}</h1>
+          <p>{article.author?.name || "Unknown Author"}</p>
+          <p className="category-date">
+            {new Date(article.date).toLocaleDateString(undefined, {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </p>
+        </div>
+        <div className="article-main">
+          <article className="article-body">
+            <div className="article-page image-cnt">
+              <img
+                src={`http://127.0.0.1:8000${article.thumbnail}`}
+                alt="Article Thumbnail"
+              />
+            </div>
+            <div className="article-text">{article.body}</div>
+          </article>
+          <div className="more-articles">
+            {snippets.map((snippet) =>
+              snippet.slug != slug ? (
+                <Link
+                  className="snippet"
+                  to={`/articles/article/${snippet.slug}`}
+                  key={snippet.id}
+                >
+                  <div>
+                    <h2>{snippet.title}</h2>
+                  </div>
+                </Link>
+              ) : (
+                <></>
+              )
+            )}
           </div>
-
-          <div className="image-cnt">
-            <img
-              src={`http://127.0.0.1:8000${article.thumbnail}`}
-              alt="Article Thumbnail"
-            />
-          </div>
-          <div className="article-body">{article.body}</div>
-        </article>
+        </div>
       </div>
     </section>
   );

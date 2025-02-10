@@ -36,8 +36,58 @@
 
 .article-page-title {
   font-family: "Abril Fatface", serif;
+  margin-bottom: 0px;
 }
 
 .article-header {
   padding: 1rem;
+}
+
+.article-page.image-cnt {
+  height: 30rem;
+  margin-bottom: 2rem;
+}
+
+.article-main {
+  display: grid;
+  grid-template-columns: 75% 25%;
+}
+
+.article-page.image-cnt img {
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.article-body {
+  padding: 1rem;
+}
+
+.article-text {
+  font-size: 1.4em;
+  color: #2a2a2a;
+  line-height: 2;
+}
+
+.article-text::first-letter {
+  font-size: 3rem;
+  font-style: italic;
+  text-shadow: 2px 2px #1f1f1f;
+  -webkit-initial-letter: 3;
+  initial-letter: 3;
+  color: #ca212a;
+  padding: 6px;
+}
+.more-articles {
+  position: relative;
+}
+.snippets {
+  display: flex;
+  flex-direction: column;
+}
+.snippet {
+  border: none;
+  border-bottom: 1px solid #1a1a1a;
+  min-width: 100%;
+  position: sticky;
+  top: 0;
 }

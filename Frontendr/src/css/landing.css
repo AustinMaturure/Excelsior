@@ -54,6 +54,7 @@
 .image-cnt img {
   width: 100%;
   min-height: 100%;
+  object-fit: cover;
 }
 .article-1 {
   border-bottom: 1px solid #161616b0;
