@@ -34,30 +34,33 @@ export default function Landing() {
         <div className="block-1">
           {data.map((article, index) => (
             <div className={`article article-${index + 1}`} key={index}>
-              <div className={`content ${index === 0 ? "" : "sub"}`}>
-                <div className="title-cnt">
-                  <h2>{article.title}</h2>
-                  {index === 0 ? (
-                    <div className="snippet-cnt">
-                      <p
-                        className="snippet"
-                        dangerouslySetInnerHTML={{
-                          __html: article.shortened_body.slice(0, 150) + "...",
-                        }}
-                      ></p>
-                    </div>
-                  ) : (
-                    <></>
-                  )}
-                </div>
-                <div className="image-cnt">
-                  {" "}
-                  <img
-                    src={`http://127.0.0.1:8000${article.thumbnail}`}
-                    alt="Article Thumbnail"
-                  />
-                </div>
-              </div>
+              <Link to={`articles/article/${article.slug}`}>
+                <div className={`content ${index === 0 ? "" : "sub"}`}>
+                  <div className="title-cnt">
+                    <h2>{article.title}</h2>
+                    {index === 0 ? (
+                      <div className="snippet-cnt">
+                        <p
+                          className="snippet"
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              article.shortened_body.slice(0, 150) + "...",
+                          }}
+                        ></p>
+                      </div>
+                    ) : (
+                      <></>
+                    )}
+                  </div>
+                  <div className="image-cnt">
+                    {" "}
+                    <img
+                      src={`http://127.0.0.1:8000${article.thumbnail}`}
+                      alt="Article Thumbnail"
+                    />
+                  </div>
+                </div>{" "}
+              </Link>
             </div>
           ))}
         </div>
