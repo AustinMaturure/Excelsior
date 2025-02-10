@@ -29,7 +29,7 @@ hr {
 }
 
 .cat-article p {
-  font-size: 0.85em;
+  font-size: 12px;
 }
 
 .category-date {
@@ -53,6 +53,10 @@ hr {
 
 .latest.category-name {
   display: block;
+}
+
+.latest-header {
+  margin-top: 0px;
 }
 @media screen and (min-width: 1015px) {
   .article-cnt {

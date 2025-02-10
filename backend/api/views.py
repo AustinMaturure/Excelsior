@@ -6,6 +6,7 @@ from .serializers import ArticleSerializer
 from excelsior.models import Category
 from .serializers import CategorySerializer
 from rest_framework.pagination import PageNumberPagination
+from django.shortcuts import get_object_or_404
 
 # Create your views here.
 
@@ -57,6 +58,17 @@ def get_missed_articles(request):
 def getCategoryData(request):
     categories = Category.objects.all()
     serializer = CategorySerializer(categories, many=True)
+    return Response(serializer.data)
+
+@api_view(["GET"])
+def getArticle(request, slug):
+
+    article = get_object_or_404(Articles, slug=slug)   
+  
+    article.views += 1 
+    article.save()  
+
+    serializer = ArticleSerializer(article)
     return Response(serializer.data)
 
 

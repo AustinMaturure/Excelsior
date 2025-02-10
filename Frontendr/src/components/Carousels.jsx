@@ -64,6 +64,8 @@ export default function Carousels() {
                     backgroundImage: `url(https://excelsior-imez7mjwgq-bq.a.run.app${article.thumbnail})`,
                   }}
                 >
+                  {" "}
+                  <div className="overlay"></div>
                   <h2 className="article-box-title">{article.title}</h2>
                 </div>
               </div>

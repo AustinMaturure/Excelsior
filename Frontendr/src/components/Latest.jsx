@@ -46,7 +46,7 @@ export default function Latest() {
   return (
     <section className="top-stories-cnt">
       <hr />
-      <h2>Latest</h2>
+      <h2 className="latest-header">Latest</h2>
 
       <div className="article-cnt">
         {articles.map((article, index) => (

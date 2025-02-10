@@ -5,6 +5,7 @@ from . import views
 urlpatterns = [
     path('', views.getData),
     path('articles/', views.getData),
+    path('articles/article/<slug:slug>/', views.getData),
     path('articles/latest', views.getLatest),
     path('articles/top-articles/', views.get_top_articles),
     path('articles/missed-articles/', views.get_missed_articles),
