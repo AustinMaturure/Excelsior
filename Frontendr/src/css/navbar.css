@@ -1,12 +1,12 @@
 header {
-  font-family: "Abril Fatface", serif;
+  font-family: "DM Serif Display", serif;
 
   text-align: center;
 }
 
 header h2 {
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
   font-style: italic;
 }
 

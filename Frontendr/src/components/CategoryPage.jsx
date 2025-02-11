@@ -6,6 +6,7 @@ import { Link, useParams } from "react-router-dom";
 export default function CategoryPage() {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [MissedArticles, setMissedArticles] = useState([]);
   const [error, setError] = useState("");
   const [pageNr, setPageNr] = useState(1);
   const [hasNext, setHasNext] = useState(true);
@@ -38,8 +39,22 @@ export default function CategoryPage() {
         if (isMounted) setLoading(false);
       }
     };
+    const fetchMissedArticles = async () => {
+      try {
+        const response = await fetch(
+          "http://127.0.0.1:8000/api/articles/missed-articles/"
+        );
+        if (!response.ok) throw new Error("Failed to fetch");
+
+        const data = await response.json();
+        setMissedArticles(data);
+      } catch (error) {
+        console.error("Error fetching articles:", error);
+      }
+    };
 
     fetchArticles();
+    fetchMissedArticles();
 
     return () => {
       isMounted = false;
@@ -47,57 +62,76 @@ export default function CategoryPage() {
   }, [pageNr, category]);
 
   return (
-    <section className="top-stories-cnt">
-      <h2 className="latest-header">{category}</h2>
-
-      <div className="article-cnt">
-        {articles.map((article, index) => (
-          <Link to={`articles/article/${article.slug}`} key={index}>
-            <div className={`article cat-article cat-article-${index + 1}`}>
-              <article className="content">
-                <p className="category-date">
-                  {new Date(article.date).toLocaleDateString(undefined, {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </p>
-                <div className="title-cnt">
-                  <h2>{article.title}</h2>
-                  <div className="snippet-cnt">
-                    <p
-                      className="snippet"
-                      dangerouslySetInnerHTML={{
-                        __html: article.shortened_body.slice(0, 150) + "...",
-                      }}
-                    ></p>
+    <>
+      {" "}
+      <h2 className="category-header">{category}</h2>
+      <section className="category-page-cnt">
+        <div className="category article-cnt">
+          {" "}
+          {articles.map((article, index) => (
+            <Link to={`articles/article/${article.slug}`} key={index}>
+              <div
+                className={`category article cat-article cat-article-${
+                  index + 1
+                }`}
+              >
+                <article className="category content">
+                  <div className="title-cnt">
+                    <h2 className="category-article-title">{article.title}</h2>{" "}
+                    <p className="category-date">
+                      {new Date(article.date).toLocaleDateString(undefined, {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </p>
+                    <div className="snippet-cnt">
+                      <p className="category snippet">
+                        {" "}
+                        {article.shortened_body.slice(0, 150) + "..."}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <p className="latest category-name">{article.category.name}</p>
-                <div className="image-cnt">
-                  <img
-                    src={`http://127.0.0.1:8000${article.thumbnail}`}
-                    alt="Article Thumbnail"
-                  />
-                </div>
-              </article>
+
+                  <div className="image-cnt">
+                    <img
+                      src={`http://127.0.0.1:8000${article.thumbnail}`}
+                      alt="Article Thumbnail"
+                    />
+                  </div>
+                </article>
+              </div>
+            </Link>
+          ))}{" "}
+          {hasNext && (
+            <div className="load-cnt">
+              <button
+                className="load-more"
+                onClick={() => {
+                  handleNextPage();
+                }}
+                disabled={loading}
+              >
+                {loading ? "Loading..." : "Load More"}
+              </button>
             </div>
-          </Link>
-        ))}
-      </div>
-      {hasNext && (
-        <div className="load-cnt">
-          <button
-            className="load-more"
-            onClick={() => {
-              handleNextPage();
-            }}
-            disabled={loading}
-          >
-            {loading ? "Loading..." : "Load More"}
-          </button>
+          )}
         </div>
-      )}
-    </section>
+        <div className="category-missed-cnt">
+          {" "}
+          <div className="category-missed-articles">
+            {" "}
+            <p>Other Articles</p>
+            {MissedArticles.map((article) => (
+              <div className=" category-missed-tile">
+                <a style={{ textDecoration: "none" }} key={article.id}>
+                  <h2>{article.title}</h2>
+                </a>
+              </div>
+            ))}{" "}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

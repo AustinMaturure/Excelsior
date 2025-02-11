@@ -31,12 +31,12 @@ export default function Navbar() {
       </header>
       <nav>
         <div className={`nav-links `}>
+          <NavLink to="/">Home</NavLink>
           <NavLink to="/categories/local">Local</NavLink>
           <NavLink to="/categories/sport">Sport</NavLink>
-          <NavLink to="/categories/school">School</NavLink>
+          <NavLink to="/categories/schools">School</NavLink>
           <NavLink to="/categories/accidents">Accidents</NavLink>
           <NavLink to="/categories/crime">Crime</NavLink>
-          <NavLink to="/categories/latest">Latest</NavLink>
         </div>
       </nav>
     </>
