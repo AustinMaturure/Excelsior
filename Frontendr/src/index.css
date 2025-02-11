@@ -19,15 +19,13 @@ a {
 p {
   font-family: "Work Sans";
 }
-a:hover {
-}
 
 body {
   margin: 0;
   font-family: "Work Sans";
   min-width: 320px;
   min-height: 100vh;
-  background-color: #fcfcfc;
+  background-color: #fafaff;
   color: #1a1a1a;
 }
 

@@ -1,12 +1,12 @@
 header {
-  font-family: "DM Serif Display", serif;
+  font-family: "Abril Fatface", serif;
 
   text-align: center;
 }
 
 header h2 {
   margin: 0;
-  font-weight: 700;
+  font-weight: bold;
   font-style: italic;
 }
 
@@ -27,5 +27,6 @@ nav {
   padding: 0.5rem 1rem;
 }
 
-.nav-links a {
+.nav-links a:hover {
+  color: #ca212a;
 }

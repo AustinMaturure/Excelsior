@@ -19,11 +19,14 @@
     " a a a a d d"
     " e e f f g g";
 }
+
 .content {
   display: grid;
   grid-template-columns: 30% 70%;
 }
-.title-cnt {
+
+.content:hover .title-cnt h2 {
+  text-decoration: underline 4px solid #ca2129dc;
 }
 
 .title-cnt h2 {

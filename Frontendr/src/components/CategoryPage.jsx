@@ -124,9 +124,9 @@ export default function CategoryPage() {
             <p>Other Articles</p>
             {MissedArticles.map((article) => (
               <div className=" category-missed-tile">
-                <a style={{ textDecoration: "none" }} key={article.id}>
+                <Link to={`/articles/article/${article.slug}`} key={article.id}>
                   <h2>{article.title}</h2>
-                </a>
+                </Link>
               </div>
             ))}{" "}
           </div>

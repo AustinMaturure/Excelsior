@@ -40,6 +40,10 @@
   font-family: "Abril Fatface", serif;
 }
 
+.category-missed-tile:hover {
+  text-decoration: underline 2px solid #ca212a;
+}
+
 .category-header {
   text-align: center;
   font-size: 3em;

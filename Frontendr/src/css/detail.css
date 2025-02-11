@@ -91,13 +91,15 @@
   padding-top: 0rem;
   font-family: "Abril Fatface", serif;
 }
-.snippet {
+.more-articles .snippet {
   border: none;
 
-  font-size: 0.9em;
+  font-size: 0.8em;
   min-width: 100%;
 }
-
+.more-articles .snippet:hover {
+  text-decoration: underline 4px solid #ca212a;
+}
 @media screen and (max-width: 768px) {
   .article-main {
     display: flex;
