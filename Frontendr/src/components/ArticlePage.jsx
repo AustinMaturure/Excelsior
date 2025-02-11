@@ -95,21 +95,22 @@ export default function ArticlePage() {
             <div className="article-text">{article.body}</div>
           </article>
           <div className="more-articles">
-            {snippets.map((snippet) =>
-              snippet.slug != slug ? (
-                <Link
-                  className="snippet"
-                  to={`/articles/article/${snippet.slug}`}
-                  key={snippet.id}
-                >
-                  <div>
+            <h3 className="more-articles-header">More Articles</h3>
+            <div className="snippets">
+              {snippets.map((snippet) =>
+                snippet.slug != slug ? (
+                  <Link
+                    className="snippet"
+                    to={`/articles/article/${snippet.slug}`}
+                    key={snippet.id}
+                  >
                     <h2>{snippet.title}</h2>
-                  </div>
-                </Link>
-              ) : (
-                <></>
-              )
-            )}
+                  </Link>
+                ) : (
+                  <></>
+                )
+              )}
+            </div>
           </div>
         </div>
       </div>

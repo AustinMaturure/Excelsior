@@ -39,3 +39,9 @@ class ArticleSerializer(serializers.ModelSerializer):
     def get_shortened_body(self, obj):
         return obj.snippet()
 
+class SnippetsSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Articles
+        fields = ['id', 'title', 'date', 'slug', 'thumbnail']
+

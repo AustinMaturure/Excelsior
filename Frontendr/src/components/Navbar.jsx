@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../css/navbar.css";
 
 export default function Navbar() {
@@ -31,13 +31,12 @@ export default function Navbar() {
       </header>
       <nav>
         <div className={`nav-links `}>
-          <a>Home</a>
-          <a>Local </a>
-          <a>Sport </a>
-          <a>School </a>
-          <a>Accidents</a>
-          <a>Crime </a>
-          <a>Latest </a>
+          <NavLink to="/categories/local">Local</NavLink>
+          <NavLink to="/categories/sport">Sport</NavLink>
+          <NavLink to="/categories/school">School</NavLink>
+          <NavLink to="/categories/accidents">Accidents</NavLink>
+          <NavLink to="/categories/crime">Crime</NavLink>
+          <NavLink to="/categories/latest">Latest</NavLink>
         </div>
       </nav>
     </>

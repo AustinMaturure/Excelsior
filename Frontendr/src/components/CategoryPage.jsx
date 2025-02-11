@@ -1,26 +1,28 @@
 import { useEffect, useState } from "react";
-import "../css/carousels.css";
+import "../css/categorypage.css";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-export default function Latest() {
+export default function CategoryPage() {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [pageNr, setPageNr] = useState(1);
   const [hasNext, setHasNext] = useState(true);
+  const { category } = useParams();
 
   const handleNextPage = () => {
     setPageNr((prevPage) => prevPage + 1);
   };
   useEffect(() => {
+    setArticles([]);
     let isMounted = true;
 
     const fetchArticles = async () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://127.0.0.1:8000/articles?page=${pageNr}`
+          `http://127.0.0.1:8000/api/categories/${category}?page=${pageNr}`
         );
         if (isMounted) {
           setArticles((prevArticles) => [
@@ -42,12 +44,11 @@ export default function Latest() {
     return () => {
       isMounted = false;
     };
-  }, [pageNr]);
+  }, [pageNr, category]);
 
   return (
     <section className="top-stories-cnt">
-      <hr />
-      <h2 className="latest-header">Latest</h2>
+      <h2 className="latest-header">{category}</h2>
 
       <div className="article-cnt">
         {articles.map((article, index) => (

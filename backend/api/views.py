@@ -4,7 +4,7 @@ from rest_framework.decorators import api_view
 from excelsior.models import Articles
 from .serializers import ArticleSerializer
 from excelsior.models import Category
-from .serializers import CategorySerializer
+from .serializers import CategorySerializer, SnippetsSerializer
 from rest_framework.pagination import PageNumberPagination
 from django.shortcuts import get_object_or_404
 
@@ -40,17 +40,30 @@ def get_articles_by_category(request):
     return Response(data)
 
 @api_view(['GET'])
+def get_category(request, category):
+
+    category_obj = get_object_or_404(Category, name__iexact=category)
+    articles = Articles.objects.filter(category=category_obj)
+    paginator = PageNumberPagination()   
+
+
+    paginated_articles = paginator.paginate_queryset(articles, request)  
+    serializer = ArticleSerializer(paginated_articles, many=True)
+    return paginator.get_paginated_response(serializer.data)
+
+
+@api_view(['GET'])
 def get_top_articles(request):
     articles = Articles.objects.all().order_by('-views')[:10]
 
-    serializer = ArticleSerializer(articles, many=True)
+    serializer = SnippetsSerializer(articles, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
 def get_missed_articles(request):
     articles = Articles.objects.only('id', 'title', 'slug').order_by('views')[:4]
 
-    serializer = ArticleSerializer(articles, many=True)
+    serializer = SnippetsSerializer(articles, many=True)
     return Response(serializer.data)
 
 
@@ -69,6 +82,15 @@ def getArticle(request, slug):
     article.save()  
 
     serializer = ArticleSerializer(article)
+    return Response(serializer.data)
+
+@api_view(["GET"])
+def getSnippets(request, slug):
+
+    article = get_object_or_404(Articles, slug=slug)
+    similar_articles = Articles.objects.filter(category=article.category).exclude(id=article.id)[:5]
+    serializer = SnippetsSerializer(similar_articles, many=True)
+    
     return Response(serializer.data)
 
 
