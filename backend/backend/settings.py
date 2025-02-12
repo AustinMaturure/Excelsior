@@ -79,11 +79,11 @@ CORS_ORIGIN_WHITELIST = [
     'https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app',
     'https://excelsior-imez7mjwgq-bq.a.run.app'
 
-    # Add any other domains if necessary
+   
 ]
 CORS_ALLOW_METHODS = [
     'GET', 
-    'POST' # Add more methods as needed
+    'POST' 
 ]
 
 CORS_ALLOW_HEADERS = [
@@ -133,7 +133,7 @@ DATABASES = {
     'default': dj_database_url.config(
         default=os.environ['DATABASE_URL'],
         engine='django_cockroachdb',
-        ssl_require=True,  # Enable SSL certificate verification
+        ssl_require=True,  
         conn_max_age=600  
     )
 }

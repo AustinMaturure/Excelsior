@@ -20,7 +20,7 @@
 
 .loading-block {
   min-height: 20vh;
-  min-width: 80vw;
+  min-width: 90vw;
 }
 
 .article-loading {
@@ -162,13 +162,12 @@
 
 @media screen and (max-width: 768px) {
   .landing-cnt {
-    padding: 1rem;
+    padding: 0rem;
   }
   .block-1,
   .loading-block {
     display: flex;
     flex-direction: column;
-    padding: 0px;
   }
 
   .article-5,

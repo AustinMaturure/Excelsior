@@ -51,3 +51,10 @@ nav {
 .nav-links a:hover {
   color: #ca212a;
 }
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    overflow-x: scroll;
+    justify-content: flex-start;
+  }
+}

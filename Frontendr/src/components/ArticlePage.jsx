@@ -96,6 +96,7 @@ export default function ArticlePage() {
           </article>
           <div className="more-articles">
             <h3 className="more-articles-header">More Articles</h3>
+            <hr />
             <div className="snippets">
               {snippets.map((snippet) =>
                 snippet.slug != slug ? (

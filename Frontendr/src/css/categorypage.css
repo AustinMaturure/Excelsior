@@ -75,12 +75,14 @@
   .category-page-cnt {
     padding: 1rem;
   }
-
+  .category.content {
+    gap: 0.8rem;
+  }
   .article-page.image-cnt {
     height: 20rem;
   }
 
-  .category.missed-articles {
+  .category-missed-articles {
     padding: 0rem;
   }
 }
