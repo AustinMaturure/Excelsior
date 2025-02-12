@@ -164,7 +164,8 @@
   .landing-cnt {
     padding: 1rem;
   }
-  .block-1 {
+  .block-1,
+  .loading-block {
     display: flex;
     flex-direction: column;
     padding: 0px;

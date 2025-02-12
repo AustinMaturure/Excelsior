@@ -3,8 +3,9 @@ import CategorySection from "./CategorySection.jsx";
 
 export default function Categories() {
   const [categories, setCategories] = useState({});
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
+    setLoading(false);
     const fetchData = async () => {
       try {
         const response = await fetch(
@@ -16,6 +17,8 @@ export default function Categories() {
         setCategories(data);
       } catch (error) {
         console.error("Error fetching articles:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -29,6 +32,7 @@ export default function Categories() {
           key={category}
           category={category}
           articles={articles}
+          loading={loading}
         />
       ))}
     </div>

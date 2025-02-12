@@ -8,7 +8,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const header = document.querySelector("header");
-      if (window.scrollY > 10) {
+      if (window.scrollY > 6) {
         setIsSticky(true);
       } else {
         setIsSticky(false);
@@ -25,10 +25,11 @@ export default function Navbar() {
       <header className={isSticky ? "sticky" : ""}>
         <h2 className="nav-logo">
           <a href="/">Excelsior</a>
-        </h2>{" "}
-        <p>The latest news in your pocket</p>
+        </h2>
+
         <hr />
-      </header>
+      </header>{" "}
+      <p className="slogan">The latest news in your pocket</p>
       <nav>
         <div className={`nav-links `}>
           <NavLink to="/">Home</NavLink>

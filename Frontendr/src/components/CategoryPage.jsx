@@ -77,7 +77,7 @@ export default function CategoryPage() {
         >
           {" "}
           {articles.map((article, index) => (
-            <Link to={`articles/article/${article.slug}`} key={index}>
+            <Link to={`/articles/article/${article.slug}`} key={index}>
               <div
                 className={`category article cat-article cat-article-${
                   index + 1

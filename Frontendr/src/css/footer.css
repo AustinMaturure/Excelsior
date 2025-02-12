@@ -1,0 +1,64 @@
+footer {
+  color: white;
+  padding: 1rem;
+  border: 2px solid #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+
+  font-family: "Abril Fatface", serif;
+}
+
+footer h1 {
+  text-decoration: underline 4px #ca212a;
+}
+.logo-footer {
+  height: 40px;
+  width: 12rem;
+  align-self: center;
+  padding: 20px;
+}
+
+.about-us p {
+  font-family: "Work Sans";
+  font-size: 19.2px;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.logo-footer img {
+  min-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+.icons {
+  font-size: 2rem;
+  text-align: center;
+  color: #f1f1f1;
+  text-decoration: none;
+
+  display: flex;
+  gap: 1.6rem;
+}
+.icon-link {
+  text-decoration: none;
+  color: #f1f1f1;
+  transition: all 0.2s;
+}
+.icon-link:hover {
+  color: #ca212a;
+}
+
+.contact-us {
+  color: #ca212a;
+}
+.legal p {
+  margin: 0;
+  padding: 0;
+  font-size: 19.2px;
+  font-family: "Abril Fatface", serif;
+}
+
+.legal a {
+  text-decoration: underline 2px #ca212a;
+}

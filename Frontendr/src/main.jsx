@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import Navbar from "./components/Navbar.jsx";
+import Footer from "./components/footer.jsx";
 import "./index.css";
 import App from "./App.jsx";
 import ArticlePage from "./components/ArticlePage.jsx";
@@ -17,6 +18,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="articles/article/:slug" element={<ArticlePage />} />
         <Route path="categories/:category" element={<CategoryPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   </StrictMode>
 );

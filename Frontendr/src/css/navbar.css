@@ -1,9 +1,26 @@
 header {
   font-family: "Abril Fatface", serif;
-
   text-align: center;
+  position: sticky;
+  top: 0;
+  margin: 0px;
+  padding: 0.5rem 0.5rem;
+  padding-bottom: 0px;
+  transition: all 0.5s;
+  z-index: 100;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
+header.sticky {
+  background-color: white;
+  color: #333;
+}
+
+.slogan {
+  text-align: center;
+  padding: 0.3rem;
+}
 header h2 {
   margin: 0;
   font-weight: bold;
@@ -12,6 +29,10 @@ header h2 {
 
 hr {
   margin-bottom: 1px;
+}
+
+header hr {
+  margin-bottom: 0px;
 }
 
 nav {

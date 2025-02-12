@@ -2,7 +2,8 @@
   padding: 1rem;
 }
 
-.article-cnt {
+.article-cnt,
+.categories-loading {
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -48,7 +49,7 @@ hr {
   color: white;
   border-radius: 22px;
   padding: 0.5rem 2rem;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 .latest.category-name {
@@ -59,10 +60,15 @@ hr {
   margin-top: 0px;
 }
 @media screen and (min-width: 1015px) {
-  .article-cnt {
+  .article-cnt,
+  .categories-loading {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 4rem;
+  }
+
+  .categories-loading {
+    grid-template-rows: 20rem;
   }
   .cat-article .content {
     display: flex;
