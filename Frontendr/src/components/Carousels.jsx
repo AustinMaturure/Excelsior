@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../css/carousels.css";
+import { Link } from "react-router-dom";
 
 export default function Carousels() {
   const [articles, setArticles] = useState([]);
@@ -56,7 +57,7 @@ export default function Carousels() {
         <hr />
         <div className="carousel" id="carousel-1">
           {articles.map((article) => (
-            <a style={{ textDecoration: "none" }} key={article.id}>
+            <Link to={`articles/article/${article.slug}`} key={article.id}>
               <div className="carousel-inner" id="carousel-inner">
                 <div
                   className="article-box"
@@ -69,7 +70,7 @@ export default function Carousels() {
                   <h2 className="article-box-title">{article.title}</h2>
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
         <div className="carousel-nav">

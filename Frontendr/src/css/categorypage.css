@@ -3,6 +3,21 @@
   flex-direction: column;
 }
 
+.category-loading {
+  background-color: #3b3b3b;
+  min-height: 30rem;
+  border-radius: 22px;
+}
+
+.missing-loading {
+  min-height: 10rem;
+  min-width: 100%;
+}
+
+.loading-cnt {
+  display: none;
+}
+
 .category-page-cnt {
   display: grid;
   grid-template-columns: 75% 25%;

@@ -89,6 +89,9 @@ def getSnippets(request, slug):
 
     article = get_object_or_404(Articles, slug=slug)
     similar_articles = Articles.objects.filter(category=article.category).exclude(id=article.id)[:5]
+    if similar_articles.count() < 5:
+        extra_articles = Articles.objects.exclude(id__in=[article.id] + list(similar_articles.values_list("id", flat=True)))[:5 - similar_articles.count()]
+        similar_articles = list(similar_articles) + list(extra_articles)
     serializer = SnippetsSerializer(similar_articles, many=True)
     
     return Response(serializer.data)

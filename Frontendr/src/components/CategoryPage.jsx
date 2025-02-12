@@ -6,6 +6,7 @@ import { Link, useParams } from "react-router-dom";
 export default function CategoryPage() {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [missingLoading, setMissingLoading] = useState(true);
   const [MissedArticles, setMissedArticles] = useState([]);
   const [error, setError] = useState("");
   const [pageNr, setPageNr] = useState(1);
@@ -40,6 +41,7 @@ export default function CategoryPage() {
       }
     };
     const fetchMissedArticles = async () => {
+      setMissingLoading(true);
       try {
         const response = await fetch(
           "http://127.0.0.1:8000/api/articles/missed-articles/"
@@ -50,6 +52,8 @@ export default function CategoryPage() {
         setMissedArticles(data);
       } catch (error) {
         console.error("Error fetching articles:", error);
+      } finally {
+        setMissingLoading(false);
       }
     };
 
@@ -66,7 +70,11 @@ export default function CategoryPage() {
       {" "}
       <h2 className="category-header">{category}</h2>
       <section className="category-page-cnt">
-        <div className="category article-cnt">
+        <div
+          className={`category article-cnt ${
+            loading ? "category-loading skel" : ""
+          }`}
+        >
           {" "}
           {articles.map((article, index) => (
             <Link to={`articles/article/${article.slug}`} key={index}>
@@ -104,7 +112,7 @@ export default function CategoryPage() {
             </Link>
           ))}{" "}
           {hasNext && (
-            <div className="load-cnt">
+            <div className={`load-cnt ${loading ? "loading-cnt " : ""}`}>
               <button
                 className="load-more"
                 onClick={() => {
@@ -123,7 +131,11 @@ export default function CategoryPage() {
             {" "}
             <p>Other Articles</p>
             {MissedArticles.map((article) => (
-              <div className=" category-missed-tile">
+              <div
+                className={` category-missed-tile ${
+                  missingLoading ? "missed-loading skel" : ""
+                }`}
+              >
                 <Link to={`/articles/article/${article.slug}`} key={article.id}>
                   <h2>{article.title}</h2>
                 </Link>
