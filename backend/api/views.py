@@ -4,7 +4,7 @@ from rest_framework.decorators import api_view
 from excelsior.models import Articles
 from .serializers import ArticleSerializer
 from excelsior.models import Category
-from .serializers import CategorySerializer, SnippetsSerializer
+from .serializers import CategorySerializer, SnippetsSerializer, TitleSerializer
 from rest_framework.pagination import PageNumberPagination
 from django.shortcuts import get_object_or_404
 
@@ -23,6 +23,19 @@ def getData(request):
 def getLatest(request):
     articles = Articles.objects.all()[:7]
     serializer = ArticleSerializer(articles, many=True)
+    return Response(serializer.data)
+
+
+@api_view(["GET"])
+def searchArticles(request):
+    query = request.GET.get("query", "")
+
+    if not query:
+        return Response({"error": "No search query provided."}, status=400)
+
+    articles = Articles.objects.filter(title__icontains=query)
+    serializer = TitleSerializer(articles, many=True)
+
     return Response(serializer.data)
 
 @api_view(['GET'])

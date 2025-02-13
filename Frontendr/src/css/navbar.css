@@ -1,6 +1,7 @@
 header {
   font-family: "Abril Fatface", serif;
   text-align: center;
+
   position: sticky;
   top: 0;
   margin: 0px;
@@ -16,7 +17,53 @@ header.sticky {
   background-color: white;
   color: #333;
 }
+.search-box-img {
+  position: absolute;
+  z-index: 45;
+  top: 1rem;
+  right: 1rem;
+}
 
+.search-box {
+  background-color: white;
+
+  top: 0;
+  right: 0;
+  min-height: 100vh;
+  min-width: 50vw;
+  font-family: "Abril Fatface", serif;
+  position: absolute;
+  transition: all 1s;
+  border-left: 4px solid#1a1a1a;
+}
+
+.closed {
+  right: -100%;
+}
+
+.search-box input:active {
+  outline: none;
+  border-bottom: 4px solid #1a1a1a;
+}
+.search-box input:hover {
+  border-bottom: 4px solid #1a1a1a;
+}
+.search-box input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 0px;
+  border-bottom: 2px solid #1a1a1a;
+}
+.search-box-img button {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+.search-box-img img {
+  height: 20px;
+  width: 20px;
+}
 .slogan {
   text-align: center;
   padding: 0.3rem;
@@ -56,5 +103,16 @@ nav {
   .nav-links {
     overflow-x: scroll;
     justify-content: flex-start;
+  }
+  .search-box {
+    min-width: 90vw;
+  }
+
+  .search-box .category-missed-articles {
+    padding: 2rem;
+  }
+
+  .search-box h2 {
+    font-size: 2em;
   }
 }

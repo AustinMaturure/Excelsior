@@ -6,17 +6,10 @@ export default function Footer() {
   return (
     <footer className="footer-section">
       <div className="about-us">
-        <h1>About us</h1>
+        <h1>Excelsior</h1>
         <p className="about-us-text">
-          The <span style={{ color: "#ca212a" }}>Only</span> Registered,
-          Recognised and Approved Local Newspaper Servicing Piet Rietief,
-          Mkhondo and Surronding Districts.
-        </p>
-        <p>
-          Contact us:{" "}
-          <a className="contact-us" href="mailto:austinmaturure@gmail.com">
-            austinmaturure@gmail.com
-          </a>
+          All the <span style={{ color: "#ca212a" }}>latest news</span> in your
+          pocket.
         </p>
       </div>
 

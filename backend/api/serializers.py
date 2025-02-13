@@ -45,3 +45,8 @@ class SnippetsSerializer(serializers.ModelSerializer):
         model = Articles
         fields = ['id', 'title', 'date', 'slug', 'thumbnail']
 
+class TitleSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Articles
+        fields = ['id', 'title', 'slug']

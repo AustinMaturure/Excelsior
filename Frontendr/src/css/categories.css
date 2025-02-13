@@ -20,6 +20,10 @@ hr {
   margin-bottom: 1rem;
 }
 
+.content .snippet {
+  margin-bottom: 6px;
+}
+
 .cat-article .content {
   flex-direction: column-reverse;
 }
@@ -59,6 +63,20 @@ hr {
 .latest-header {
   margin-top: 0px;
 }
+
+@media screen and (min-width: 769px) {
+  .article-cnt,
+  .categories-loading {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .cat-article .content {
+    display: flex;
+    flex-direction: column;
+  }
+}
 @media screen and (min-width: 1015px) {
   .article-cnt,
   .categories-loading {
@@ -72,6 +90,7 @@ hr {
   }
   .cat-article .content {
     display: flex;
+    flex-direction: column-reverse;
   }
   .cat-article img {
     height: 10rem;

@@ -132,11 +132,12 @@ export default function CategoryPage() {
             <p>Other Articles</p>
             {MissedArticles.map((article) => (
               <div
+                key={article.id}
                 className={` category-missed-tile ${
                   missingLoading ? "missed-loading skel" : ""
                 }`}
               >
-                <Link to={`/articles/article/${article.slug}`} key={article.id}>
+                <Link to={`/articles/article/${article.slug}`}>
                   <h2>{article.title}</h2>
                 </Link>
               </div>
