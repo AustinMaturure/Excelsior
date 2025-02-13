@@ -93,6 +93,8 @@ export default function ArticlePage() {
               />
             </div>
             <div className="article-text">{article.body}</div>
+            <hr />
+            <p>General views: {article.views}</p>
           </article>
           <div className="more-articles">
             <h3 className="more-articles-header">More Articles</h3>
