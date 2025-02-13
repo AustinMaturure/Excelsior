@@ -10,7 +10,7 @@ export default function Landing() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://127.0.0.1:8000/api/articles/latest"
+          "https://excelsior-373787610603.africa-south1.run.app/api/articles/latest"
         );
 
         if (!response.ok) {
@@ -61,7 +61,7 @@ export default function Landing() {
                     <div className="image-cnt">
                       {" "}
                       <img
-                        src={`http://127.0.0.1:8000${article.thumbnail}`}
+                        src={`https://excelsior-imez7mjwgq-bq.a.run.app${article.thumbnail}`}
                         alt="Article Thumbnail"
                       />
                     </div>

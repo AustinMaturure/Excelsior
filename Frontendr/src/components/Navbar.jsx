@@ -36,7 +36,7 @@ export default function Navbar() {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/articles/search/?query=${query}`
+        `https://excelsior-373787610603.africa-south1.run.app/api/articles/search/?query=${query}`
       );
 
       if (!response.ok) {

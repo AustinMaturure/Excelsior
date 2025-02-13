@@ -10,7 +10,7 @@ export default function Carousels() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://127.0.0.1:8000/api/articles/top-articles/"
+          "https://excelsior-373787610603.africa-south1.run.app/api/articles/top-articles/"
         );
         if (!response.ok) throw new Error("Failed to fetch");
 
@@ -24,7 +24,7 @@ export default function Carousels() {
     const fetchMissedArticles = async () => {
       try {
         const response = await fetch(
-          "http://127.0.0.1:8000/api/articles/missed-articles/"
+          "https://excelsior-373787610603.africa-south1.run.app/api/articles/missed-articles/"
         );
         if (!response.ok) throw new Error("Failed to fetch");
 

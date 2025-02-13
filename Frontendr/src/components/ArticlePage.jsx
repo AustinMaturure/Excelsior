@@ -22,7 +22,7 @@ export default function ArticlePage() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://127.0.0.1:8000/api/articles/article/${slug}`
+          `https://excelsior-373787610603.africa-south1.run.app/api/articles/article/${slug}`
         );
 
         if (!response.ok) {
@@ -45,7 +45,7 @@ export default function ArticlePage() {
     setSnippetsLoading(true);
     try {
       const response = await axios.get(
-        `http://127.0.0.1:8000/api/articles/snippets/${slug}`
+        `https://excelsior-373787610603.africa-south1.run.app/api/articles/snippets/${slug}`
       );
       setSnippets(response.data);
     } catch (error) {
@@ -88,7 +88,7 @@ export default function ArticlePage() {
           <article className="article-body">
             <div className="article-page image-cnt">
               <img
-                src={`http://127.0.0.1:8000${article.thumbnail}`}
+                src={`https://excelsior-imez7mjwgq-bq.a.run.app${article.thumbnail}`}
                 alt="Article Thumbnail"
               />
             </div>

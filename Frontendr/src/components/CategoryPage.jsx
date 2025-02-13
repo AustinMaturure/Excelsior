@@ -24,7 +24,7 @@ export default function CategoryPage() {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://127.0.0.1:8000/api/categories/${category}?page=${pageNr}`
+          `https://excelsior-373787610603.africa-south1.run.app/api/categories/${category}?page=${pageNr}`
         );
         if (isMounted) {
           setArticles((prevArticles) => [
@@ -44,7 +44,7 @@ export default function CategoryPage() {
       setMissingLoading(true);
       try {
         const response = await fetch(
-          "http://127.0.0.1:8000/api/articles/missed-articles/"
+          "https://excelsior-373787610603.africa-south1.run.app/api/articles/missed-articles/"
         );
         if (!response.ok) throw new Error("Failed to fetch");
 
@@ -103,14 +103,14 @@ export default function CategoryPage() {
 
                   <div className="image-cnt">
                     <img
-                      src={`http://127.0.0.1:8000${article.thumbnail}`}
+                      src={`https://excelsior-imez7mjwgq-bq.a.run.app${article.thumbnail}`}
                       alt="Article Thumbnail"
                     />
                   </div>
                 </article>
               </div>
             </Link>
-          ))}{" "}
+          ))}
           {hasNext && (
             <div className={`load-cnt ${loading ? "loading-cnt " : ""}`}>
               <button

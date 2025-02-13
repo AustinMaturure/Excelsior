@@ -9,7 +9,7 @@ export default function Categories() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://127.0.0.1:8000/api/articles-by-category/"
+          "https://excelsior-373787610603.africa-south1.run.app/api/articles-by-category/"
         );
         if (!response.ok) throw new Error("Failed to fetch");
 

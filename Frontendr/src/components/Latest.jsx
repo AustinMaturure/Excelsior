@@ -20,7 +20,7 @@ export default function Latest() {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://127.0.0.1:8000/api/articles?page=${pageNr}`
+          `https://excelsior-373787610603.africa-south1.run.app/api/articles?page=${pageNr}`
         );
         if (isMounted) {
           setArticles((prevArticles) => [
@@ -75,7 +75,7 @@ export default function Latest() {
                 <p className="latest category-name">{article.category.name}</p>
                 <div className="image-cnt">
                   <img
-                    src={`http://127.0.0.1:8000${article.thumbnail}`}
+                    src={`https://excelsior-imez7mjwgq-bq.a.run.app${article.thumbnail}`}
                     alt="Article Thumbnail"
                   />
                 </div>
