@@ -22,7 +22,7 @@ export default function ArticlePage() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://excelsior-373787610603.africa-south1.run.app/api/articles/article/${slug}`
+          `${import.meta.env.VITE_API_URL}/api/articles/article/${slug}`
         );
 
         if (!response.ok) {
@@ -45,7 +45,7 @@ export default function ArticlePage() {
     setSnippetsLoading(true);
     try {
       const response = await axios.get(
-        `https://excelsior-373787610603.africa-south1.run.app/api/articles/snippets/${slug}`
+        `${import.meta.env.VITE_API_URL}/api/articles/snippets/${slug}`
       );
       setSnippets(response.data);
     } catch (error) {
@@ -76,6 +76,7 @@ export default function ArticlePage() {
         <div className="article-header">
           <h1 className="article-page-title">{article.title}</h1>
           <p>{article.author?.name || "Unknown Author"}</p>
+
           <p className="category-date">
             {new Date(article.date).toLocaleDateString(undefined, {
               year: "numeric",
@@ -88,7 +89,7 @@ export default function ArticlePage() {
           <article className="article-body">
             <div className="article-page image-cnt">
               <img
-                src={`https://excelsior-imez7mjwgq-bq.a.run.app${article.thumbnail}`}
+                src={`${import.meta.env.VITE_API_URL}${article.thumbnail}`}
                 alt="Article Thumbnail"
               />
             </div>

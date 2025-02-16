@@ -26,11 +26,12 @@
 }
 .category.content {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 70% 28%;
+  gap: 1rem;
 }
 
 .category.snippet {
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: #3b3b3b;
 }
 
@@ -57,6 +58,14 @@
 
 .category-missed-tile:hover {
   text-decoration: underline 2px solid #ca212a;
+}
+
+.missed-loading {
+  height: 20rem;
+  width: 100%;
+  background: linear-gradient(90deg, #f3f2f2 25%, #939292 50%, #f0f0f0 75%);
+  background-size: 400% 100%;
+  animation: gradientLoading 2s infinite alternate;
 }
 
 .category-header {

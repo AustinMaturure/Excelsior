@@ -71,7 +71,7 @@
 
 .article-1 p {
   color: #595959;
-  line-height: 1.2em;
+  line-height: 1.5em;
   font-size: 0.9em;
 }
 .image-cnt {
@@ -187,11 +187,11 @@
     justify-items: normal;
   }
   .article-1 h2 {
-    font-size: 26px;
+    font-size: 28px;
   }
   .article-1 p {
     font-size: 16px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem !important;
   }
 
   .article-1 .image-cnt {
@@ -200,5 +200,8 @@
   }
   .article-1 .image-cnt {
     margin-bottom: 1rem;
+  }
+  .cat-article p {
+    font-size: 16px !important;
   }
 }

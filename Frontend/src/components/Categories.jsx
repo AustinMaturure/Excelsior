@@ -9,7 +9,7 @@ export default function Categories() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://excelsior-373787610603.africa-south1.run.app/api/articles-by-category/"
+          `${import.meta.env.VITE_API_URL}/api/articles-by-category/`
         );
         if (!response.ok) throw new Error("Failed to fetch");
 

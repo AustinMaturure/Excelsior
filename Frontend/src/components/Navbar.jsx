@@ -36,7 +36,7 @@ export default function Navbar() {
 
     try {
       const response = await fetch(
-        `https://excelsior-373787610603.africa-south1.run.app/api/articles/search/?query=${query}`
+        `${import.meta.env.VITE_API_URL}/api/articles/search/?query=${query}`
       );
 
       if (!response.ok) {
@@ -79,6 +79,7 @@ export default function Navbar() {
         <h2 className="nav-logo">
           <a href="/">Excelsior</a>
         </h2>
+        <hr />
         <div className="search-box-img" onClick={() => toggleSearch()}>
           <button>
             <img src={image} alt="" />
@@ -97,6 +98,8 @@ export default function Navbar() {
             <p></p>
             {isLoading ? (
               <p>Searching...</p>
+            ) : articles.length == 0 ? (
+              <p>No articles found...</p>
             ) : (
               articles.map((article) => (
                 <div key={article.id} className="category-missed-tile">
@@ -110,7 +113,7 @@ export default function Navbar() {
         </div>
         <hr />
       </header>{" "}
-      <p className="slogan">The latest news in your pocket</p>
+      <p className="slogan">"The latest news in your pocket"</p>
       <nav>
         <div className={`nav-links `}>
           <NavLink to="/">Home</NavLink>

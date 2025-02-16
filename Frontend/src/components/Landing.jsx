@@ -10,7 +10,7 @@ export default function Landing() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://excelsior-373787610603.africa-south1.run.app/api/articles/latest"
+          `${import.meta.env.VITE_API_URL}/api/articles/latest`
         );
 
         if (!response.ok) {
@@ -61,7 +61,9 @@ export default function Landing() {
                     <div className="image-cnt">
                       {" "}
                       <img
-                        src={`https://excelsior-imez7mjwgq-bq.a.run.app${article.thumbnail}`}
+                        src={`${import.meta.env.VITE_API_URL}${
+                          article.thumbnail
+                        }`}
                         alt="Article Thumbnail"
                       />
                     </div>

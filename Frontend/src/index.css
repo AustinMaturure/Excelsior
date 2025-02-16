@@ -27,7 +27,7 @@ body {
   min-height: 100vh;
   background-color: #fafaff;
   color: #1a1a1a;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 h1 {

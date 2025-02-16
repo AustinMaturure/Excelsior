@@ -130,6 +130,9 @@ export default function CategoryPage() {
           <div className="category-missed-articles">
             {" "}
             <p>Other Articles</p>
+            <div
+              className={`${missingLoading ? "missed-loading skel" : ""}`}
+            ></div>
             {MissedArticles.map((article) => (
               <div
                 key={article.id}

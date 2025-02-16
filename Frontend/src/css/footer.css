@@ -11,6 +11,7 @@ footer {
 
 footer h1 {
   text-decoration: underline 4px #ca212a;
+  margin-bottom: 4px;
 }
 .logo-footer {
   height: 40px;

@@ -30,7 +30,8 @@ ALLOWED_HOSTS = ["excelsior-news-backend-3vwjmxepcq-bq.a.run.app",
     "excelsiornews.netlify.app",
     "main--excelsiornews.netlify.app",
     "127.0.0.1",
-    'excelsior-imez7mjwgq-bq.a.run.app'
+    'excelsior-imez7mjwgq-bq.a.run.app',
+    'excelsior-373787610603.africa-south1.run.app'
     
 ]
 
@@ -68,7 +69,8 @@ CORS_ALLOWED_ORIGINS = [
     "https://excelsiornews.netlify.app",
     'https://main--excelsiornews.netlify.app',
     'https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app',
-    'https://excelsior-imez7mjwgq-bq.a.run.app'
+    'https://excelsior-imez7mjwgq-bq.a.run.app',
+    'https://excelsior-373787610603.africa-south1.run.app'
         
 
 ]
@@ -77,7 +79,8 @@ CORS_ORIGIN_WHITELIST = [
     'https://main--excelsiornews.netlify.app',
     "https://excelsiornews.netlify.app",
     'https://excelsior-news-backend-3vwjmxepcq-bq.a.run.app',
-    'https://excelsior-imez7mjwgq-bq.a.run.app'
+    'https://excelsior-imez7mjwgq-bq.a.run.app',
+     'https://excelsior-373787610603.africa-south1.run.app'
 
    
 ]

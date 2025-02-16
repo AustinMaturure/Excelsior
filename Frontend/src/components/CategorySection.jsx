@@ -4,6 +4,7 @@ export default function CategorySection({ category, articles, loading }) {
   return (
     <section className="category-section">
       <h2 className="section-header">{category}</h2>
+      <hr style={{ marginBottom: "0px" }} />
       <hr />
       {loading ? (
         <div className="categories-loading"></div>
@@ -38,7 +39,9 @@ export default function CategorySection({ category, articles, loading }) {
                   <div className="image-cnt">
                     {" "}
                     <img
-                      src={`https://excelsior-imez7mjwgq-bq.a.run.app${article.thumbnail}`}
+                      src={`${import.meta.env.VITE_API_URL}${
+                        article.thumbnail
+                      }`}
                       alt="Article Thumbnail"
                     />
                   </div>
