@@ -177,6 +177,9 @@
     border: none;
     border-bottom: 1px solid #595959;
   }
+  .article-1.article-loading {
+    min-height: 30rem;
+  }
 
   .content {
     display: flex;
