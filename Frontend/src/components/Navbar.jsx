@@ -98,13 +98,15 @@ export default function Navbar() {
             <p></p>
             {isLoading ? (
               <p>Searching...</p>
-            ) : articles.length == 0 ? (
+            ) : articles.length == 0 && !isLoading ? (
               <p>No articles found...</p>
             ) : (
-              articles.map((article) => (
+              articles.map((article, index) => (
                 <div key={article.id} className="category-missed-tile">
                   <Link to={`/articles/article/${article.slug}`}>
-                    <h2>{article.title}</h2>
+                    <h2>
+                      {index + 1}. {article.title}
+                    </h2>
                   </Link>
                 </div>
               ))

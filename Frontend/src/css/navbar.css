@@ -36,7 +36,7 @@ header.sticky {
   min-height: 100vh;
   min-width: 50vw;
   font-family: "Abril Fatface", serif;
-  position: absolute;
+  position: fixed;
   transition: all 0.8s;
   border-left: 4px solid#1a1a1a;
 }
@@ -73,7 +73,7 @@ header.sticky {
   text-align: center;
   padding: 0.3rem;
   font-style: italic;
-  font-size: 0.8em;
+  font-size: 0.85em;
   font-weight: 450;
 }
 header h2 {
@@ -114,7 +114,7 @@ nav {
     justify-content: flex-start;
   }
   .search-box {
-    min-width: 90vw;
+    width: 95vw;
   }
 
   .search-box .category-missed-articles {
