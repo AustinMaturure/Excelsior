@@ -96,9 +96,9 @@ export default function Carousels() {
           <div className="missed-articles">
             {MissedArticles.map((article) => (
               <div className="missed-tile" key={article.id}>
-                <a style={{ textDecoration: "none" }}>
+                <Link to={`articles/article/${article.slug}`} key={article.id}>
                   <h2>{article.title}</h2>
-                </a>
+                </Link>
               </div>
             ))}{" "}
           </div>

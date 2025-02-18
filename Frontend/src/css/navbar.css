@@ -59,6 +59,7 @@ header.sticky {
   border-radius: 0px;
   border-bottom: 2px solid #1a1a1a;
   margin-top: 1rem;
+  padding: 0.5rem;
 }
 .search-box-img button {
   padding: 0;
