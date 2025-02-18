@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "../css/detail.css";
 import axios from "axios";
+import ReactMarkdown from "react-markdown";
 
 export default function ArticlePage() {
   const [article, setArticle] = useState(null);
@@ -93,7 +94,11 @@ export default function ArticlePage() {
                 alt="Article Thumbnail"
               />
             </div>
-            <div className="article-text">{article.body}</div>
+            <div className="article-text">
+              <ReactMarkdown className={"article-body"}>
+                {article.body}
+              </ReactMarkdown>
+            </div>
             <hr />
             <p>General views: {article.views}</p>
           </article>
