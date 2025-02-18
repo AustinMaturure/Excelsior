@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "../css/carousels.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { marked } from "marked";
 
 export default function Latest() {
   const [articles, setArticles] = useState([]);
@@ -64,12 +65,12 @@ export default function Latest() {
                 <div className="title-cnt">
                   <h2>{article.title}</h2>
                   <div className="snippet-cnt">
-                    <p
-                      className="snippet"
-                      dangerouslySetInnerHTML={{
-                        __html: article.shortened_body.slice(0, 150) + "...",
-                      }}
-                    ></p>
+                    <p className="snippet">
+                      {marked(article.shortened_body.slice(0, 150)).replace(
+                        /<\/?[^>]+(>|$)/g,
+                        ""
+                      )}
+                    </p>
                   </div>
                 </div>
                 <p className="latest category-name">{article.category.name}</p>

@@ -17,7 +17,7 @@ export default function ArticlePage() {
       top: 0,
       behavior: "smooth",
     });
-  });
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {

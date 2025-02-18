@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "../css/categories.css";
+import { marked } from "marked";
 export default function CategorySection({ category, articles, loading }) {
   return (
     <section className="category-section">
@@ -27,12 +28,12 @@ export default function CategorySection({ category, articles, loading }) {
                     <h2>{article.title}</h2>
 
                     <div className="snippet-cnt">
-                      <p
-                        className="snippet"
-                        dangerouslySetInnerHTML={{
-                          __html: article.shortened_body.slice(0, 150) + "...",
-                        }}
-                      ></p>
+                      <p className="snippet">
+                        {marked(article.shortened_body.slice(0, 150)).replace(
+                          /<\/?[^>]+(>|$)/g,
+                          ""
+                        )}
+                      </p>
                     </div>
                   </div>{" "}
                   <p className="category-name">{article.category.name}</p>

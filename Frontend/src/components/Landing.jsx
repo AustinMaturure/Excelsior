@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { marked } from "marked";
 
 import "../css/landing.css";
 
@@ -46,13 +47,11 @@ export default function Landing() {
                       <h2>{article.title}</h2>
                       {index === 0 ? (
                         <div className="snippet-cnt">
-                          <p
-                            className="snippet"
-                            dangerouslySetInnerHTML={{
-                              __html:
-                                article.shortened_body.slice(0, 150) + "...",
-                            }}
-                          ></p>
+                          <p className="snippet">
+                            {marked(
+                              article.shortened_body.slice(0, 150)
+                            ).replace(/<\/?[^>]+(>|$)/g, "")}
+                          </p>
                         </div>
                       ) : (
                         <></>
